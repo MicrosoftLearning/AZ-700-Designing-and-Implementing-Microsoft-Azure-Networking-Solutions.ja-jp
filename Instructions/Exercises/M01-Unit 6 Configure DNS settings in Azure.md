@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 6 Azure で DNS 設定を構成する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: e9def7c4f9c73455fa951706fe250f55f5f79152
-ms.sourcegitcommit: 7f291542d9277fb2ea77561bd0b097ffffbfb815
+ms.openlocfilehash: 6224b77917ee7631ec709773edc866ffc19b85b0
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2022
-ms.locfileid: "139132634"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742042"
 ---
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - ユニット 6 Azure で DNS 設定を構成する
 
@@ -106,7 +106,7 @@ ms.locfileid: "139132634"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 

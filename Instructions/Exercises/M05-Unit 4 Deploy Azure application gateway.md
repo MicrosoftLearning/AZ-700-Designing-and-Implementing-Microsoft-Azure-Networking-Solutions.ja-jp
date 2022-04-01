@@ -2,12 +2,12 @@
 Exercise:
   title: M05-ユニット 4 Azure Application Gateway をデプロイする
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: 3ada3fed1e452c817bce8f52ee5418695023ab89
-ms.sourcegitcommit: 0717a1bd8290deb682974f4c4447f5fff87c220e
+ms.openlocfilehash: bb7e4a9d6c91177afa8b22c127bc56d61f95ebd3
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "138100344"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741994"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-ユニット 4 Azure Application Gateway をデプロイする
  
@@ -130,7 +130,7 @@ Azure によるアプリケーション ゲートウェイの作成には数分�
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**backend.json** と **backend.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M05** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**backend.json** と **backend.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M05** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 

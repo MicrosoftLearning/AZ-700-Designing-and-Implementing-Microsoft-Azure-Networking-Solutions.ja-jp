@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
   module: Module - Design and implement network security
-ms.openlocfilehash: bcab244740a8a49f7923a9a8aa782a10c93d13b1
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: 4ccd864904eda16e2959bcfd31c360df4c0d7efc
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422788"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742012"
 ---
 # <a name="m06-unit-9-secure-your-virtual-hub-using-azure-firewall-manager"></a>M06-ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
 
@@ -46,7 +46,7 @@ ms.locfileid: "138422788"
 10. **[サブネットの編集]** ダイアログ ボックスで、名前を「**Workload-01-SN**」に変更します。
 11. **[サブネット アドレス範囲]** を「**10.0.1.0/24**」に変更します。
 12. **[保存]** をクリックします。
-13. **[Review + create]\(レビュー + 作成\)** をクリックします。
+13. **[Review + create](レビュー + 作成)** をクリックします。
 14. **Create** をクリックしてください。
 
 上記のステップ 1 から 14 を繰り返して、同様の仮想ネットワークとサブネットを作成します。ただし、次の情報を使用します。
@@ -134,7 +134,7 @@ ms.locfileid: "138422788"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**FirewallManager.json** と **FirewallManager.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M06** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**FirewallManager.json** と **FirewallManager.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M06** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -260,7 +260,7 @@ ms.locfileid: "138422788"
 
 49. これで、3 つの規則コレクションが一覧に表示されるようになっているはずです。
 
-50. **[Review + create]\(レビュー + 作成\)** をクリックします。
+50. **[Review + create](レビュー + 作成)** をクリックします。
 
 51. **Create** をクリックしてください。
 
@@ -307,9 +307,9 @@ ms.locfileid: "138422788"
 
 3. **[オプションの表示]** をクリックします。
 
-4. **[ユーザー名]** ボックスに「**MyAdmin**」と入力します。
+4. **[ユーザー名]** ボックスに「**TestUser**」と入力します。
 
-5. **[接続]** をクリックします。
+5. **[Connect]** をクリックします。
 
    ![srv-workload-01 への RDP 接続](../media/rdp-srv-workload-01.png)
 
@@ -347,7 +347,7 @@ ms.locfileid: "138422788"
 
 2. **[コンピューター]** ボックスに **Srv-workload-02** の **プライベート IP アドレス** (例: **10.1.1.4**) を入力します。
 
-3. **[資格情報を入力してください]** ダイアログ ボックスで、ユーザー名 **MyAdmin** とパスワード **TestPa$$w0rd!** を使用して、**Srv-workload-02** サーバーにログインします。
+3. **[資格情報を入力してください]** ダイアログ ボックスで、ユーザー名 **TestUser** とパスワード **TestPa$$w0rd!** を使用して、**Srv-workload-02** サーバーにログインします。
 
 4. **[OK]** をクリックします。
 

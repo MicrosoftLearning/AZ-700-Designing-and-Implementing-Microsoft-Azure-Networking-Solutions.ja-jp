@@ -2,12 +2,12 @@
 Exercise:
   title: M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 8c2767e40bf09e4df79012f8944720f53af729ee
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: 7769b75d3db52a3b802013dcf96cdc5528c33a4c
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132284"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742048"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
 
@@ -101,7 +101,7 @@ ms.locfileid: "138132284"
    | **設定**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | サブスクリプション   | サブスクリプションを選択します。                                     |
-   | リソース グループ | myResourceGroup                                              |
+   | Resource group | myResourceGroup                                              |
    | Name           | ContosoPrivateNSG                                            |
    | 場所       | **[米国東部]** を選択します。                                           |
 
@@ -123,7 +123,7 @@ ms.locfileid: "138132284"
    | 宛先サービス タグ | **[ストレージ]** を選びます        |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
+   | プロトコル                | Any                       |
    | アクション                  | Allow                     |
    | Priority                | 100                       |
    | Name                    | Allow-Storage-All         |
@@ -147,7 +147,7 @@ ms.locfileid: "138132284"
    | 宛先サービス タグ | **[インターネット]** を選びます       |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
+   | プロトコル                | Any                       |
    | アクション                  | 拒否                      |
    | Priority                | 110                       |
    | Name                    | Deny-Internet-All         |
@@ -202,7 +202,7 @@ ms.locfileid: "138132284"
    | **設定**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | サブスクリプション   | サブスクリプションを選択します。                                     |
-   | リソース グループ | myResourceGroup                                              |
+   | Resource group | myResourceGroup                                              |
    | 名前           | 「contosostoragexx」と入力します (固有なものにするため、xx は、ご自分のイニシャルに置き換えてください) |
    | パフォーマンス    | Standard StorageV2 (汎用 v2)                      |
    | 場所       | [米国東部] を選択します。                                               |
@@ -249,7 +249,7 @@ ms.locfileid: "138132284"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**VMs.json** と **VMs.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M07** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**VMs.json** と **VMs.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M07** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 

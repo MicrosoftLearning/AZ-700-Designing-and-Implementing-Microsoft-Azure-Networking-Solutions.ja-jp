@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
   module: 'Module - Design and implement network security '
-ms.openlocfilehash: ed65009faa624ee3c7f50caefa33aa9abed2af21
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: ae9bb7d64103b1a04003cb7b1bce42f2e99fadde
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422797"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742000"
 ---
 # <a name="m06-unit-7-deploy-and-configure-azure-firewall-using-the-azure-portal"></a>M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
 
@@ -97,7 +97,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**firewall.json** と **firewall.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M06** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**firewall.json** と **firewall.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M06** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -183,7 +183,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
    | ゲートウェイのルートを伝達する | **あり**                  |
 
 
-4. **[Review + create]\(レビュー + 作成\)** をクリックします。
+4. **[Review + create](レビュー + 作成)** をクリックします。
 
 5. **Create** をクリックしてください。
 

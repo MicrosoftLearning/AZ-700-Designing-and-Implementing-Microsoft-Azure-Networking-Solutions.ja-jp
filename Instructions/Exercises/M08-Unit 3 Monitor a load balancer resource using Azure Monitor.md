@@ -2,12 +2,12 @@
 Exercise:
   title: M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
   module: Module - Design and implement network monitoring
-ms.openlocfilehash: 89bd32ceea640043e28d2aabfe1e448562468e16
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: eefc2e8d1e6092b133c9409cdbdd8635edd1bed6
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132293"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741997"
 ---
 # <a name="m08-unit-3-monitor-a-load-balancer-resource-using-azure-monitor"></a>M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
 
@@ -79,7 +79,7 @@ ms.locfileid: "138132293"
     | AzureBastionSubnet のアドレス空間  | **10.1.1.0/24**                                        |
     | パブリック IP アドレス                 | **[新規作成]** を選択します<br /><br />名前: **myBastionIP** |
 
-12. **[Review + create]\(レビュー + 作成\)** をクリックします。
+12. **[Review + create](レビュー + 作成)** をクリックします。
 
 13. **Create** をクリックしてください。
 
@@ -105,12 +105,13 @@ ms.locfileid: "138132293"
    | SKU                   | **Standard**             |
    | Type                  | **内部**             |
    | フロントエンド IP 構成タブ | + フロントエンド IP 構成の追加 |
+   | 名前                  | **LoadBalancerFrontEnd** |
    | 仮想ネットワーク       | **IntLB-VNet**           |
    | Subnet                | **myBackendSubnet**      |
    | IP アドレスの割り当て | **動的**              |
 
 
-4. **[Review + create]\(レビュー + 作成\)** をクリックします。
+4. **[Review + create](レビュー + 作成)** をクリックします。
 
 
 5. **Create** をクリックしてください。
@@ -194,7 +195,7 @@ ms.locfileid: "138132293"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json**、**azuredeploy.parameters.vm1.json**、**azuredeploy.parameters.vm2.json**、および **azuredeploy.parameters.vm3.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M08** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json**、**azuredeploy.parameters.vm1.json**、**azuredeploy.parameters.vm2.json**、および **azuredeploy.parameters.vm3.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M08** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワーク、サブネット、VM を作成します。
 
@@ -279,7 +280,7 @@ ms.locfileid: "138132293"
    | ネットワーク セキュリティ グループを構成する                             | 既存の **[myNSG]** を選択します |
    | この仮想マシンを既存の負荷分散ソリューションの後ろに配置しますか? | **[オフ]** (チェック解除)           |
 
-5. **[Review + create]\(レビュー + 作成\)** をクリックします。
+5. **[Review + create](レビュー + 作成)** をクリックします。
 
 6. **Create** をクリックしてください。
 

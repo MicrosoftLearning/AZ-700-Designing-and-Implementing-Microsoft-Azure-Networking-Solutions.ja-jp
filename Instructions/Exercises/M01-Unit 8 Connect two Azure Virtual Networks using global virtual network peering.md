@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 934ebb601aa0fb8a66b9493d1cb4b5d913005482
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: fc423941d69e8a4c4d166aa6896c10506fe239eb
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422791"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742039"
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
 
@@ -31,7 +31,7 @@ ms.locfileid: "138422791"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**ManufacturingVMazuredeploy.json** および **ManufacturingVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**ManufacturingVMazuredeploy.json** および **ManufacturingVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -111,7 +111,7 @@ ms.locfileid: "138422791"
 | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
 | この仮想ネットワーク                 |                                               |                                       |
 |                                      | [Peering link name]\(ピアリング リンク名\)                             | CoreServicesVnet-to-ManufacturingVnet |
-|                                      | [Traffic to remote virtual network]\(リモート仮想ネットワークへのトラフィック\)             | 許可 (既定)                       |
+|                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
 |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
 |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
 | リモート仮想ネットワーク               |                                               |                                       |
@@ -120,7 +120,7 @@ ms.locfileid: "138422791"
 |                                      | リソース ID を知っている                         | オフ                          |
 |                                      | サブスクリプション                                  | MOC Subscription-lodxxxxxxxx          |
 |                                      | 仮想ネットワーク                               | ManufacturingVnet                     |
-|                                      | [Traffic to remote virtual network]\(リモート仮想ネットワークへのトラフィック\)             | 許可 (既定)                       |
+|                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
 |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
 |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
 | 設定を確認し、[追加] を選択します。 |                                               |                                       |

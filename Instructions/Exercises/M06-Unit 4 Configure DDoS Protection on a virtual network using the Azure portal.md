@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
   module: Module - Design and implement network security
-ms.openlocfilehash: 8a0e95de6a9dc9cdb26a13fd71719769c9715e95
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: e8ad8b1a640391e4393082999d50ed36dcc561ac
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422800"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742015"
 ---
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
 
@@ -175,7 +175,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
    | キーの組名         | **myvirtualmachine-ssh-key**                                 |
 
 
-4. **[Review + create]\(レビュー + 作成\)** をクリックします。
+4. **[Review + create](レビュー + 作成)** をクリックします。
 
 5. **Create** をクリックしてください。
 
@@ -189,7 +189,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 1. 新しい仮想マシンの **[概要]** ページで、**[設定]** の下にある **[ネットワーク]** をクリックします。
 
-2. **[ネットワーク インターフェイス]** の横にある **[myvirtualmachine-nic]** をクリックします。
+2. **[ネットワーク インターフェイス]** の横にある **[myvirtualmachine-nic]** をクリックします。 NIC の名前は異なる場合があります。
 
 3. **[設定]** で **[IP 構成]** をクリックします。
 

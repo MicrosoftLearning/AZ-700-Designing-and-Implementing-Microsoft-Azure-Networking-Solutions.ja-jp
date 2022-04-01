@@ -2,12 +2,12 @@
 Exercise:
   title: M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 85db6e283f4b1bfb8f57c110d3d3eadd9af2d755
-ms.sourcegitcommit: f63ebaa31399a7b2b37abc32ed64f24f3d40608c
+ms.openlocfilehash: be0108387a6618c00d5e950d6065a286d5694fc5
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2022
-ms.locfileid: "138028508"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741991"
 ---
 # <a name="m02-unit-3-create-and-configure-a-virtual-network-gateway"></a>M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "138028508"
 
 1. Azure portal で、**[Cloud Shell]** ウィンドウ内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルを Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルを Cloud Shell のホーム ディレクトリにアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワークとサブネットを作成します。
 
@@ -46,7 +46,7 @@ ms.locfileid: "138028508"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**CoreServicesVMazuredeploy.json** および **CoreServicesVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**CoreServicesVMazuredeploy.json** および **CoreServicesVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -64,7 +64,7 @@ ms.locfileid: "138028508"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ウィンドウのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**ManufacturingVMazuredeploy.json** および **ManufacturingVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**ManufacturingVMazuredeploy.json** および **ManufacturingVMazuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -137,9 +137,9 @@ ms.locfileid: "138028508"
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
+   |                 |                   | パブリック IP アドレスの種類                      | 基本                        |
    |                 | パブリック IP アドレス | パブリック IP アドレス                           | 新規作成                   |
    |                 |                   | パブリック IP アドレス名                      | CoreServicesVnetGateway-ip   |
-   |                 |                   | パブリック IP アドレスの SKU                       | Basic                        |
    |                 |                   | アクティブ/アクティブ モードの有効化                   | 無効                     |
    |                 |                   | BGP の構成                               | 無効                     |
    | [確認および作成] |                   | 設定を確認し、 **[作成]** を選択します。 |                              |
@@ -168,9 +168,9 @@ ms.locfileid: "138028508"
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
+   |                 |                   | パブリック IP アドレスの種類                      | 基本                        |
    |                 | パブリック IP アドレス | パブリック IP アドレス                           | 新規作成                   |
    |                 |                   | パブリック IP アドレス名                      | ManufacturingVnetGateway-ip  |
-   |                 |                   | パブリック IP アドレスの SKU                       | Basic                        |
    |                 |                   | アクティブ/アクティブ モードの有効化                   | 無効                     |
    |                 |                   | BGP の構成                               | 無効                     |
    | [確認および作成] |                   | 設定を確認し、 **[作成]** を選択します。 |                              |

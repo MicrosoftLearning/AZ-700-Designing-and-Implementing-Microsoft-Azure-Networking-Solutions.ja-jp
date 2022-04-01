@@ -2,12 +2,12 @@
 Exercise:
   title: M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: d89f695085ff1284fa2a94e3875049a0619acaac
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: 007d533a77a0f8f71d6d38989b4da59664776d18
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819830"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741988"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
 
@@ -67,7 +67,7 @@ ms.locfileid: "137819830"
 6. **[サイト間]** タブで、次のフィールドを入力します。
    - **サイト間 (VPN Gateway) を作成しますか?:** はい
    - **[AS 番号]** フィールドは編集できません。
-   - **ゲートウェイ スケール ユニット:** 1 スケール ユニット = 500 Mbps
+   - **ゲートウェイのスケール ユニット:** 1 スケール ユニット = 500 Mbps x 2
 7. **[確認と作成]** を選択して検証します。
 8. **[作成]** を選択してハブを作成します。 
 9. 30 分後に **[更新]** を実行して、 [ハブ] ページでハブを確認します。 

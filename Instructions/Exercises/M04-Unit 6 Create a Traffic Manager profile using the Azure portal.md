@@ -2,12 +2,12 @@
 Exercise:
   title: M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 0dc408c246bd44c0c0f3b6ca7de77a8db9e39f69
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: 1d04de9c9710cc452220b1f6c6cecc39ff130810
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132290"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742006"
 ---
 # <a name="m04-unit-6-create-a-traffic-manager-profile-using-the-azure-portal"></a>M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
 
@@ -158,7 +158,7 @@ ms.locfileid: "138132290"
 
 3. Web ブラウザーのタブを開き、**DNS 名** のエントリ (contoso-tmprofile.trafficmanager.net) をアドレス バーに貼り付け (または入力して)、Enter キーを押します。
 
-4. その Web アプリの既定の Web サイトが表示されます。
+4. その Web アプリの既定の Web サイトが表示されます。 " **404 Web サイトが見つかりません**" というメッセージが表示された場合は、**Contoso-TMProfilexx** Traffic Manager のプロファイルの概要ページから **プロファイルを無効化** し、**プロファイルを有効化** します。 その後、Web ページを更新します。
 
    ![画像 24](../media/tm-webapp-test-1a.png)
 
@@ -192,6 +192,7 @@ ms.locfileid: "138132290"
    ```powershell
 
    Remove-AzResourceGroup -Name 'Contoso-RG-TM1' -Force -AsJob
+   Remove-AzResourceGroup -Name 'Contoso-RG-TM2' -Force -AsJob
 
    ```
 

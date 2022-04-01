@@ -2,12 +2,12 @@
 Exercise:
   title: M03-ユニット 4 ExpressRoute ゲートウェイを構成する
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: 2fcf6237ccdedff405f20999dfcfb4aa6027d1ed
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: 27ff95d931a6ec26dc892af0965158157cabac31
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819584"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742036"
 ---
 # <a name="m03-unit-4-configure-an-expressroute-gateway"></a>M03-ユニット 4 ExpressRoute ゲートウェイを構成する
 
@@ -73,14 +73,16 @@ ms.locfileid: "137819584"
 
 1. Azure portal ページの「**リソース、サービス、ドキュメントの検索 (G+/)** 」で、仮想ネットワークと入力し、結果から「**仮想ネットワーク ゲートウェイ**」を選択します。
 
-2. **[仮想ネットワーク ゲートウェイの作成]** ページで、次の表の情報を使用してゲートウェイを作成します。
+2. [仮想ネットワーク ゲートウェイ] ページで、 **[+ 作成]** を選択します。
+
+3. **[仮想ネットワーク ゲートウェイの作成]** ページで、次の表の情報を使用してゲートウェイを作成します。
 
    | **設定**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **プロジェクトの詳細**       |                            |
    | リソース グループ            | ContosoResourceGroup       |
    | **インスタンスの詳細**      |                            |
-   | Name                      | CoreServicesVnetGateway    |
+   | 名前                      | CoreServicesVnetGateway    |
    | リージョン                    | 米国東部                    |
    | ゲートウェイの種類              | ExpressRoute               |
    | SKU                       | Standard                   |
@@ -91,11 +93,11 @@ ms.locfileid: "137819584"
    | パブリック IP アドレスの SKU     | Basic                      |
    | 割り当て                | 構成できません。           |
    
-3. **[確認および作成]** を選択します。
+4. **[確認および作成]** を選択します。
 
-4. ゲートウェイの構成が検証に合格することを確認してから、**[作成]** を選択します。
+5. ゲートウェイの構成が検証に合格することを確認してから、**[作成]** を選択します。
 
-5. デプロイが完了したら、**[リソースに移動]** を選択します
+6. デプロイが完了したら、**[リソースに移動]** を選択します
 
 > [!Note] 
 >
