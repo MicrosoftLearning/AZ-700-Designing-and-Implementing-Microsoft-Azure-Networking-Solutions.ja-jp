@@ -2,12 +2,12 @@
 Exercise:
   title: M05-ユニット 4 Azure Application Gateway をデプロイする
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: bb7e4a9d6c91177afa8b22c127bc56d61f95ebd3
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 4a69cd20079b32de6219049a3127d146a26386c4
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741994"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102110"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-ユニット 4 Azure Application Gateway をデプロイする
  
@@ -96,7 +96,7 @@ ms.locfileid: "140741994"
 
 19. **[リスナー]** タブの他の設定に対しては、既定値をそのまま使用します。
 
-    ![Azure portal は Application Gateway ルーティング規則を追加する](../media/routing-rule-listener-tab.png)
+    ![Azure portal は Application Gateway ルーティング規則を追加する](../media/Routing-rule-listener-tab.png)
 
 20. **[バックエンド ターゲット]** タブを選択して、残りのルーティング規則を構成します。
 
@@ -105,7 +105,7 @@ ms.locfileid: "140741994"
     | **設定**   | **Value**      |
     | ------------- | -------------- |
     | 変換後の型   | バックエンド プール   |
-    | HTTP 設定 | **新規作成** |
+    | HTTP 設定 | **[新規追加]** |
 
 22. **[HTTP 設定の追加]** で、次の情報を入力または選択します。
 
