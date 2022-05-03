@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 6 Azure で DNS 設定を構成する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 6224b77917ee7631ec709773edc866ffc19b85b0
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 9e273579568e8ae32eb241ad7c8cefe67258a062
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742042"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102105"
 ---
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - ユニット 6 Azure で DNS 設定を構成する
 
@@ -105,6 +105,8 @@ ms.locfileid: "140742042"
 このセクションでは、2 つのテスト VM を作成して、プライベート DNS ゾーンの構成をテストします。
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+    
+    > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
 
 2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンを選択し、ドロップダウン メニューで [アップロード] を選択して、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
