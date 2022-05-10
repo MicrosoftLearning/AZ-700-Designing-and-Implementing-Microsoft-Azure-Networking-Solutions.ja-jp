@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: fc423941d69e8a4c4d166aa6896c10506fe239eb
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: dfa6acdc6e3e2ad25d50cb20e9deccdf7f73b1ba
+ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742039"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "141348851"
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
 
@@ -126,6 +126,7 @@ ms.locfileid: "140742039"
 | 設定を確認し、[追加] を選択します。 |                                               |                                       |
 |                                      |                                               |                                       |
 
+ >**注**:"MOC サブスクリプション" をお持ちでない場合は、以前に使用したサブスクリプションを使用してください。 それは単なる名前です。
 
 5. [CoreServicesVnet | ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。
 

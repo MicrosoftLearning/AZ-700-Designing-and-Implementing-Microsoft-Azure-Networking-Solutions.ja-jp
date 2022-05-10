@@ -2,12 +2,12 @@
 Exercise:
   title: M03-ユニット 5 ExpressRoute 回線のプロビジョニング
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: cf7a0c4f6c7a17d7b67d75bf661a1a7a4781084c
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: baf6ccb5c164b867b31225fbe78758e834df6c6e
+ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819971"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "141348857"
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
@@ -15,7 +15,6 @@ ms.locfileid: "137819971"
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/environment-diagram.png)
 
-ExpressRoute 回線を作成する方法のデモを見るには、「[Azure ExpressRoute - ExpressRoute 回線を作成する方法 | Azure |Channel 9 (msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15)」を参照してください。
 
 
 この演習では、以下のことを行います。
@@ -43,6 +42,11 @@ ExpressRoute 回線を作成する方法のデモを見るには、「[Azure Exp
 3. 「**ExpressRoute の作成**」ページで、回線の **リソース グループ**、**リージョン**、**名前** を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
 
 4. このページで値を入力するときには、正しい SKU レベル (Local、Standard、または Premium) と、データ使用状況測定の課金モデル (無制限または従量制) を必ず指定してください。
+
+5. **[確認および作成]** を選択します。
+
+6. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
+
 
 ![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration.png)
 

@@ -2,12 +2,12 @@
 Exercise:
   title: M04-ユニット 4 Azure Load Balancer を作成および構成する
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 1c34cac1a578662e40265f387b4579b6171b4d13
-ms.sourcegitcommit: 3aeb76a0ac28b33b6edc61365b303f5b0252a3c2
+ms.openlocfilehash: f88f70aa0a753425a9c93ac37d034d26ea7685d4
+ms.sourcegitcommit: 349c82964aa36c0f69cfaf6a0b36ad8bb0017f06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2022
-ms.locfileid: "137860530"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "141483588"
 ---
 # <a name="m04-unit-4-create-and-configure-an-azure-load-balancer"></a>M04-ユニット 4 Azure Load Balancer を作成および構成する
 
@@ -81,9 +81,9 @@ ms.locfileid: "137860530"
 
 1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、azuredeploy.json、azuredeploy.parameters.vm1.json、azuredeploy.parameters.vm2.json、azuredeploy.parameters.vm3.json の各ファイルを Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、azuredeploy.json、azuredeploy.parameters.vm1.json、azuredeploy.parameters.vm2.json、azuredeploy.parameters.vm3.json の各ファイルを Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
-3. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワーク、サブネット、VM を作成します。
+3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
    ```powershell
    $RGName = "IntLB-RG"
@@ -92,6 +92,8 @@ ms.locfileid: "137860530"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
+
+これらの 3 つの VM の作成には 5 分から 10 分かかる場合があります。 このジョブが完了するまで待つ必要はありません。すぐに次のタスクを続行できます。
 
 ## <a name="task-3-create-the-load-balancer"></a>タスク 3: ロード バランサーを作成する
 
@@ -103,8 +105,7 @@ ms.locfileid: "137860530"
 
 3. 結果ページで、**[ロード バランサー]** (名前の下に "Microsoft" と "Azure Service" と表示されているもの) を見つけ、選択します。
 
-4. **[作成]** をクリックします。
-   ![画像 3](../media/create-load-balancer-4.png)
+4. **Create** をクリックしてください。
 
 5. **[基本]** タブで、以下の表の情報を使用して、ロード バランサーを作成します。
 
@@ -112,7 +113,7 @@ ms.locfileid: "137860530"
    | --------------------- | ------------------------ |
    | サブスクリプション          | サブスクリプションを選択します。 |
    | Resource group        | **IntLB-RG**             |
-   | Name                  | **myIntLoadBalancer**    |
+   | 名前                  | **myIntLoadBalancer**    |
    | リージョン                | **(米国) 米国東部**         |
    | Type                  | **内部**             |
    | SKU                   | **Standard**             |
@@ -120,7 +121,7 @@ ms.locfileid: "137860530"
 
 6. **[次へ: フロントエンド IP 構成]** をクリックします。
 7. [フロントエンド IP の追加] をクリックします。
-8. **[フロントエンド IP アドレスの追加]** ウィンドウで、以下の表の情報を入力します。
+8. **[フロントエンド IP アドレスの追加]** ブレードで、次の表の情報を入力し、 **[追加]** を選びます。
  
    | **設定**     | **Value**                |
    | --------------- | ------------------------ |
@@ -129,7 +130,7 @@ ms.locfileid: "137860530"
    | Subnet          | **myFrontEndSubnet**     |
    | 割り当て      | **動的**              |
 
-9. **[Review + create]\(レビュー + 作成\)** をクリックします。
+9. **[Review + create](レビュー + 作成)** をクリックします。
 
 10. **Create** をクリックしてください。
 
@@ -223,7 +224,7 @@ ms.locfileid: "137860530"
 
 ### <a name="create-test-vm"></a>テスト VM を作成する
 
-1. Azure portal のホーム ページで、**[リソースの作成]**、**[Compute]** の順にクリックし、**[仮想マシン]** を選択します (このリソースの種類がページに表示されていない場合は、ページの上部にある [検索] ボックスを使用してそれを検索し、選択します)。
+1. Azure portal のホーム ページで、 **[リソースの作成]** 、 **[仮想]** の順にクリックし、 **[仮想マシン]** を選択します (このリソースの種類がページに表示されていない場合は、ページの上部にある [検索] ボックスを使用してそれを検索し、選択します)。
 
 2. **[仮想マシンの作成]** ページの **[基本]** タブで、以下の表の情報を使用して最初の VM を作成します。
 
@@ -234,7 +235,7 @@ ms.locfileid: "137860530"
    | 仮想マシン名 | **myTestVM**                                 |
    | リージョン               | **(米国) 米国東部**                             |
    | 可用性のオプション | **インフラストラクチャの冗長性は必要ありません**    |
-   | Image                | **[Windows Server 2019 Datacenter - Gen 1]**   |
+   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | サイズ                 | **Standard_DS2_v3 - 2 vcpu、8 GiB メモリ** |
    | ユーザー名             | **TestUser**                                 |
    | Password             | **TestPa$$w0rd!**                            |
@@ -255,7 +256,7 @@ ms.locfileid: "137860530"
    | この仮想マシンを既存の負荷分散ソリューションの後ろに配置しますか? | **[オフ]** (チェック解除)           |
 
 
-5. **[Review + create]\(レビュー + 作成\)** をクリックします。
+5. **[Review + create](レビュー + 作成)** をクリックします。
 
 6. **Create** をクリックしてください。
 
@@ -273,7 +274,7 @@ ms.locfileid: "137860530"
 
 5. **[Bastion を使用する]** をクリックします。
 
-6. **[ユーザー名]** ボックスに「**TestUser**」と入力し、**[パスワード]** ボックスに「**TestPa$$w0rd!**」と入力して、**[接続]** をクリックします。
+6. **[ユーザー名]** ボックスに「**TestUser**」と入力し、**[パスワード]** ボックスに「**TestPa$$w0rd!**」と入力して、**[接続]** をクリックします。 ポップアップ ブロッカーにより新しいウィンドウが開かれないようになっている場合は、ポップアップ ブロッカーで許可し、もう一度 **[接続]** をクリックします。
 
 7. **[myTestVM]** ウィンドウが別のブラウザー タブで開きます。
 
