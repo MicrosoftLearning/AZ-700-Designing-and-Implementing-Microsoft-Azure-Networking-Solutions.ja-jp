@@ -77,22 +77,28 @@ ms.locfileid: "137860535"
 
 2 つの Web アプリ サーバーのうち待ち時間が短い方にユーザー トラフィックを誘導するように Azure Front Door を構成します。 最初に、Azure Front Door のフロントエンド ホストを追加します。
 
-1. Azure portal ページの「**リソース、サービス、ドキュメントの検索 (G+/)** 」で、Front Doors と入力し、結果から「**Front Doors**」を選択します。
+1. Azure portal ページの「**リソース、サービス、ドキュメントの検索 (G+/)** 」で、Front Door と入力し、結果から「**Front Door と CDN プロファイル**」を選択します。
 
-   ![Azure portal で Front Door を検索する](../media/search-front-door.png)
+1. [Front Door と CDN プロファイル] ページで、**[+ 作成]** を選択します。
 
-2. [フロント ドア] ページで、**[+ 作成]** を選択します。
+1. [オファリングの比較] ページで **[簡易作成]**が選択されていることを確認して **[reate front door and CDN profiles]** を選択します。
 
-3. [Create a Front Door]\(フロント ドアの作成\) で、次の情報を入力または選択します。
+1. [Create a Front Door]\(フロント ドアの作成\) で、次の情報を入力または選択します。
 
-   | **設定**             | **Value**                                    |
+   | **Setting**             | **Value**                                    |
    | ----------------------- | -------------------------------------------- |
-   | サブスクリプション            | サブスクリプションを選択します。                    |
-   | Resource group          | [ContosoResourceGroup] を選択します                  |
-   | リソース グループの場所 | 既定の設定を使用します                       |
+   | サブスクリプション      | サブスクリプションを選択します。                  |
+   | リソースグループ        | リソース グループ ContosoResourceGroup を選択する                  |
+   | リソースグループの場所  | デフォルトの場所を受け入れます                   |
+   | 名前                    | サブスクリプションの中で一意の名前を入力します。   |
+   | レベル                    | Standard   |
+   | エンドポイント名          | FDendpoint   |
+   | 配信元の種類             | App Services| 
+   | 配信元のホスト名       | 先の手順でデプロイした Web App の名前 |
 
-4. **[Next:構成]** を選択します。
+1. **[確認及び作成]** を選択した後、 **[作成]**を選択します。
 
+## Task 3: View Azure Front Door in action
 5. [構成] タブの **[Frontends/domains]\(フロントエンド/ドメイン\)** で、**+** を選択してフロントエンド ホストを追加します。
 
    ![[Create a Front Door]\(フロント ドアの作成\) でフロントエンド/ドメインを追加する](../media/add-frontends-domains.png)
