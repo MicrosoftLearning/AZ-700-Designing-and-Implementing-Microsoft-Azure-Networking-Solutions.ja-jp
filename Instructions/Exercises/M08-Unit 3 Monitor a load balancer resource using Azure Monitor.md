@@ -2,12 +2,12 @@
 Exercise:
   title: M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
   module: Module - Design and implement network monitoring
-ms.openlocfilehash: 6ba86eb68ad8e343bfe693cef6a8a3c882a24dda
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: ce86fe207223424b4407f3e9986ad76965f819c5
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102117"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922312"
 ---
 # <a name="m08-unit-3-monitor-a-load-balancer-resource-using-azure-monitor"></a>M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
 
@@ -37,6 +37,8 @@ ms.locfileid: "144102117"
 + タスク 15: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-55-minutes"></a>推定時間: 55 分
 
 ## <a name="task-1-create-the-virtual-network"></a>タスク 1: 仮想ネットワークを作成する
 

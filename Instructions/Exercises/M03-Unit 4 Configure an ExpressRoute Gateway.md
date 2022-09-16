@@ -2,18 +2,21 @@
 Exercise:
   title: M03-ユニット 4 ExpressRoute ゲートウェイを構成する
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: 27ff95d931a6ec26dc892af0965158157cabac31
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: af79e4be86e2b89c20338b9cb66ddaa5a94b1f5e
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742036"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922336"
 ---
 # <a name="m03-unit-4-configure-an-expressroute-gateway"></a>M03-ユニット 4 ExpressRoute ゲートウェイを構成する
 
 ## <a name="deploy-expressroute-gateways"></a>ExpressRoute ゲートウェイをデプロイする
 
 お使いの Azure 仮想ネットワークとオンプレミス ネットワークを ExpressRoute 経由で接続するには、最初に仮想ネットワーク ゲートウェイを作成する必要があります。 仮想ネットワーク ゲートウェイには 2 つの目的があります。ネットワーク間で IP ルートを交換することと、ネットワーク トラフィックをルーティングすることです。 
+
+
+#### <a name="estimated-time-60-minutes-includes-45-minutes-deployment-waiting-time"></a>推定時間: 60 分 (最大 45 分のデプロイ待機時間を含む)
 
 **ゲートウェイの種類**
 

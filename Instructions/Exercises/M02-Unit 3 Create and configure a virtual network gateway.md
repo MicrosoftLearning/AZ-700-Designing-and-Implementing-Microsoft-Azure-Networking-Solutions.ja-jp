@@ -2,12 +2,12 @@
 Exercise:
   title: M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: be0108387a6618c00d5e950d6065a286d5694fc5
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 55c62023ebcc5f30e69649dca4a027f8d69878ac
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741991"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922342"
 ---
 # <a name="m02-unit-3-create-and-configure-a-virtual-network-gateway"></a>M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
 
@@ -27,11 +27,13 @@ ms.locfileid: "140741991"
 + タスク 10: 接続が接続されていることを確認する 
 + タスク 11: VM 間の接続をテストする
 
+#### <a name="estimated-time-70-minutes-including-45-minutes-deployment-waiting-time"></a>推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
+
 ## <a name="task-1-create-coreservicesvnet-and-manufacturingvnet"></a>タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 
 1. Azure portal で、**[Cloud Shell]** ウィンドウ内に **PowerShell** セッションを開きます。
 
-2. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルを Cloud Shell のホーム ディレクトリにアップロードします。
+2. [Cloud Shell] ペインのツール バーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、**azuredeploy.json** および **azuredeploy.parameters.json** の各ファイルをソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワークとサブネットを作成します。
 

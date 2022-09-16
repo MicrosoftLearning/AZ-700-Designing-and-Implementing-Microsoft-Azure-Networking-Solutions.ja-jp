@@ -2,12 +2,12 @@
 Exercise:
   title: M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 165f6023aaee74ce370f319cda493ce9eb87251a
-ms.sourcegitcommit: 99cea7fefa7a89521d4d01338bbad396bc6411cf
+ms.openlocfilehash: 3dd388f4bed463f4e982e848bcec7e15598482a1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "146111070"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922378"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
 
@@ -27,6 +27,8 @@ ms.locfileid: "146111070"
 + タスク 9: 仮想マシンを作成する
 + タスク 10: ストレージ アカウントへのアクセスを確認する
 + タスク 11: リソースをクリーンアップする
+
+#### <a name="estimated-time-35-minutes"></a>推定時間: 35 分
 
 ## <a name="task-1-create-a-virtual-network"></a>タスク 1: 仮想ネットワークを作成する
 

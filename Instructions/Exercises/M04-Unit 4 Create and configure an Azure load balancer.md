@@ -2,16 +2,18 @@
 Exercise:
   title: M04-ユニット 4 Azure Load Balancer を作成および構成する
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: f88f70aa0a753425a9c93ac37d034d26ea7685d4
-ms.sourcegitcommit: 349c82964aa36c0f69cfaf6a0b36ad8bb0017f06
+ms.openlocfilehash: f3125fa7a5fafa5a1894ccd18b1430cb1055028d
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "141483588"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922327"
 ---
 # <a name="m04-unit-4-create-and-configure-an-azure-load-balancer"></a>M04-ユニット 4 Azure Load Balancer を作成および構成する
 
 この演習では、架空の組織 Contoso Ltd. 用の内部ロード バランサーを作成します。 
+
+#### <a name="estimated-time-60-minutes-includes-45-minutes-deployment-waiting-time"></a>推定時間: 60 分 (最大 45 分のデプロイ待機時間を含む)
 
 内部ロード バランサーを作成する手順は、このモジュールで既に学習した、パブリック ロード バランサーを作成する手順とよく似ています。 主な違いは、パブリック ロード バランサーでは、フロントエンドにはパブリック IP アドレスを使用してアクセスされ、仮想ネットワークの外部に配置されているホストから接続をテストしますが、一方で内部ロード バランサーでは、フロントエンドは仮想ネットワーク内のプライベート IP アドレスであり、同じネットワーク内のホストから接続をテストします。
 
@@ -126,9 +128,10 @@ ms.locfileid: "141483588"
    | **設定**     | **Value**                |
    | --------------- | ------------------------ |
    | 名前            | **LoadBalancerFrontEnd** |
-   | 仮想ネットワーク | **IntLB-VNet**           |
-   | Subnet          | **myFrontEndSubnet**     |
-   | 割り当て      | **動的**              |
+   | IP バージョン      | **IPv4**           |
+   | IP の種類         | **IP アドレス (IP address)**     |
+   | パブリック IP アドレス      | **myFrontEndIP** という名前で **[新規作成]**             |
+   | Azure Gateway Load Balancer  | **なし**  |
 
 9. **[Review + create](レビュー + 作成)** をクリックします。
 
@@ -253,7 +256,7 @@ ms.locfileid: "141483588"
    | パブリック IP                                                    | **[なし]** に変更する            |
    | NIC ネットワーク セキュリティ グループ                                   | **詳細**                  |
    | ネットワーク セキュリティ グループを構成する                             | 既存の **[myNSG]** を選択します |
-   | この仮想マシンを既存の負荷分散ソリューションの後ろに配置しますか? | **[オフ]** (チェック解除)           |
+   | 負荷分散のオプション                                       | **なし**                      |
 
 
 5. **[Review + create](レビュー + 作成)** をクリックします。

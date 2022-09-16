@@ -2,12 +2,12 @@
 Exercise:
   title: M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: cdba2b4a3439d6903030352de15166c030ad2f3e
-ms.sourcegitcommit: 2b9d6e12ebe29bbf543d2f0b88f4caefc7fa91ce
+ms.openlocfilehash: 0d1cdaad19959b5c284618d3e55c2a0c7068e9b1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "147098036"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922321"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
 
@@ -22,6 +22,8 @@ ms.locfileid: "147098036"
 + タスク 4: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-65-minutes-including-45-minutes-deployment-waiting-time"></a>推定時間: 65 分 (最大 45 分のデプロイ待機時間を含む)
 
 ## <a name="task-1-create-a-virtual-wan"></a>タスク 1: Virtual WAN を作成する
 
