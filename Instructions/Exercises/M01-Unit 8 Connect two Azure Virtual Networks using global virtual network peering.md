@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: dfa6acdc6e3e2ad25d50cb20e9deccdf7f73b1ba
-ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
+ms.openlocfilehash: d93ebe915fbdf9b4e7acd69695e3de3ea214f7c3
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "141348851"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922372"
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
 
@@ -22,6 +22,8 @@ ms.locfileid: "141348851"
 + タスク 4: CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
 + タスク 5: VM 間の接続をテストする
 + タスク 6: リソースをクリーンアップする
+
+#### <a name="estimated-time-20-minutes"></a>推定時間:20 分
 
 ## <a name="task-1-create-a-virtual-machine-to-test-the-configuration"></a>タスク 1: 構成をテストするための仮想マシンを作成する
 
@@ -110,12 +112,12 @@ ms.locfileid: "141348851"
 | **セクション**                          | **オプション**                                    | **Value**                             |
 | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
 | この仮想ネットワーク                 |                                               |                                       |
-|                                      | [Peering link name]\(ピアリング リンク名\)                             | CoreServicesVnet-to-ManufacturingVnet |
+|                                      | [Peering link name](ピアリング リンク名)                             | CoreServicesVnet-to-ManufacturingVnet |
 |                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
 |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
 |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
 | リモート仮想ネットワーク               |                                               |                                       |
-|                                      | [Peering link name]\(ピアリング リンク名\)                             | ManufacturingVnet-to-CoreServicesVnet |
+|                                      | [Peering link name](ピアリング リンク名)                             | ManufacturingVnet-to-CoreServicesVnet |
 |                                      | 仮想ネットワークのデプロイ モデル              | Resource Manager                      |
 |                                      | リソース ID を知っている                         | オフ                          |
 |                                      | サブスクリプション                                  | MOC Subscription-lodxxxxxxxx          |

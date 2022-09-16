@@ -2,12 +2,12 @@
 Exercise:
   title: M05-ユニット 6 Azure portal を使用して高可用性 Web アプリケーションのフロント ドアを作成する
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: ae5346b27305d68779db54dad5496027a0adfec5
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: dbdd8fdccdea3ade0ae2d8f67b5b837a13fb94fa
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102102"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922363"
 ---
 # <a name="m05-unit-6-create-a-front-door-for-a-highly-available-web-application-using-the-azure-portal"></a>M05-ユニット 6 Azure portal を使用して高可用性 Web アプリケーションのフロント ドアを作成する
 
@@ -24,6 +24,8 @@ ms.locfileid: "144102102"
 + タスク 3: Azure Front Door の動作を確認する
 + タスク 4: リソースをクリーンアップする
 
+
+#### <a name="estimated-time-30-minutes"></a>予想所要時間: 30 分
 
 ## <a name="task-1-create-two-instances-of-a-web-app"></a>タスク 1: Web アプリの 2 つのインスタンスを作成する
 
@@ -47,7 +49,7 @@ ms.locfileid: "144102102"
    | オペレーティング システム | **[Windows]** を選択します。                                          |
    | リージョン           | **[米国中部]** を選択します。                                       |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanCentralUS」と入力します。 |
-   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory]\(Standard S1 合計 100 ACU、1.75 GB メモリ\)** を選択します。        |
+   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
 
 5. **[確認および作成]** を選択し、[概要] を確認して、**[作成]** を選択します。   
    ‎デプロイが完了するまでに数分かかる場合があります。
@@ -68,7 +70,7 @@ ms.locfileid: "144102102"
    | オペレーティング システム | **[Windows]** を選択します。                                          |
    | リージョン           | **[米国東部]** を選択します。                                          |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanEastUS」と入力します。 |
-   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory]\(Standard S1 合計 100 ACU、1.75 GB メモリ\)** を選択します。        |
+   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
 
 9. **[確認および作成]** を選択し、[概要] を確認して、**[作成]** を選択します。   
    ‎デプロイが完了するまでに数分かかる場合があります。

@@ -2,16 +2,18 @@
 Exercise:
   title: M03-ユニット 5 ExpressRoute 回線のプロビジョニング
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: baf6ccb5c164b867b31225fbe78758e834df6c6e
-ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
+ms.openlocfilehash: 9e65cbcb5b746b1b6a63139c9e7ee9973ddb8a5b
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "141348857"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922333"
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
 この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。 
+
+#### <a name="estimated-time-15-minutes"></a>推定時間:15 分
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/environment-diagram.png)
 

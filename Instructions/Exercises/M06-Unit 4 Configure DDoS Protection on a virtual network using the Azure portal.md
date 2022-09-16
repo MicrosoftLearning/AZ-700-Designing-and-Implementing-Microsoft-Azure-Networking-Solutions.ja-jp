@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
   module: Module - Design and implement network security
-ms.openlocfilehash: 3a6a7719f5f78198fe5215b6d0779752d0fbc848
-ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
+ms.openlocfilehash: a3d6752859f81544082d6aa40ca0d455d217d8f4
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "141348860"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922339"
 ---
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
 
@@ -25,6 +25,8 @@ Contoso のネットワーク セキュリティ チームを担当している�
 + タスク 8: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-40-minutes"></a>予想所要時間: 40 分
 
 ## <a name="task-1-create-a-resource-group"></a>タスク 1: リソース グループを作成する
 

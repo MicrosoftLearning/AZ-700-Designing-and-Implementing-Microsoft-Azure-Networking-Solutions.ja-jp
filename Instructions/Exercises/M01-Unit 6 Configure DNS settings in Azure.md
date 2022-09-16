@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 6 Azure で DNS 設定を構成する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 9e273579568e8ae32eb241ad7c8cefe67258a062
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: e6a21f21c87ff92e0e8a1a245d5b1fab477ce271
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102105"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922324"
 ---
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - ユニット 6 Azure で DNS 設定を構成する
 
@@ -21,6 +21,7 @@ ms.locfileid: "144102105"
 + タスク 3: 構成をテストするための仮想マシンを作成する
 + タスク 4: DNS ゾーンにレコードが存在することを確認する
 
+#### <a name="estimated-time-25-minutes"></a>推定時間: 25 分
 
 ## <a name="task-1-create-a-private-dns-zone"></a>タスク 1: プライベート DNS ゾーンを作成する
 

@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
   module: 'Module - Design and implement network security '
-ms.openlocfilehash: d5d875e379845d0fec8b9803b18b7b78bb4d385a
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: 95308e5da6b8e349047834d0fc1b97a360289f55
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102114"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922354"
 ---
 # <a name="m06-unit-7-deploy-and-configure-azure-firewall-using-the-azure-portal"></a>M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
 
@@ -27,6 +27,8 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 + タスク 10: ファイアウォールをテストする
 + タスク 11: リソースをクリーンアップする
 
+
+#### <a name="estimated-time-60-minutes"></a>予想所要時間: 60 分
 
 ## <a name="task-1-create-a-resource-group"></a>タスク 1: リソース グループを作成する
 

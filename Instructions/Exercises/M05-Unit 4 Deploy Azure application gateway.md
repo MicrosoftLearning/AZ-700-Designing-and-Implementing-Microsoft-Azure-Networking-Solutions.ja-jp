@@ -2,17 +2,19 @@
 Exercise:
   title: M05-ユニット 4 Azure Application Gateway をデプロイする
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: 4a69cd20079b32de6219049a3127d146a26386c4
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: 0f000687276a78991f2a88d7caeab7c5b7a32bcd
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102110"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922366"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-ユニット 4 Azure Application Gateway をデプロイする
  
 
 この演習では、Azure portal を使用してアプリケーション ゲートウェイを作成します。 さらに、それをテストし、正しく動作することを確認します。
+
+#### <a name="estimated-time-25-minutes"></a>推定時間: 25 分
 
 アプリケーション ゲートウェイは、アプリケーション Web トラフィックをバックエンド プール内の特定のリソースに転送します。 リスナーをポートに割り当て、ルールを作成し、リソースをバックエンド プールに追加します。 わかりやすくするために、この記事では、パブリック フロントエンド IP、アプリケーション ゲートウェイで単一サイトをホストするための基本リスナー、基本要求ルーティング規則、およびバックエンド プール内の 2 つの仮想マシンを使用する簡単な設定を使用します。
 
@@ -75,7 +77,7 @@ ms.locfileid: "144102110"
     | **設定**                      | **Value**   |
     | -------------------------------- | ----------- |
     | 名前                             | BackendPool |
-    | [Add backend pool without targets]\(ターゲットを持たないバックエンド プールを追加する\) | はい         |
+    | [Add backend pool without targets](ターゲットを持たないバックエンド プールを追加する) | はい         |
 
 13. **[バックエンド プールの追加]** ウィンドウで、 **[追加]** を選択してバックエンド プールの構成を保存し、 **[バックエンド]** タブに戻ります。
 
@@ -92,6 +94,7 @@ ms.locfileid: "144102110"
     | **設定**   | **Value**         |
     | ------------- | ----------------- |
     | リスナー名 | リスナー          |
+    | Priority      | **100**           |
     | フロントエンド IP   | **[Public]** を選択します |
 
 19. **[リスナー]** タブの他の設定に対しては、既定値をそのまま使用します。
