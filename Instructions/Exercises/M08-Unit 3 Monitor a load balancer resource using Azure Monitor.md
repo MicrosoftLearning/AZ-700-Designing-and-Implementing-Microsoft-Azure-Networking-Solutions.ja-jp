@@ -2,12 +2,12 @@
 Exercise:
   title: M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
   module: Module - Design and implement network monitoring
-ms.openlocfilehash: eefc2e8d1e6092b133c9409cdbdd8635edd1bed6
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: ce86fe207223424b4407f3e9986ad76965f819c5
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741997"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922312"
 ---
 # <a name="m08-unit-3-monitor-a-load-balancer-resource-using-azure-monitor"></a>M08 - ユニット 3 Azure Monitor を使用してロード バランサー リソースを監視する
 
@@ -37,6 +37,8 @@ ms.locfileid: "140741997"
 + タスク 15: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-55-minutes"></a>推定時間: 55 分
 
 ## <a name="task-1-create-the-virtual-network"></a>タスク 1: 仮想ネットワークを作成する
 
@@ -87,13 +89,10 @@ ms.locfileid: "140741997"
 
 このセクションでは、Standard SKU の内部ロード バランサーを作成します。 この演習で、Basic SKU のロード バランサーではなく、Standard SKU のロード バランサーを作成する理由は、後の演習で Standard SKU バージョンのロード バランサーが必要となるためです。
 
-1. Azure portal のホーム ページで、ページの上部ある検索ボックス内に「**ロード バランサー**」を入力し、[サービス] でロード バランサーを選択します。
-
-2. **[作成]** をクリックします。
-
-   ![Load Balancer の作成](../media/create-load-balancer-4.png)
-
-3. **[基本]** タブで、以下の表の情報を使用して、ロード バランサーを作成します。
+1.  Azure ホーム ページで、検索バーに「**Load Balancer**」と入力します。 
+2.  **[ロード バランサーの作成]** を選択します。
+3.  **[基本]** タブで、以下の表の情報を使用して、ロード バランサーを作成します。
+    
 
    | **設定**           | **Value**                |
    | --------------------- | ------------------------ |

@@ -2,17 +2,19 @@
 Exercise:
   title: M05-ユニット 4 Azure Application Gateway をデプロイする
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: bb7e4a9d6c91177afa8b22c127bc56d61f95ebd3
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 0f000687276a78991f2a88d7caeab7c5b7a32bcd
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741994"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922366"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-ユニット 4 Azure Application Gateway をデプロイする
  
 
 この演習では、Azure portal を使用してアプリケーション ゲートウェイを作成します。 さらに、それをテストし、正しく動作することを確認します。
+
+#### <a name="estimated-time-25-minutes"></a>推定時間: 25 分
 
 アプリケーション ゲートウェイは、アプリケーション Web トラフィックをバックエンド プール内の特定のリソースに転送します。 リスナーをポートに割り当て、ルールを作成し、リソースをバックエンド プールに追加します。 わかりやすくするために、この記事では、パブリック フロントエンド IP、アプリケーション ゲートウェイで単一サイトをホストするための基本リスナー、基本要求ルーティング規則、およびバックエンド プール内の 2 つの仮想マシンを使用する簡単な設定を使用します。
 
@@ -75,7 +77,7 @@ ms.locfileid: "140741994"
     | **設定**                      | **Value**   |
     | -------------------------------- | ----------- |
     | 名前                             | BackendPool |
-    | [Add backend pool without targets]\(ターゲットを持たないバックエンド プールを追加する\) | はい         |
+    | [Add backend pool without targets](ターゲットを持たないバックエンド プールを追加する) | はい         |
 
 13. **[バックエンド プールの追加]** ウィンドウで、 **[追加]** を選択してバックエンド プールの構成を保存し、 **[バックエンド]** タブに戻ります。
 
@@ -92,11 +94,12 @@ ms.locfileid: "140741994"
     | **設定**   | **Value**         |
     | ------------- | ----------------- |
     | リスナー名 | リスナー          |
+    | Priority      | **100**           |
     | フロントエンド IP   | **[Public]** を選択します |
 
 19. **[リスナー]** タブの他の設定に対しては、既定値をそのまま使用します。
 
-    ![Azure portal は Application Gateway ルーティング規則を追加する](../media/routing-rule-listener-tab.png)
+    ![Azure portal は Application Gateway ルーティング規則を追加する](../media/Routing-rule-listener-tab.png)
 
 20. **[バックエンド ターゲット]** タブを選択して、残りのルーティング規則を構成します。
 
@@ -105,7 +108,7 @@ ms.locfileid: "140741994"
     | **設定**   | **Value**      |
     | ------------- | -------------- |
     | 変換後の型   | バックエンド プール   |
-    | HTTP 設定 | **新規作成** |
+    | HTTP 設定 | **[新規追加]** |
 
 22. **[HTTP 設定の追加]** で、次の情報を入力または選択します。
 

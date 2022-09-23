@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
   module: Module - Design and implement network security
-ms.openlocfilehash: e8ad8b1a640391e4393082999d50ed36dcc561ac
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: a3d6752859f81544082d6aa40ca0d455d217d8f4
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742015"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922339"
 ---
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
 
@@ -25,6 +25,8 @@ Contoso のネットワーク セキュリティ チームを担当している�
 + タスク 8: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-40-minutes"></a>予想所要時間: 40 分
 
 ## <a name="task-1-create-a-resource-group"></a>タスク 1: リソース グループを作成する
 
@@ -233,7 +235,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
     ![アラート ルールに条件を追加します - シグナルのロジックを構成します](../media/add-condition-to-alert-rule-2.png)
 
-13. **[アラート ルールの作成]** ページに戻り、**[アラート ルールの詳細]** セクションまで下にスクロールして、**[アラート ルール名]** に「**MyDdosAlert**」と入力します。
+13. **[アラート ルールの作成]** ページに戻り、 **[アラート ルールの詳細]** セクションの **[アラート ルール名]** に「**MyDdosAlert**」と入力します。
 
     ![新しいアラート ルールの作成の終了点](../media/new-alert-rule-end.png)
 

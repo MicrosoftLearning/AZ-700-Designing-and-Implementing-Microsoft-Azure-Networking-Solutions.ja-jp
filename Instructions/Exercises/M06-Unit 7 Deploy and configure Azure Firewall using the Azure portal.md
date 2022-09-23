@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
   module: 'Module - Design and implement network security '
-ms.openlocfilehash: ae9bb7d64103b1a04003cb7b1bce42f2e99fadde
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 95308e5da6b8e349047834d0fc1b97a360289f55
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742000"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922354"
 ---
 # <a name="m06-unit-7-deploy-and-configure-azure-firewall-using-the-azure-portal"></a>M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
 
@@ -27,6 +27,8 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 + タスク 10: ファイアウォールをテストする
 + タスク 11: リソースをクリーンアップする
 
+
+#### <a name="estimated-time-60-minutes"></a>予想所要時間: 60 分
 
 ## <a name="task-1-create-a-resource-group"></a>タスク 1: リソース グループを作成する
 
@@ -209,7 +211,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 15. **[ネクスト ホップ アドレス]** に、前に記録したファイアウォールのプライベート IP アドレスを入力します (例: **10.0.1.4**)
 
-16. **[OK]** をクリックします。
+16. **[追加]** をクリックします。
 
     ![ファイアウォール ルートを追加します](../media/add-firewall-route.png)
 

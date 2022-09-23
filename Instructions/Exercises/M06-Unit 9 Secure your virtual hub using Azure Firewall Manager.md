@@ -2,12 +2,12 @@
 Exercise:
   title: M06-ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
   module: Module - Design and implement network security
-ms.openlocfilehash: 4ccd864904eda16e2959bcfd31c360df4c0d7efc
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: e53ea57b2304396f36d608ce531d278c6ddad446
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742012"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922381"
 ---
 # <a name="m06-unit-9-secure-your-virtual-hub-using-azure-firewall-manager"></a>M06-ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
 
@@ -29,6 +29,8 @@ ms.locfileid: "140742012"
 + タスク 8: アプリケーション規則をテストする
 + タスク 9: ネットワーク規則をテストする
 + タスク 10: リソースをクリーンアップする
+
+#### <a name="estimated-time-35-minutes"></a>推定時間: 35 分
 
 ## <a name="task-1-create-two-spoke-virtual-networks-and-subnets"></a>タスク 1: 2 つのスポーク仮想ネットワークとサブネットを作成する
 
@@ -272,7 +274,7 @@ ms.locfileid: "140742012"
    - ホーム ページに Firewall Manager アイコンが表示されない場合は、**[すべてのサービス]** をクリックします。 次に、検索ボックスに「**Firewall Manager**」と入力し、表示されたら **[Firewall Manager]** を選択します。
 2. **[Firewall Manager]** の **[セキュリティ]** で、**[Azure Firewall ポリシー]** をクリックします。
 3. **Policy-01** のチェック ボックスをオンにします。
-4. **[Manage associations]\(関連付けの管理\) &gt; [ハブの関連付け]** を選択します。
+4. **[Manage associations](関連付けの管理) &gt; [ハブの関連付け]** を選択します。
 5. **Hub-01** のチェック ボックスをオンにします。
 6. **[追加]** をクリックします。
 7. ポリシーがアタッチされている場合は、**[最新の情報に更新]** をクリックします。 関連付けが表示されるはずです。
@@ -289,10 +291,10 @@ ms.locfileid: "140742012"
 2. **Hub-01** をクリックします。
 3. **[設定]** で **[セキュリティの構成]** をクリックします。
 4. **[インターネット トラフィック]** で、**[Azure Firewall]** を選択します。
-5. **[プライベート トラフィック]** で、**[Send via Azure Firewall]\(Azure Firewall 経由で送信する\)** を選択します。
+5. **[プライベート トラフィック]** で、**[Send via Azure Firewall](Azure Firewall 経由で送信する)** を選択します。
 6. **[保存]** をクリックします。 
 7. これが完了するまでに数分かかります。
-8. 構成が完了したら、**[インターネット トラフィック]** と **[プライベート トラフィック]** で、どちらのハブ スポーク接続にも **[Secured by Azure Firewall]\(Azure Firewall によって保護されています\)** と表示されていることを確認します。
+8. 構成が完了したら、**[インターネット トラフィック]** と **[プライベート トラフィック]** で、どちらのハブ スポーク接続にも **[Secured by Azure Firewall](Azure Firewall によって保護されています)** と表示されていることを確認します。
 
 
 ## <a name="task-8-test-the-application-rule"></a>タスク 8: アプリケーション規則をテストする

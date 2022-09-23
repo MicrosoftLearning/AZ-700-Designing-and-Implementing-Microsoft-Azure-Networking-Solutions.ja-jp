@@ -2,12 +2,12 @@
 Exercise:
   title: M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 7769b75d3db52a3b802013dcf96cdc5528c33a4c
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 3dd388f4bed463f4e982e848bcec7e15598482a1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742048"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922378"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
 
@@ -27,6 +27,8 @@ ms.locfileid: "140742048"
 + タスク 9: 仮想マシンを作成する
 + タスク 10: ストレージ アカウントへのアクセスを確認する
 + タスク 11: リソースをクリーンアップする
+
+#### <a name="estimated-time-35-minutes"></a>推定時間: 35 分
 
 ## <a name="task-1-create-a-virtual-network"></a>タスク 1: 仮想ネットワークを作成する
 
@@ -117,15 +119,16 @@ ms.locfileid: "140742048"
 
    | **設定**             | **Value**                 |
    | ----------------------- | ------------------------- |
-   | source                  | **VirtualNetwork** を選びます。 |
+   | source                  | **[Service Tag](サービス タグ)** を選びます    |
+   | 発信元サービス タグ      | **VirtualNetwork** を選びます。 |
    | Source port ranges      | *                         |
-   | 宛先             | **[Service Tag]\(サービス タグ\)** を選びます    |
+   | 宛先             | **[Service Tag](サービス タグ)** を選びます    |
    | 宛先サービス タグ | **[ストレージ]** を選びます        |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | プロトコル                | Any                       |
+   | Protocol                | Any                       |
    | アクション                  | Allow                     |
-   | Priority                | 100                       |
+   | 優先度                | 100                       |
    | Name                    | Allow-Storage-All         |
 
 9. **[追加]** を選択します。
@@ -143,11 +146,11 @@ ms.locfileid: "140742048"
    | ----------------------- | ------------------------- |
    | source                  | **VirtualNetwork** を選びます。 |
    | Source port ranges      | *                         |
-   | 宛先             | **[Service Tag]\(サービス タグ\)** を選びます    |
+   | 宛先             | **[Service Tag](サービス タグ)** を選びます    |
    | 宛先サービス タグ | **[インターネット]** を選びます       |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | プロトコル                | Any                       |
+   | Protocol                | Any                       |
    | アクション                  | 拒否                      |
    | Priority                | 110                       |
    | Name                    | Deny-Internet-All         |
@@ -212,7 +215,7 @@ ms.locfileid: "140742048"
 
 ## <a name="task-7-create-a-file-share-in-the-storage-account"></a>タスク 7: ストレージ アカウントにファイル共有を作成する
 
-1. ストレージ アカウントを作成した後、ポータルの上部にある **[Search resources, services, and docs]\(リソース、サービス、ドキュメントの検索\)** ボックスにストレージ アカウントの名前を入力します。 指定したストレージ アカウントの名前が検索結果に表示されたら、それを選びます。
+1. ストレージ アカウントを作成した後、ポータルの上部にある **[Search resources, services, and docs](リソース、サービス、ドキュメントの検索)** ボックスにストレージ アカウントの名前を入力します。 指定したストレージ アカウントの名前が検索結果に表示されたら、それを選びます。
 2. 次の図に示すように、 **[ファイル共有]** を選択します。![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../media/new-file-share.png)
 3. **[+ ファイル共有]** を選択します。
 4. **[名前]** に「marketing」と入力し、**[作成]** を選択します。
@@ -241,7 +244,7 @@ ms.locfileid: "140742048"
 
 7. ストレージ アカウントの **[セキュリティとネットワーク]** で、**[アクセス キー]** を選択します。
 
-8. **[Show Keys]\(キーの表示\)** を選択します。 **[キー]** の値をメモします。後の手順でファイル共有を VM のドライブ文字にマップするときに、この値を手入力する必要があります。
+8. **[Show Keys](キーの表示)** を選択します。 **[キー]** の値をメモします。後の手順でファイル共有を VM のドライブ文字にマップするときに、この値を手入力する必要があります。
 
 ## <a name="task-9-create-virtual-machines"></a>タスク 9: 仮想マシンを作成する
 
@@ -272,12 +275,14 @@ ms.locfileid: "140742048"
 5. サインイン処理中に証明書の警告が表示される場合があります。 警告を受け取ったら、[はい] または [続行] を選択して接続処理を続行します。
 6. ContosoPrivate VM で、PowerShell を使用して、Azure ファイル共有を Z ドライブにマップします。 次のコマンドを実行する前に、<storage-account-key>、<storage-account-name> (つまり contosostoragexx) と、my-file-share (つまり マーケティング) を、ストレージ アカウントを作成するタスクで指定した値と置き換えます。
 
-```Azure CLI
+
+```azurecli
 $acctKey = ConvertTo-SecureString -String "<storage-account-key>" -AsPlainText -Force
 
 $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
 
 New-PSDrive -Name Z -PSProvider FileSystem -Root "\\<storage-account-name>.file.core.windows.net\marketing" -Credential $credential
+
 ```
 
 Azure ファイル共有は Z ドライブに正常にマップされました。

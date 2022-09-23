@@ -2,12 +2,12 @@
 Exercise:
   title: M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 007d533a77a0f8f71d6d38989b4da59664776d18
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 0d1cdaad19959b5c284618d3e55c2a0c7068e9b1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741988"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922321"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-ユニット 7 Azure portal を使用して仮想 WAN を作成する
 
@@ -22,6 +22,8 @@ ms.locfileid: "140741988"
 + タスク 4: リソースをクリーンアップする
 
 
+
+#### <a name="estimated-time-65-minutes-including-45-minutes-deployment-waiting-time"></a>推定時間: 65 分 (最大 45 分のデプロイ待機時間を含む)
 
 ## <a name="task-1-create-a-virtual-wan"></a>タスク 1: Virtual WAN を作成する
 
@@ -63,6 +65,7 @@ ms.locfileid: "140741988"
    - **リージョン:** 米国西部
    - **名前:** ContosoVirtualWANHub-WestUS
    - **ハブ プライベート アドレス空間:** 10.60.0.0/24
+   - **仮想ハブの容量:** 2 ルーティング インフラストラクチャ ユニット
 5. **サイト間** を選択します。
 6. **[サイト間]** タブで、次のフィールドを入力します。
    - **サイト間 (VPN Gateway) を作成しますか?:** はい

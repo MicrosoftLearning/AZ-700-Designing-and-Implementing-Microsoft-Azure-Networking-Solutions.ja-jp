@@ -2,12 +2,12 @@
 Exercise:
   title: M01-ユニット 4 Azure で仮想ネットワークを設計および実装する
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: f44e23e80ce989065d4495586bb1ba0e5b90ec64
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: 609406c98129f47e547e09bfe70b0d289ed95340
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819923"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922375"
 ---
 # <a name="m01-unit-4-design-and-implement-a-virtual-network-in-azure"></a>M01-ユニット 4 Azure で仮想ネットワークを設計および実装する
 
@@ -17,6 +17,8 @@ ms.locfileid: "137819923"
 現在、あなたは Azure portal で仮想ネットワークをデプロイする準備ができています。
 
 ここで考える架空の組織 Contoso Ltd は、インフラストラクチャとアプリケーションを Azure に移行している途中です。 ネットワーク エンジニアとしての役割を持つあなたは、それらの仮想ネットワーク内のリソースをサポートするため、3 つの仮想ネットワークとサブネットを計画して実装する必要があります。
+
+#### <a name="estimated-time-20-minutes"></a>推定時間:20 分
 
 **CoreServicesVnet** 仮想ネットワークは、**米国東部** リージョンにデプロイされています。 この仮想ネットワークには、最も多くのリソースを配置します。 VPN 接続を介してオンプレミス ネットワークに接続されます。 このネットワークには、ビジネスの運営にとって重要な Web サービス、データベース、その他のシステムを配置します。 ドメイン コントローラーや DNS などの共有サービスもここに配置されます。 大きく成長することが見込まれるため、この仮想ネットワークには大きなアドレス空間が必要です。
 

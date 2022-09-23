@@ -2,16 +2,18 @@
 Exercise:
   title: M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 1d04de9c9710cc452220b1f6c6cecc39ff130810
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: c285aaf46e98daa1fa95a0cf1ef603bb9674b2e5
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742006"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922330"
 ---
 # <a name="m04-unit-6-create-a-traffic-manager-profile-using-the-azure-portal"></a>M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
 
 この演習では、架空の組織 Contoso Ltd の Web アプリケーションに高い可用性をもたらす Traffic Manager プロファイルを作成します。 
+
+#### <a name="estimated-time-35-minutes"></a>推定時間: 35 分
 
 2 つの異なるリージョン (米国東部と西ヨーロッパ) にデプロイされた Web アプリケーションの 2 つのインスタンスを作成します。 米国東部リージョンは Traffic Manager のプライマリ エンドポイントとして、西ヨーロッパ リージョンはフェールオーバー エンドポイントとして機能します。
 
