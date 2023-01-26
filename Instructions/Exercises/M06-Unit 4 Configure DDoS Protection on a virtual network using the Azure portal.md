@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
-  module: Module - Design and implement network security
-ms.openlocfilehash: a3d6752859f81544082d6aa40ca0d455d217d8f4
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922339"
+  title: M06 - ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
+  module: Module 06 - Design and implement network security
 ---
+
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-ユニット 4 Azure portal を使用して仮想ネットワーク上に DDoS Protection を構成する
 
 Contoso のネットワーク セキュリティ チームを担当しているあなたは、仮想ネットワークで模擬 DDoS 攻撃を実行しようとしています。 次の手順では、仮想ネットワークを作成し、DDoS Protection を構成し、テレメトリとメトリックを使用して観察および監視できる攻撃を作成する手順について説明します。
@@ -40,7 +35,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 5. **[リージョン]** で [米国東部] を選択します。
 
-6. **[Review + create]\(レビュー + 作成\)** を選択します。
+6. **[Review + create](レビュー + 作成)** を選択します。
 
 7. **［作成］** を選択します
 
@@ -78,7 +73,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
    ![[仮想ネットワークの作成] - [セキュリティ] タブ](../media/create-virtual-network-security-for-ddos-protection.png)
 
-7. **[Review + create]\(レビュー + 作成\)** をクリックします。
+7. **[Review + create](レビュー + 作成)** をクリックします。
 
 8. **Create** をクリックしてください。
 
@@ -118,7 +113,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 13. **[適用]** をクリックします。
 
-14. **[メトリック]** ボックスで、**[Inbound packets dropped DDoS]\(DDoS で破棄されたインバウンド パケット数\)** を選択します。
+14. **[メトリック]** ボックスで、**[Inbound packets dropped DDoS](DDoS で破棄されたインバウンド パケット数)** を選択します。
 
 15. **[集計]** ボックスで、**[最大]** を選択します。
 
@@ -138,9 +133,9 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 5. **[診断設定]** ページの **[診断設定の名前]** ボックスに、「**MyDiagnosticSetting**」と入力します。 
 
-6. **[カテゴリの詳細]** で、3 つの **ログ** すべてのチェック ボックスと **[AllMetrics]** チェック ボックスをオンにします。
+6. **[カテゴリの詳細]** で、3 つの**ログ**すべてのチェック ボックスと **[AllMetrics]** チェック ボックスをオンにします。
 
-7. **[宛先の詳細]** で、**[Send to Log Analytics workspace]\(Log Analytics ワークスペースに送信する\)** チェック ボックスをオンにします。 ここでは、既存の Log Analytics ワークスペースを選択することもできますが、診断ログの宛先をまだ設定していないので、設定を入力しても、この演習の次のステップでそれらを破棄します。
+7. **[宛先の詳細]** で、**[Send to Log Analytics workspace](Log Analytics ワークスペースに送信する)** チェック ボックスをオンにします。 ここでは、既存の Log Analytics ワークスペースを選択することもできますが、診断ログの宛先をまだ設定していないので、設定を入力しても、この演習の次のステップでそれらを破棄します。
 
    ![DDoS の新しい診断設定を構成します](../media/configure-ddos-diagnostic-settings-new.png)
 
@@ -170,7 +165,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
    | リージョン                | 自分のリージョン                                                  |
    | 可用性のオプション  | **インフラストラクチャ冗長は必要ありません**                   |
    | イメージ                 | **Ubuntu Server 18.04 LTS - Gen 1** (必要な場合は、[VM の世代の構成] リンクを選びます) |                     
-   | サイズ                  | **[See all sizes]\(すべてのサイズを表示\)** を選択し、一覧で **[B1ls]** を選択して、 **[選択]** を選択します (**Standard_B1ls - 1 vcpu, 0.5 GiB memory**) |
+   | サイズ                  | **[See all sizes](すべてのサイズを表示)** を選択し、一覧で **[B1ls]** を選択して、 **[選択]** を選択します (**Standard_B1ls - 1 vcpu, 0.5 GiB memory**) |
    | 認証の種類   | **SSH 公開キー**                                           |
    | ユーザー名              | **azureuser**                                                |
    | SSH 公開キーのソース | **新しいキーの組の生成**                                    |
@@ -181,7 +176,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 5. **Create** をクリックしてください。
 
-6. **[新しいキーの組を生成]** ダイアログ ボックスで、**[Download private key and create resource]\(秘密キーをダウンロードしてリソースを作成する\)** をクリックします。
+6. **[新しいキーの組を生成]** ダイアログ ボックスで、**[Download private key and create resource](秘密キーをダウンロードしてリソースを作成する)** をクリックします。
 
 7. 秘密キーを保存します。
 
@@ -255,7 +250,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 4. リソースの一覧で **MyPublicIPAddress** リソースをクリックし、**[監視]** で **[メトリック]** をクリックします。 
 
-5. **[メトリック]** ボックスで、一覧から **[Under DDoS attack or not]\(DDoS 攻撃の有無\)** を選択します。
+5. **[メトリック]** ボックスで、一覧から **[Under DDoS attack or not](DDoS 攻撃の有無)** を選択します。
 
 6. これで、発生している DDoS 攻撃を見ることができるようになります。 結果が表示されるまでに、10 分ほどかかる場合があることに注意してください。
 

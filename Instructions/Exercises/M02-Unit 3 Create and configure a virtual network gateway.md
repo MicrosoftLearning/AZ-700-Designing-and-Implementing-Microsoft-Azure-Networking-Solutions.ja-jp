@@ -1,14 +1,10 @@
 ---
 Exercise:
-  title: M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
-  module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 55c62023ebcc5f30e69649dca4a027f8d69878ac
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922342"
+  title: M02 - ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
+  module: Module 02 - Design and implement hybrid networking
 ---
+
+
 # <a name="m02-unit-3-create-and-configure-a-virtual-network-gateway"></a>M02-ユニット 3 仮想ネットワーク ゲートウェイを作成および構成する
 
 この演習では、Contoso Core Services VNet と Manufacturing VNet を接続する仮想ネットワーク ゲートウェイを構成します。 

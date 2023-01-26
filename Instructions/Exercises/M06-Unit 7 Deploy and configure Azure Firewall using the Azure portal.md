@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
-  module: 'Module - Design and implement network security '
-ms.openlocfilehash: 95308e5da6b8e349047834d0fc1b97a360289f55
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922354"
+  title: M06 - ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
+  module: 'Module 06 - Design and implement network security '
 ---
+
 # <a name="m06-unit-7-deploy-and-configure-azure-firewall-using-the-azure-portal"></a>M06-ユニット 7 Azure portal を使用して Azure Firewall をデプロイして構成する
 
 Contoso のネットワーク セキュリティ チームの一員であるあなたの次のタスクは、特定の Web サイトへのアクセスを許可または拒否するファイアウォール規則を作成することです。 以下の手順では、環境準備タスクとしてリソース グループ、仮想ネットワークとサブネット、仮想マシンを作成した後、ファイアウォールとファイアウォール ポリシーをデプロイし、既定のルートとアプリケーション、ネットワーク、DNAT 規則を構成して、最後にファイアウォールをテストします。
@@ -46,7 +41,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
    ![Azure Firewall 用のリソース グループを作成します](../media/create-resource-group-for-azure-firewall.png)
 
-6. **[Review + create]\(レビュー + 作成\)** をクリックします。
+6. **[Review + create](レビュー + 作成)** をクリックします。
 
 7. **Create** をクリックしてください。
 
@@ -87,7 +82,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 13. **[追加]** をクリックします。
 
-14. **[Review + create]\(レビュー + 作成\)** をクリックします。
+14. **[Review + create](レビュー + 作成)** をクリックします。
 
 15. **Create** をクリックしてください。
 
@@ -134,7 +129,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
    | Resource group       | **Test-FW-RG**                                               |
    | ファイアウォール名        | **Test-FW01**                                                |
    | リージョン               | 自分のリージョン                                                  |
-   | ファイアウォール レベル        | **Standard**                                                 |
+   | ファイアウォール SKU        | **Standard**                                                 |
    | ファイアウォール管理  | **ファイアウォール ポリシーを使用してこのファイアウォールを管理する**            |
    | ファイアウォール ポリシー      | **[新規追加]** を選択します<br />名前: **fw-test-pol**<br />リージョン: **自分のリージョン** |
 
@@ -152,7 +147,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
    ![ファイアウォールの作成 - 設定の確認](../media/review-all-configurations-for-firewall.png)
 
-5. **[Review + create]\(レビュー + 作成\)** をクリックします。
+5. **[Review + create](レビュー + 作成)** をクリックします。
 
 6. **[作成]** をクリックし、ファイアウォールのデプロイが完了するまで待ちます。
 
@@ -205,7 +200,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 12. **[ルート名]** に「**fw-dg**」と入力します。
 
-13. **[アドレス プレフィックス]** に「**0.0.0.0/0**」と入力します。
+13. **[アドレス プレフィックス送信先]** に「**0.0.0.0/0**」と入力します。
 
 14. **[ネクスト ホップの種類]** で、**[仮想アプライアンス]** を選択します。
 
@@ -225,7 +220,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 2. リソースの一覧で、自分のファイアウォール ポリシー **fw-test-pol** をクリックします。
 
-3. **[設定]** で **[Application Rules]\(アプリケーション規則\)** をクリックします。
+3. **[設定]** で **[Application Rules](アプリケーション規則)** をクリックします。
 
 4. **[規則コレクションの追加]** をクリックします。
 
@@ -290,7 +285,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
 このタスクでは、ファイアウォール経由でリモート デスクトップを Srv-Work 仮想マシンに接続できるようにする DNAT 規則を追加します。
 
-1. **fw-test-pol** のページで、**[設定]** の下の **[DNAT Rules]\(DNAT 規則\)** をクリックします。
+1. **fw-test-pol** のページで、**[設定]** の下の **[DNAT Rules](DNAT 規則)** をクリックします。
 
 2. **[規則コレクションの追加]** をクリックします。
 
@@ -320,7 +315,7 @@ Contoso のネットワーク セキュリティ チームの一員であるあ�
 
  
 
-## <a name="task-9-change-the-primary-and-secondary-dns-address-for-the-servers-network-interface"></a>タスク 9: サーバーのネットワーク インターフェイスのプライマリおよびセカンダリ DNS アドレスを変更する
+## <a name="task-9-change-the-primary-and-secondary-dns-address-for-the-serversnetwork-interface"></a>タスク 9: サーバーのネットワーク インターフェイスのプライマリおよびセカンダリ DNS アドレスを変更する
 
 この演習でのテストのため、このタスクでは、Srv-Work サーバーのプライマリおよびセカンダリ DNS アドレスを構成します。 ただし、これは Azure Firewall での一般的な要件ではありません。
 

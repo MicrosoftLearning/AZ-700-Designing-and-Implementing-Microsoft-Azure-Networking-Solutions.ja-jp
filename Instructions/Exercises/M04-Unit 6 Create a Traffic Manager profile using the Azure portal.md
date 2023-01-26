@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
-  module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: c285aaf46e98daa1fa95a0cf1ef603bb9674b2e5
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922330"
+  title: M04 - ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
+  module: Module 04 - Load balancing non-HTTP(S) traffic in Azure
 ---
+
 # <a name="m04-unit-6-create-a-traffic-manager-profile-using-the-azure-portal"></a>M04-ユニット 6 Azure portal を使用して Traffic Manager プロファイルを作成する
 
 この演習では、架空の組織 Contoso Ltd の Web アプリケーションに高い可用性をもたらす Traffic Manager プロファイルを作成します。 
@@ -50,14 +45,14 @@ ms.locfileid: "147922330"
    | オペレーティング システム | **Windows**                                                  |
    | リージョン           | **米国東部**                                                  |
    | Windows プラン     | **[新規作成]** を選択  名前: **ContosoAppServicePlanEastUS** |
-   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75-GB  memory]\(Standard S1 合計 100 ACU、1.75 GB メモリ\)**               |
+   | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75-GB  memory](Standard S1 合計 100 ACU、1.75 GB メモリ)**               |
 
 
 3. ページの下部の **[次へ: デプロイ]** をクリックしたら、 **[次へ: モニタリング]** を選択します。
 
 4. **[監視]** タブの **[Application Insights を有効にする]** で、**[いいえ]** のオプションを選択します。
 
-5. **[Review + create]\(レビュー + 作成\)** をクリックします。
+5. **[Review + create](レビュー + 作成)** をクリックします。
 
    ![画像 18](../media/create-web-app-1.png)
 
@@ -154,13 +149,13 @@ ms.locfileid: "147922330"
 
 1. **[Contoso-TMProfile]** ページで、**[概要]** をクリックします。
 
-2. **[概要]** 画面で、**DNS 名** のエントリをクリップボードにコピーします (または、どこかに書き留めておきます)。
+2. **[概要]** 画面で、**DNS 名**のエントリをクリップボードにコピーします (または、どこかに書き留めておきます)。
 
    ![画像 23](../media/check-dnsname-1.png)
 
-3. Web ブラウザーのタブを開き、**DNS 名** のエントリ (contoso-tmprofile.trafficmanager.net) をアドレス バーに貼り付け (または入力して)、Enter キーを押します。
+3. Web ブラウザーのタブを開き、**DNS 名**のエントリ (contoso-tmprofile.trafficmanager.net) をアドレス バーに貼り付け (または入力して)、Enter キーを押します。
 
-4. その Web アプリの既定の Web サイトが表示されます。 " **404 Web サイトが見つかりません**" というメッセージが表示された場合は、**Contoso-TMProfilexx** Traffic Manager のプロファイルの概要ページから **プロファイルを無効化** し、**プロファイルを有効化** します。 その後、Web ページを更新します。
+4. その Web アプリの既定の Web サイトが表示されます。 " **404 Web サイトが見つかりません**" というメッセージが表示された場合は、**Contoso-TMProfilexx** Traffic Manager のプロファイルの概要ページから**プロファイルを無効化**し、**プロファイルを有効化**します。 その後、Web ページを更新します。
 
    ![画像 24](../media/tm-webapp-test-1a.png)
 
@@ -178,7 +173,7 @@ ms.locfileid: "147922330"
 
 10. これで **[Contoso-TMProfile]** ページで、**myPrimaryEndpoint** の **[監視状態]** が **[無効]** になっているはずです。
 
-11. Web ブラウザーの新しいセッションを開き、**DNS 名** のエントリ (contoso-tmprofile.trafficmanager.net) をアドレス バーに貼り付け (または入力して)、Enter キーを押します。
+11. Web ブラウザーの新しいセッションを開き、**DNS 名**のエントリ (contoso-tmprofile.trafficmanager.net) をアドレス バーに貼り付け (または入力して)、Enter キーを押します。
 
 12. Web アプリからまだ応答があることを確認します。 プライマリ エンドポイントを使用できなかったため、Web サイトを引き続き利用できるように、トラフィックが代わりにフェールオーバー エンドポイントにルーティングされました。
 
