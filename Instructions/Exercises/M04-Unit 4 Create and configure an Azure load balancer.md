@@ -1,14 +1,10 @@
 ---
 Exercise:
-  title: M04-ユニット 4 Azure Load Balancer を作成および構成する
-  module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: f3125fa7a5fafa5a1894ccd18b1430cb1055028d
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922327"
+  title: M04 - ユニット 4 Azure Load Balancer を作成および構成する
+  module: Module 04 - Load balancing non-HTTP(S) traffic in Azure
 ---
+
+
 # <a name="m04-unit-4-create-and-configure-an-azure-load-balancer"></a>M04-ユニット 4 Azure Load Balancer を作成および構成する
 
 この演習では、架空の組織 Contoso Ltd. 用の内部ロード バランサーを作成します。 
@@ -50,7 +46,7 @@ ms.locfileid: "147922327"
    | リージョン         | **(米国) 米国東部**                           |
 
 
-5. **[Next : IP Addresses]\(次へ: IP アドレス\)** をクリックします。
+5. **[Next : IP Addresses](次へ: IP アドレス)** をクリックします。
 
 6. **[IP アドレス]** タブの **[IPv4 アドレス空間]** ボックスで、既定値を削除してから「**10.1.0.0/16**」と入力します。
 
@@ -62,7 +58,7 @@ ms.locfileid: "147922327"
 
 10. **「サブネットの追加」** で、 **「myFrontEndSubnet」** のサブネット名と **「10.1.2.0/24」** のサブネット アドレス範囲を指定します。 **[追加]** をクリックします。
 
-11. **[Next : Security]\(次へ: セキュリティ\)** をクリックします。
+11. **[Next : Security](次へ: セキュリティ)** をクリックします。
 
 12. **[BastionHost]** で、**[有効化]** を選択し、以下の表の情報を入力します。
 
@@ -73,7 +69,7 @@ ms.locfileid: "147922327"
     | パブリック IP アドレス                 | **[新規作成]** を選択  名前: **myBastionIP** |
 
 
-13. **[Review + create]\(レビュー + 作成\)** をクリックします。
+13. **[Review + create](レビュー + 作成)** をクリックします。
 
 14. **Create** をクリックしてください。
 
@@ -115,7 +111,7 @@ ms.locfileid: "147922327"
    | --------------------- | ------------------------ |
    | サブスクリプション          | サブスクリプションを選択します。 |
    | Resource group        | **IntLB-RG**             |
-   | 名前                  | **myIntLoadBalancer**    |
+   | Name                  | **myIntLoadBalancer**    |
    | リージョン                | **(米国) 米国東部**         |
    | Type                  | **内部**             |
    | SKU                   | **Standard**             |
@@ -128,10 +124,10 @@ ms.locfileid: "147922327"
    | **設定**     | **Value**                |
    | --------------- | ------------------------ |
    | 名前            | **LoadBalancerFrontEnd** |
-   | IP バージョン      | **IPv4**           |
-   | IP の種類         | **IP アドレス (IP address)**     |
-   | パブリック IP アドレス      | **myFrontEndIP** という名前で **[新規作成]**             |
-   | Azure Gateway Load Balancer  | **なし**  |
+   | 仮想ネットワーク | **IntLB-VNet**           |
+   | Subnet          | **myFrontEndSubnet**     |
+   | 割り当て      | **動的**              |
+
 
 9. **[Review + create](レビュー + 作成)** をクリックします。
 
@@ -245,7 +241,7 @@ ms.locfileid: "147922327"
    | [パスワードの確認入力]     | **TestPa$$w0rd!**                            |
 
 
-3. **[Next : Disks]\(次へ: ディスク\)** をクリックし、**[Next : Networking]\(次へ: ネットワーク\)** をクリックします。 
+3. **[Next : Disks](次へ: ディスク)** をクリックし、**[Next : Networking](次へ: ネットワーク)** をクリックします。 
 
 4. **[ネットワーク]** タブで、以下の表の情報を使用してネットワーク設定を構成します。
 
@@ -269,7 +265,7 @@ ms.locfileid: "147922327"
 
 1. Azure portal のホームページで、**[すべてのリソース]** をクリックし、リソースの一覧から **[myIntLoadBalancer]** をクリックします。
 
-2. **[概要]** ページで、**プライベート IP アドレス** をメモするか、クリップボードにコピーします。 注: **[プライベート IP アドレス]** フィールドを表示するには、 **[もっと見る]** を選択しなくてはならない場合があります。
+2. **[概要]** ページで、**プライベート IP アドレス**をメモするか、クリップボードにコピーします。 注: **[プライベート IP アドレス]** フィールドを表示するには、 **[もっと見る]** を選択しなくてはならない場合があります。
 
 3. **[ホーム]** をクリックし、Azure portal ページで **[すべてのリソース]** をクリックして、先ほど作成した **myTestVM** 仮想マシンをクリックします。
 
@@ -287,7 +283,7 @@ ms.locfileid: "147922327"
 
 10. **[Internet Explorer 11 の設定]** ダイアログ ボックスで、**[OK]** をクリックします。
 
-11. 前の手順の **プライベート IP アドレス** (例: 10.1.0.4) をブラウザーのアドレス バーに入力し (または貼り付け)、Enter キーを押します。
+11. 前の手順の**プライベート IP アドレス** (例: 10.1.0.4) をブラウザーのアドレス バーに入力し (または貼り付け)、Enter キーを押します。
 
 12. IIS Web サーバーの既定の Web ホーム ページがブラウザー ウィンドウに表示されます。 バックエンド プール内の 3 つの仮想マシンの 1 つによって応答が返されます。
     ![画像 8](../media/load-balancer-web-test-1.png)

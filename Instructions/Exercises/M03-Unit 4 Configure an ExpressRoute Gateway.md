@@ -1,13 +1,7 @@
 ---
 Exercise:
-  title: M03-ユニット 4 ExpressRoute ゲートウェイを構成する
-  module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: af79e4be86e2b89c20338b9cb66ddaa5a94b1f5e
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922336"
+  title: M03 - ユニット 4 ExpressRoute ゲートウェイを構成する
+  module: Module 03 - Design and implement Azure ExpressRoute
 ---
 # <a name="m03-unit-4-configure-an-expressroute-gateway"></a>M03-ユニット 4 ExpressRoute ゲートウェイを構成する
 

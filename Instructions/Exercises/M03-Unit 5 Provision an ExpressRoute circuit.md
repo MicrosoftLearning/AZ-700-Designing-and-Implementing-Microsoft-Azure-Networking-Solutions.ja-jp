@@ -1,13 +1,7 @@
 ---
 Exercise:
-  title: M03-ユニット 5 ExpressRoute 回線のプロビジョニング
-  module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: 9e65cbcb5b746b1b6a63139c9e7ee9973ddb8a5b
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922333"
+  title: M03 - ユニット 5 ExpressRoute 回線のプロビジョニング
+  module: Module 03 - Design and implement Azure ExpressRoute
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
@@ -41,16 +35,16 @@ ms.locfileid: "147922333"
 
    ![Azure portal - ExpressRoute 回線の作成のメニュー](../media/create-expressroute-circuit-menu.png)
 
-3. 「**ExpressRoute の作成**」ページで、回線の **リソース グループ**、**リージョン**、**名前** を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
+3. 「**ExpressRoute の作成**」ページで、回線の**リソース グループ**、**リージョン**、**名前**を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
 
-4. このページで値を入力するときには、正しい SKU レベル (Local、Standard、または Premium) と、データ使用状況測定の課金モデル (無制限または従量制) を必ず指定してください。
+4. このページの値を入力するときは、この例では、正しい SKU レベル (**標準**) データ測定課金モデル (**測定**) プロバイダー (**Equinix**) ピアリングの場所 (**シアトル**) と帯域幅 (**50 Mbps**) を指定してください。
 
 5. **[確認および作成]** を選択します。
 
 6. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
 
 
-![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration.png)
+![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration2.png)
 
  
 
@@ -75,7 +69,7 @@ ms.locfileid: "147922333"
 >
 > 種類は [無制限] から [従量制] に変更することはできません。
 
-- **[Allow classic operation]\(クラシック操作を許可する\)** により、従来の仮想ネットワークを回線にリンクすることができます。
+- **[Allow classic operation](クラシック操作を許可する)** により、従来の仮想ネットワークを回線にリンクすることができます。
 
 ## <a name="task-2-retrieve-your-service-key"></a>タスク 2: サービス キーを取得する
  
@@ -112,9 +106,8 @@ ms.locfileid: "147922333"
 ![Azure portal - 状態がプロビジョニング済みであることが表示されている ExpressRoute 回線のプロパティ](../media/provisioned.png)
 
  
-ExpressRoute 回線を作成してプロビジョニングする方法に関するこのデモを視聴してください: [Azure ExpressRoute - ExpressRoute 回線を作成する方法 | Azure |Channel 9 (msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15)。 
 
-お疲れさまでした。 あなたは ExpressRoute 回線を作成し、回線のプロビジョニングを完了するために必要になるサービス キーを見つけました。
+おめでとうございます。 あなたは ExpressRoute 回線を作成し、回線のプロビジョニングを完了するために必要になるサービス キーを見つけました。
 
 ## <a name="task-3-deprovisioning-an-expressroute-circuit"></a>タスク 3: ExpressRoute 回線をプロビジョニング解除する
 

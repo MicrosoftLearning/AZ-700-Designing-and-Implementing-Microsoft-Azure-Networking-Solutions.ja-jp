@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
-  module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 3dd388f4bed463f4e982e848bcec7e15598482a1
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922378"
+  title: M07 - ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
+  module: Module 07 - Design and implement private access to Azure Services
 ---
+
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-ユニット 5 仮想ネットワーク サービス エンドポイントを使用して、PaaS リソースへのネットワーク アクセスを制限する
 
 
@@ -126,9 +121,9 @@ ms.locfileid: "147922378"
    | 宛先サービス タグ | **[ストレージ]** を選びます        |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
+   | プロトコル                | Any                       |
    | アクション                  | Allow                     |
-   | 優先度                | 100                       |
+   | Priority                | 100                       |
    | Name                    | Allow-Storage-All         |
 
 9. **[追加]** を選択します。
@@ -150,7 +145,7 @@ ms.locfileid: "147922378"
    | 宛先サービス タグ | **[インターネット]** を選びます       |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
+   | プロトコル                | Any                       |
    | アクション                  | 拒否                      |
    | Priority                | 110                       |
    | Name                    | Deny-Internet-All         |
@@ -226,7 +221,7 @@ ms.locfileid: "147922378"
 
 1. ストレージ アカウントの **[セキュリティとネットワーク]** で、**[ネットワーク]** を選択します。
 
-2. **[選択されたネットワーク]** を選択します。
+2. **[選択した仮想ネットワークと IP アドレスから有効]** を選択します。
 
 3. **[+ 既存の仮想ネットワークを追加]** を選択します。
 
@@ -291,6 +286,7 @@ Azure ファイル共有は Z ドライブに正常にマップされました�
 
  ping bing.com
 
+
 Private サブネットに関連付けられているネットワーク セキュリティ グループはインターネットへの発信アクセスが許可されていないため、応答はありません。
 
 8. ContosoPrivate VM へのリモート デスクトップ セッションを終了します。
@@ -308,7 +304,7 @@ Private サブネットに関連付けられているネットワーク セキ�
 4. パブリック VM に、コマンド プロンプトからインターネットへの送信接続がないことを確認します。
 
  ping bing.com    
-    
+
 5. ContosoPublic VM へのリモート デスクトップ セッションを終了します。
 
 6. お使いのコンピューターから、Azure Portal にアクセスします。

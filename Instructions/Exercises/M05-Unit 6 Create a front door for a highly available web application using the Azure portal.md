@@ -1,14 +1,11 @@
 ---
 Exercise:
-  title: M05-ユニット 6 Azure portal を使用して高可用性 Web アプリケーションのフロント ドアを作成する
-  module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: dbdd8fdccdea3ade0ae2d8f67b5b837a13fb94fa
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922363"
+  title: M05 - ユニット 6 Azure portal を使用して高可用性 Web アプリケーションのフロント ドアを作成する
+  module: Module 05 - Load balancing HTTP(S) traffic in Azure
 ---
+
+
+
 # <a name="m05-unit-6-create-a-front-door-for-a-highly-available-web-application-using-the-azure-portal"></a>M05-ユニット 6 Azure portal を使用して高可用性 Web アプリケーションのフロント ドアを作成する
 
  
@@ -79,9 +76,9 @@ ms.locfileid: "147922363"
 
 2 つの Web アプリ サーバーのうち待ち時間が短い方にユーザー トラフィックを誘導するように Azure Front Door を構成します。 最初に、Azure Front Door のフロントエンド ホストを追加します。
 
-1. Azure Portal 上の任意のページで、 **[リソース、サービス、ドキュメントの検索 (G+/)]** 、[Search for Front Door and CDN profiles]\(Front Door と CDN プロファイルを検索\) の順に選択し、**フロント ドアと CDN プロファイル** を選択します。
+1. Azure Portal 上の任意のページで、 **[リソース、サービス、ドキュメントの検索 (G+/)]** 、[Search for Front Door and CDN profiles](Front Door と CDN プロファイルを検索) の順に選択し、**フロント ドアと CDN プロファイル**を選択します。
 
-1. **[Create front door and CDN profiles]\(フロント ドアと CDN プロファイルの作成\)** を選択します。 [Compare offerings](オファリングの比較) ページで、 [簡易作成] を選択します。 次に、 [Continue to create a Front Door](フロント ドアの作成を続行する) を選択します。
+1. **[Create front door and CDN profiles](フロント ドアと CDN プロファイルの作成)** を選択します。 [Compare offerings](オファリングの比較) ページで、 [簡易作成] を選択します。 次に、 [Continue to create a Front Door](フロント ドアの作成を続行する) を選択します。
 
 1. [基本] タブで、次の情報を入力または選択します。
 
@@ -101,14 +98,14 @@ ms.locfileid: "147922363"
 1. **[確認と作成]** を選択し、次に **[作成]** を選択します。
 
 1. リソースのデプロイを待ってから、 **[リソースに移動]** を選択します。
-2. [概要] ブレードの Front Door リソースで **配信元グループ** を見つけ、作成された配信元グループを選択します
-3. 配信元グループを更新するには、一覧から名前 **default-origin-group** を選択します。 **[Add an origin]\(配信元の追加\)** を選択し、2 つ目の Web アプリを追加します。 [追加] を選択し、[更新] を選択します。 
+2. [概要] ブレードの Front Door リソースで**配信元グループ**を見つけ、作成された配信元グループを選択します
+3. 配信元グループを更新するには、一覧から名前 **default-origin-group** を選択します。 **[Add an origin](配信元の追加)** を選択し、2 つ目の Web アプリを追加します。 [追加] を選択し、[更新] を選択します。 
 
 ## <a name="task-3-view-azure-front-door-in-action"></a>タスク 3: Azure Front Door の動作を確認する
 
 フロント ドアを作成した後、グローバルに構成がデプロイされるまでに数分かかります。 完了したら、作成したフロントエンド ホストにアクセスします。 
 
-1. [概要] ブレードの Front Door リソースで、エンドポイント用に作成されたエンドポイント ホスト名を探します。 これは、fdendpoint の後にハイフンとランダムな文字列が続きます。 たとえば、**fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net** などです。 この FQDN を **コピー** します。
+1. [概要] ブレードの Front Door リソースで、エンドポイント用に作成されたエンドポイント ホスト名を探します。 これは、fdendpoint の後にハイフンとランダムな文字列が続きます。 たとえば、**fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net** などです。 この FQDN を**コピー**します。
 
 1. 新しいブラウザー タブで、Front Door エンドポイントの FQDN に移動します。 既定の App Service ページが表示されます。
    ![App Service の情報ページが表示されているブラウザー](../media/app-service-info-page.png)
