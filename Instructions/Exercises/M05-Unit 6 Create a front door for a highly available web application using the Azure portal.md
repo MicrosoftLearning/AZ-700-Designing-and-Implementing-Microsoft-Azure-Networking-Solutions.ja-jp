@@ -42,9 +42,9 @@ Exercise:
    | Resource group   | リソース グループ ContosoResourceGroup を選択する               |
    | Name             | Web アプリの一意の名前を入力します。 この例では WebAppContoso-1 を使用します。 |
    | 発行          | **[コード]** を選択します。                                             |
-   | ランタイム スタック    | **[.NET Core 3.1 (LTS)]** を選択します。                              |
+   | ランタイム スタック    | **[ASP.NET V4.8]** を選択します。                              |
    | オペレーティング システム | **[Windows]** を選択します。                                          |
-   | リージョン           | **[米国中部]** を選択します。                                       |
+   | リージョン           | **[East Japan（東日本）]** を選択します。                                       |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanCentralUS」と入力します。 |
    | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
 
@@ -63,9 +63,9 @@ Exercise:
    | Resource group   | リソース グループ ContosoResourceGroup を選択する               |
    | Name             | Web アプリの一意の名前を入力します。 この例では WebAppContoso-2 を使用します。 |
    | 発行          | **[コード]** を選択します。                                             |
-   | ランタイム スタック    | **[.NET Core 3.1 (LTS)]** を選択します。                              |
+   | ランタイム スタック    | **[ASP.NET V4.8]** を選択します。                              |
    | オペレーティング システム | **[Windows]** を選択します。                                          |
-   | リージョン           | **[米国東部]** を選択します。                                          |
+   | リージョン           | **[East US（米国東部）]** を選択します。                                          |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanEastUS」と入力します。 |
    | SKU とサイズ     | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
 
@@ -92,7 +92,7 @@ Exercise:
    | レベル                    | Standard   |
    | エンドポイント名           | FDendpoint   |
    | 配信元の種類             | App Service| 
-   | 配信元のホスト名        | 以前にデプロイした Web アプリの名前 |
+   | 配信元のホスト名        | 以前にデプロイした １つ目のWeb アプリの名前 |
    
 
 1. **[確認と作成]** を選択し、次に **[作成]** を選択します。
@@ -122,7 +122,7 @@ Exercise:
 
 **Web アプリが停止している間に遅延が発生する場合があります。ブラウザーにエラー ページが表示された場合は、ページを最新の情報に更新してください**。
 
-1. Azure portal に戻り、他の Web アプリを見つけて、停止します。
+1. Azure portal に戻り、もう一方の Web アプリを見つけて、停止します。
 
 2. ブラウザーに戻り、[最新の情報に更新] を選択します。 今回はエラー メッセージが表示されます。
 
