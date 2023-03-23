@@ -176,8 +176,6 @@ Exercise:
    | Port                | **80**            |
    | パス                | **/**             |
    | Interval            | **15**            |
-   | 異常のしきい値 | **2**             |
-
 
 3. **[追加]** をクリックします。
    ![画像 5](../media/create-healthprobe.png)
