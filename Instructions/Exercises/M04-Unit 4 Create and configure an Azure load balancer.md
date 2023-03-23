@@ -232,6 +232,7 @@ Exercise:
    | 仮想マシン名 | **myTestVM**                                 |
    | リージョン               | **(米国) 米国東部**                             |
    | 可用性のオプション | **インフラストラクチャの冗長性は必要ありません**    |
+   | セキュリティの種類 | **Standard**    |
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | サイズ                 | **Standard_DS2_v3 - 2 vcpu、8 GiB メモリ** |
    | ユーザー名             | **TestUser**                                 |
