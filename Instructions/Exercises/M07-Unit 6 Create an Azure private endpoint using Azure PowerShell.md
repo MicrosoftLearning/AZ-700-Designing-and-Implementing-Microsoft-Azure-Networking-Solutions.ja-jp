@@ -20,14 +20,6 @@ Azure Web アプリのプライベート エンドポイントを作成し、仮
 
 - 対象の Azure サブスクリプションにデプロイされている PremiumV2 レベル以上のアプリ サービス プランを持つ Azure Web アプリ。
 
-- 以下の手順に従って、必要なリソース グループと Web アプリを作成します。
-
-1. M07 フォルダー内の **parameters.json** を見つけて開きます。 メモ帳で開き、"value": "GEN-UNIQUE" の行を見つけます。 プレースホルダー GEN-UNIQUE の文字列を、Web アプリ名の一意の値に置き換えます。 その変更を保存します。
-
-2. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
-
-3. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、次のファイル **template.json** および **parameters.json** を CloudShell ホーム ディレクトリに 1 つずつアップロードします。
-
 PowerShell をインストールしてローカルで使用する場合、この例では Azure PowerShell モジュール バージョン 5.4.1 以降が必要になります。 インストールされているバージョンを確認するには、```Get-Module -ListAvailable Az``` を実行します。 アップグレードする必要がある場合は、[Azure PowerShell モジュールのインストール](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)に関するページを参照してください。 PowerShell をローカルで実行している場合、```Connect-AzAccount``` を実行して Azure との接続を作成することも必要です。
 
 この演習では、以下のことを行います。
@@ -39,6 +31,15 @@ PowerShell をインストールしてローカルで使用する場合、この
 + タスク 5: プライベート DNS ゾーンを構成する
 + タスク 6: プライベート エンドポイントへの接続をテストする
 + タスク 7: リソースをクリーンアップする
+
+## 以下の手順に従って、必要なリソース グループと Web アプリを作成します。
+
+1. M07 フォルダー内の **parameters.json** を見つけて開きます。 メモ帳で開き、"value": "GEN-UNIQUE" の行を見つけます。 プレースホルダー GEN-UNIQUE の文字列を、Web アプリ名の一意の値に置き換えます。 その変更を保存します。
+
+2. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+
+3. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、次のファイル **template.json** および **parameters.json** を CloudShell ホーム ディレクトリに 1 つずつアップロードします。
+
 
 ## <a name="task-1-create-a-resource-group-and-deploy-the-prerequisite-web-app"></a>タスク 1:リソース グループを作成し、前提条件の Web アプリをデプロイする
 
@@ -72,19 +73,23 @@ bastion ホストは、プライベート エンドポイントをテストす�
 
 - New-AzBastion
 
- 
 
-```PowerShell
 ## Create backend subnet config. ##
-
+```PowerShell
 $subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24
+
+```
 
 ## Create Azure Bastion subnet. ##
 
+```PowerShell
 $bastsubnetConfig = New-AzVirtualNetworkSubnetConfig -Name AzureBastionSubnet -AddressPrefix 10.0.1.0/24
+
+```
 
 ## Create the virtual network. ##
 
+```PowerShell
 $parameters1 = @{
 
  Name = 'MyVNet'
@@ -101,8 +106,11 @@ $parameters1 = @{
 
 $vnet = New-AzVirtualNetwork @parameters1
 
+```
+
 ## Create public IP address for bastion host. ##
 
+```PowerShell
 $parameters2 = @{
 
  Name = 'myBastionIP'
@@ -119,8 +127,11 @@ $parameters2 = @{
 
 $publicip = New-AzPublicIpAddress @parameters2
 
+```
+
 ## Create bastion host ##
 
+```PowerShell
 $parameters3 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
@@ -134,6 +145,7 @@ $parameters3 = @{
 }
 
 New-AzBastion @parameters3
+
 ```
 
 
@@ -159,16 +171,22 @@ New-AzBastion @parameters3
 
 - Add-AzVMNetworkInterface
 
-```PowerShell
 ## Set credentials for server admin and password. ##
+```PowerShell
 
 $cred = Get-Credential
 
+```
+
 ## Command to get virtual network configuration. ##
+```PowerShell
 
 $vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg
 
+```
+
 ## Command to create network interface for VM ##
+```PowerShell
 
 $parameters1 = @{
 
@@ -184,7 +202,10 @@ $parameters1 = @{
 
 $nicVM = New-AzNetworkInterface @parameters1
 
+```
+
 ## Create a virtual machine configuration.##
+```PowerShell
 
 $parameters2 = @{
 
@@ -215,15 +236,13 @@ $parameters4 = @{
 }
 
 $vmConfig = New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @parameters3 | Set-AzVMSourceImage @parameters4 | Add-AzVMNetworkInterface -Id $nicVM.Id
-
-## Create the virtual machine ##
-
-New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
-
-
 ```
 
+## Create the virtual machine ##
+```
+New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
 
+```
 
 
 パブリック IP アドレスが割り当てられていないか、内部の Basic Azure Load Balancer のバックエンドプールにある Azure Virtual Machines に対しては、Azure によってエフェメラル IP が提供されます。 エフェメラル IP メカニズムは、構成できないアウトバウンド IP アドレスを提供します。
@@ -242,13 +261,14 @@ Azure でのアウトバウンド接続の詳細については、「アウト�
 
  
 
-```PowerShell
 ## Place web app into variable. This assumes that only one web app exists in the resource group. ##
-
+```PowerShell
 $webapp = Get-AzWebApp -ResourceGroupName CreatePrivateEndpointQS-rg
 
-## Create Private Endpoint connection. ##
+```
 
+## Create Private Endpoint connection. ##
+```PowerShell
 $parameters1 = @{
 
  Name = 'myConnection'
@@ -261,18 +281,24 @@ $parameters1 = @{
 
 $privateEndpointConnection = New-AzPrivateLinkServiceConnection @parameters1
 
-## Place virtual network into variable. ##
+```
 
+## Place virtual network into variable. ##
+```PowerShell
 $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
 
-## Disable private endpoint network policy ##
+```
 
+## Disable private endpoint network policy ##
+```PowerShell
 $vnet.Subnets[0].PrivateEndpointNetworkPolicies = "Disabled"
 
 $vnet | Set-AzVirtualNetwork
 
-## Create private endpoint
+```
 
+## Create private endpoint
+```PowerShell
 $parameters2 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
@@ -288,9 +314,8 @@ $parameters2 = @{
 }
 
 New-AzPrivateEndpoint @parameters2 
+
 ```
-
-
 
 
 ## <a name="task-5-configure-the-private-dns-zone"></a>タスク 5: プライベート DNS ゾーンを構成する
@@ -305,13 +330,14 @@ New-AzPrivateEndpoint @parameters2
 
 - New-AzPrivateDnsZoneGroup
 
-```PowerShell
 ## Place virtual network into variable. ##
-
+```PowerShell
 $vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
 
-## Create private dns zone. ##
+```
 
+## Create private dns zone. ##
+```PowerShell
 $parameters1 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
@@ -322,8 +348,10 @@ $parameters1 = @{
 
 $zone = New-AzPrivateDnsZone @parameters1
 
-## Create dns network link. ##
+```
 
+## Create dns network link. ##
+```PowerShell
 $parameters2 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
@@ -337,9 +365,10 @@ $parameters2 = @{
 }
 
 $link = New-AzPrivateDnsVirtualNetworkLink @parameters2
+```
 
 ## Create DNS configuration ##
-
+```PowerShell
 $parameters3 = @{
 
  Name = 'privatelink.azurewebsites.net'
@@ -350,8 +379,10 @@ $parameters3 = @{
 
 $config = New-AzPrivateDnsZoneConfig @parameters3
 
-## Create DNS zone group. ##
+```
 
+## Create DNS zone group. ##
+```PowerShell
 $parameters4 = @{
 
  ResourceGroupName = 'CreatePrivateEndpointQS-rg'
@@ -365,6 +396,7 @@ $parameters4 = @{
 }
 
 New-AzPrivateDnsZoneGroup @parameters4 
+
 ```
 
 
@@ -386,7 +418,7 @@ New-AzPrivateDnsZoneGroup @parameters4
 
 7. 仮想マシンの作成時に入力したユーザー名とパスワードを入力します。
 
-8. 接続後にサーバーで Windows PowerShell を開きます。
+8. Bastionで接続後に Windows PowerShell を開きます。
 
 9. 「nslookup &lt;your- webapp-name&gt;.azurewebsites.net」と入力します。 &lt;Web アプリ名&gt; を、前の手順で作成した Web アプリの名前に置き換えます。 以下に表示されるようなメッセージが返されます。
 
