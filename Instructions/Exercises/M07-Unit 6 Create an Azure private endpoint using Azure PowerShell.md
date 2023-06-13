@@ -4,11 +4,13 @@ Exercise:
   module: Module 07 - Design and implement private access to Azure Services
 ---
 
-# <a name="m07-unit-6-create-an-azure-private-endpoint-using-azure-powershell"></a>M07-ユニット 6 Azure PowerShell を使用して Azure プライベート エンドポイントを作成する
+# M07-ユニット 6 Azure PowerShell を使用して Azure プライベート エンドポイントを作成する
 
 プライベート エンドポイントを使用して Azure Web アプリに安全に接続することにより、Azure Private Link の使用を開始します。 ポータル、CLI、PowerShell などを含むエンドポイントを作成する方法はたくさんあります。 
 
-#### <a name="estimated-time-45-minutes"></a>予想所要時間: 45 分
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+
+#### 予想所要時間: 45 分
 
 Azure Web アプリのプライベート エンドポイントを作成し、仮想マシンをデプロイしてプライベート接続をテストします。
 
@@ -16,17 +18,15 @@ Azure Web アプリのプライベート エンドポイントを作成し、仮
 
 **前提条件**
 
-- アクティブなサブスクリプションが含まれる Azure アカウント。 無料でアカウントを作成できます。
-
 - 対象の Azure サブスクリプションにデプロイされている PremiumV2 レベル以上のアプリ サービス プランを持つ Azure Web アプリ。
 
 - 以下の手順に従って、必要なリソース グループと Web アプリを作成します。
 
 1. M07 フォルダー内の **parameters.json** を見つけて開きます。 メモ帳で開き、"value": "GEN-UNIQUE" の行を見つけます。 プレースホルダー GEN-UNIQUE の文字列を、Web アプリ名の一意の値に置き換えます。 その変更を保存します。
 
-2. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-3. [Cloud Shell] ペインのツールバーで、[ファイルのアップロード/ダウンロード] アイコンをクリックし、ドロップダウン メニューで [アップロード] をクリックして、次のファイル **template.json** および **parameters.json** を CloudShell ホーム ディレクトリに 1 つずつアップロードします。
+1. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、次のファイル **template.json** および **parameters.json** を Cloud Shell ホーム ディレクトリに 1 つずつアップロードします。
 
 PowerShell をインストールしてローカルで使用する場合、この例では Azure PowerShell モジュール バージョン 5.4.1 以降が必要になります。 インストールされているバージョンを確認するには、```Get-Module -ListAvailable Az``` を実行します。 アップグレードする必要がある場合は、[Azure PowerShell モジュールのインストール](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)に関するページを参照してください。 PowerShell をローカルで実行している場合、```Connect-AzAccount``` を実行して Azure との接続を作成することも必要です。
 
@@ -40,7 +40,7 @@ PowerShell をインストールしてローカルで使用する場合、この
 + タスク 6: プライベート エンドポイントへの接続をテストする
 + タスク 7: リソースをクリーンアップする
 
-## <a name="task-1-create-a-resource-group-and-deploy-the-prerequisite-web-app"></a>タスク 1:リソース グループを作成し、前提条件の Web アプリをデプロイする
+## タスク 1:リソース グループを作成し、前提条件の Web アプリをデプロイする
 
 Azure リソース グループとは、Azure リソースのデプロイと管理に使用する論理コンテナーです。
 
@@ -58,7 +58,7 @@ New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
    ```
 (たとえばポータルでデプロイ状態を確認しているときなどに) "指定された名前 GEN-UNIQUE の Web サイトは既に存在します" のようなエラーを受け取った場合は、 必ず、テンプレートの編集に関する前述の「前提条件」を確認してください。
 
-## <a name="task-2-create-a-virtual-network-and-bastion-host"></a>タスク 2: 仮想ネットワークと bastion ホストを作成する
+## タスク 2: 仮想ネットワークと bastion ホストを作成する
 
 仮想ネットワーク、サブネット、bastion ホストを作成します。
 
@@ -139,13 +139,13 @@ New-AzBastion @parameters3
 
 
 
-## <a name="task-3-create-a-test-virtual-machine"></a>タスク 3: テスト仮想マシンを作成する
+## タスク 3: テスト仮想マシンを作成する
 
 このセクションでは、プライベート エンドポイントのテストに使用する仮想マシンを作成します。
 
-- 次のコマンドを使用して、仮想マシンを作成します。
+次のコマンドを使用して仮想マシンを作成します。
 
-- Get-Credential (注: プロンプトが表示されたら、VM のローカル管理者アカウントの資格情報を入力します (例: Student と Pa55w.rd1234))。
+- Get-Credential (注: 管理者パスワードを入力するように求められます。)
 
 - New-AzNetworkInterface
 
@@ -232,7 +232,7 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 Azure でのアウトバウンド接続の詳細については、「アウトバウンド接続に送信元ネットワーク アドレス変換 (SNAT) を使用する」を参照してください。
 
-## <a name="task-4-create-a-private-endpoint"></a>タスク 4: プライベート エンドポイントを作成する
+## タスク 4: プライベート エンドポイントを作成する
 
 このセクションでは、以下を使用してプライベート エンドポイントと接続を作成します。
 
@@ -293,7 +293,7 @@ New-AzPrivateEndpoint @parameters2
 
 
 
-## <a name="task-5-configure-the-private-dns-zone"></a>タスク 5: プライベート DNS ゾーンを構成する
+## タスク 5: プライベート DNS ゾーンを構成する
 
 このセクションでは、次を使用してプライベート DNS ゾーンを作成し、構成します。
 
@@ -368,27 +368,27 @@ New-AzPrivateDnsZoneGroup @parameters4
 ```
 
 
-## <a name="task-6-test-connectivity-to-the-private-endpoint"></a>タスク 6: プライベート エンドポイントへの接続をテストする
+## タスク 6: プライベート エンドポイントへの接続をテストする
 
 このセクションでは、前の手順で作成した仮想マシンを使用し、プライベート エンドポイントを通じて Web アプリに接続します。
 
-1.  [Azure ポータル](https://portal.azure.com/)
+1. [Azure ポータル](https://portal.azure.com/)
 
-2.  左側のナビゲーション ペインで **[リソース グループ]** を選択します。
+1. 左側のナビゲーション ペインで **[リソース グループ]** を選択します。
 
-3. **[CreatePrivateEndpointQS-rg]** を選択します。
+1. **[CreatePrivateEndpointQS-rg]** を選択します。
 
-4. **[myVM]** を選択します。
+1. **[myVM]** を選択します。
 
-5. **myVM** の [概要] ページで **[接続]** 、 **[Bastion]** の順に選択します。
+1. **myVM** の [概要] ページで **[接続]** 、 **[Bastion]** の順に選択します。
 
-6. 青色の **[Bastion を使用する]** ボタンを選択します。
+1. 青色の **[Bastion を使用する]** ボタンを選択します。
 
-7. 仮想マシンの作成時に入力したユーザー名とパスワードを入力します。
+1. 仮想マシンの作成時に入力したユーザー名とパスワードを入力します。
 
-8. 接続後にサーバーで Windows PowerShell を開きます。
+1. 接続後にサーバーで Windows PowerShell を開きます。
 
-9. 「nslookup &lt;your- webapp-name&gt;.azurewebsites.net」と入力します。 &lt;Web アプリ名&gt; を、前の手順で作成した Web アプリの名前に置き換えます。 以下に表示されるようなメッセージが返されます。
+1. 「nslookup &lt;your- webapp-name&gt;.azurewebsites.net」と入力します。 &lt;Web アプリ名&gt; を、前の手順で作成した Web アプリの名前に置き換えます。 以下に表示されるようなメッセージが返されます。
 
   ```
   Server: UnKnown
@@ -408,11 +408,11 @@ New-AzPrivateDnsZoneGroup @parameters4
 Web アプリ名に対応する **10.0.0.5** というプライベート IP アドレスが返されます。 このアドレスは、先ほど作成した仮想ネットワークのサブネット内に存在します。
 
 1. **myVM** への bastion 接続で、Internet Explorer を開きます。
-2. Web アプリの URL (**https://&lt;your-webapp-name&gt;.azurewebsites.net**) を入力します。
-3. アプリケーションをデプロイしていない場合は、既定の Web アプリ ページが表示されます。![アプリ サービスが起動し、稼働していることを示す Azure のページのスクリーン ショット](../media/web-app-default-page.png)
-4. **myVM** への接続を閉じます。 
+1. Web アプリの URL (**https://&lt;your-webapp-name&gt;.azurewebsites.net**) を入力します。
+1. アプリケーションをデプロイしていない場合は、既定の Web アプリ ページが表示されます。![アプリ サービスが起動し、稼働していることを示す Azure のページのスクリーン ショット](../media/web-app-default-page.png)
+1. **myVM** への接続を閉じます。 
 
-## <a name="task-7-clean-up-resources"></a>タスク 7: リソースをクリーンアップする
+## タスク 7: リソースをクリーンアップする
 
 プライベート エンドポイントと VM を使い終わったら、[Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup) を使用して、リソース グループとそのすべてのリソースを削除します。
 
