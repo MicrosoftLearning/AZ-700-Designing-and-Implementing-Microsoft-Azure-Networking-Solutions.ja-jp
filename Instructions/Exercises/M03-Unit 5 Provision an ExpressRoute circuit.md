@@ -3,11 +3,13 @@ Exercise:
   title: M03 - ユニット 5 ExpressRoute 回線のプロビジョニング
   module: Module 03 - Design and implement Azure ExpressRoute
 ---
-# <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-ユニット 5 ExpressRoute 回線のプロビジョニング
+# M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
 この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。 
 
-#### <a name="estimated-time-15-minutes"></a>推定時間:15 分
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+
+#### 推定時間:15 分
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/environment-diagram.png)
 
@@ -21,7 +23,7 @@ Exercise:
 + タスク 4: リソースをクリーンアップする
 
 
-## <a name="task-1-create-and-provision-an-expressroute-circuit"></a>タスク 1: ExpressRoute 回線を作成してプロビジョニングする
+## タスク 1: ExpressRoute 回線を作成してプロビジョニングする
 
  
 
@@ -31,17 +33,17 @@ Exercise:
    >
    > ExpressRoute 回線の課金は、サービス キーが発行されたときから始まります。 接続プロバイダーが回線をプロビジョニングする準備ができたら、この操作を実行します。
 
-2. Azure portal のメニューで、**[+ リソースの作成]** を選択します。 **[ネットワーク]** を選択してから、次の図に示すように **[ExpressRoute]** を選択します。 [ExpressRoute] が一覧に表示されない場合は、**[Marketplace を検索]** を使用してそれを検索します。
+1. Azure portal のメニューで、**[+ リソースの作成]** を選択します。 **[ネットワーク]** を選択してから、次の図に示すように **[ExpressRoute]** を選択します。 [ExpressRoute] が一覧に表示されない場合は、**[Marketplace を検索]** を使用してそれを検索します。
 
    ![Azure portal - ExpressRoute 回線の作成のメニュー](../media/create-expressroute-circuit-menu.png)
 
-3. 「**ExpressRoute の作成**」ページで、回線の**リソース グループ**、**リージョン**、**名前**を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
+1. 「**ExpressRoute の作成**」ページで、回線の**リソース グループ**、**リージョン**、**名前**を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
 
-4. このページの値を入力するときは、この例では、正しい SKU レベル (**標準**) データ測定課金モデル (**測定**) プロバイダー (**Equinix**) ピアリングの場所 (**シアトル**) と帯域幅 (**50 Mbps**) を指定してください。
+1. このページの値を入力するときは、この例では、正しい SKU レベル (**標準**) データ測定課金モデル (**測定**) プロバイダー (**Equinix**) ピアリングの場所 (**シアトル**) と帯域幅 (**50 Mbps**) を指定してください。
 
-5. **[確認および作成]** を選択します。
+1. **[確認および作成]** を選択します。
 
-6. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
+1. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
 
 
 ![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration2.png)
@@ -71,24 +73,24 @@ Exercise:
 
 - **[Allow classic operation](クラシック操作を許可する)** により、従来の仮想ネットワークを回線にリンクすることができます。
 
-## <a name="task-2-retrieve-your-service-key"></a>タスク 2: サービス キーを取得する
+## タスク 2: サービス キーを取得する
  
 
 1. **[すべてのサービス] &gt; [ネットワーク] &gt; [ExpressRoute 回線]** を選択すると、作成したすべての回線を表示できます。
 
    ![Azure portal - ExpressRoute リソースの作成のメニュー](../media/expressroute-circuit-menu.png)
 
-2. サブスクリプション内で作成されたすべての ExpressRoute 回線がここに表示されます。 
+1. サブスクリプション内で作成されたすべての ExpressRoute 回線がここに表示されます。 
 
    ![Azure portal - 既存の Expressroute 回線を表示する](../media/expressroute-circuit-list.png)
 
-3. 回線のページには、その回線のプロパティが表示されます。 サービス キーは [サービス キー] フィールドに表示されます。 お使いのサービス プロバイダーは、プロビジョニング プロセスを完了するためにサービス キーを必要とします。 サービス キーは回線に固有です。 **プロビジョニングのためにサービス キーを接続プロバイダーに送信する必要があります。**
+1. 回線のページには、その回線のプロパティが表示されます。 サービス キーは [サービス キー] フィールドに表示されます。 お使いのサービス プロバイダーは、プロビジョニング プロセスを完了するためにサービス キーを必要とします。 サービス キーは回線に固有です。 **プロビジョニングのためにサービス キーを接続プロバイダーに送信する必要があります。**
 
    ![Azure portal - サービス キーが表示されている ExpressRoute 回線のプロパティ](../media/expressroute-circuit-overview.png)
 
-4. このページの **[プロバイダーの状態]** には、サービス プロバイダー側でのプロビジョニングの現在の状態が表示されます。 **[回線の状態]** は、Microsoft 側での状態を提供します。 
+1. このページの **[プロバイダーの状態]** には、サービス プロバイダー側でのプロビジョニングの現在の状態が表示されます。 **[回線の状態]** は、Microsoft 側での状態を提供します。 
 
-5. 新しい ExpressRoute 回線を作成する場合、この回線は次の状態になります。
+1. 新しい ExpressRoute 回線を作成する場合、この回線は次の状態になります。
 
    - プロバイダーの状態: 未プロビジョニング
    -  回線の状態: 有効
@@ -109,7 +111,7 @@ Exercise:
 
 おめでとうございます。 あなたは ExpressRoute 回線を作成し、回線のプロビジョニングを完了するために必要になるサービス キーを見つけました。
 
-## <a name="task-3-deprovisioning-an-expressroute-circuit"></a>タスク 3: ExpressRoute 回線をプロビジョニング解除する
+## タスク 3: ExpressRoute 回線をプロビジョニング解除する
 
 ExpressRoute 回線サービス プロバイダーのプロビジョニング状態が **[プロビジョニング中]** または **[プロビジョニング済み]** である場合は、サービス プロバイダーと協力して、サービス プロバイダー側で回線のプロビジョニング解除を行う必要があります。 サービス プロバイダーが回線のプロビジョニング解除を完了し、Microsoft に通知するまで、Microsoft が引き続きリソースを予約し、お客様に請求する可能性があります。
 
@@ -119,7 +121,7 @@ ExpressRoute 回線サービス プロバイダーのプロビジョニング状
 >
 > サービス プロバイダーが回線のプロビジョニングを解除済みの場合 (サービス プロバイダーのプロビジョニング状態が未プロビジョニングに設定されている場合)、回線を削除することができます。 これによって回線の課金が停止されます。
 
-## <a name="task-4-clean-up-resources"></a>タスク 4: リソースをクリーンアップする
+## タスク 4: リソースをクリーンアップする
 
 **[削除]** アイコンを選択し、ExpressRoute 回線を削除できます。 続行する前に、プロバイダーのステータスが確実に "未プロビジョニング" になっているようにします。
 
@@ -128,7 +130,7 @@ ExpressRoute 回線サービス プロバイダーのプロビジョニング状
 
    >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
-1. Azure portal で、**[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
 1. 次のコマンドを実行して、このモジュールのラボ全体を通して作成したすべてのリソース グループを削除します。
 

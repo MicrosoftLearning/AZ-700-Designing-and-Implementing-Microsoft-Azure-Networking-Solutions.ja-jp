@@ -3,16 +3,18 @@ Exercise:
   title: M01 - ユニット 4 Azure で仮想ネットワークを設計および実装する
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# <a name="m01-unit-4-design-and-implement-a-virtual-network-in-azure"></a>M01-ユニット 4 Azure で仮想ネットワークを設計および実装する
+# M01-ユニット 4 Azure で仮想ネットワークを設計および実装する
 
 
-## <a name="exercise-scenario"></a>演習のシナリオ 
+## 演習のシナリオ 
 
 現在、あなたは Azure portal で仮想ネットワークをデプロイする準備ができています。
 
 ここで考える架空の組織 Contoso Ltd は、インフラストラクチャとアプリケーションを Azure に移行している途中です。 ネットワーク エンジニアとしての役割を持つあなたは、それらの仮想ネットワーク内のリソースをサポートするため、3 つの仮想ネットワークとサブネットを計画して実装する必要があります。
 
-#### <a name="estimated-time-20-minutes"></a>推定時間:20 分
+                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+
+#### 推定時間:20 分
 
 **CoreServicesVnet** 仮想ネットワークは、**米国東部**リージョンにデプロイされています。 この仮想ネットワークには、最も多くのリソースを配置します。 VPN 接続を介してオンプレミス ネットワークに接続されます。 このネットワークには、ビジネスの運営にとって重要な Web サービス、データベース、その他のシステムを配置します。 ドメイン コントローラーや DNS などの共有サービスもここに配置されます。 大きく成長することが見込まれるため、この仮想ネットワークには大きなアドレス空間が必要です。
 
@@ -53,13 +55,13 @@ Exercise:
 + タスク 4: ResearchVnet の仮想ネットワークとサブネットを作成する
 + タスク 5: VNet とサブネットの作成を確認する
 
-## <a name="task-1-create-the-contoso-resource-group"></a>タスク 1: Contoso のリソース グループを作成する
+## タスク 1: Contoso のリソース グループを作成する
 
 1. [Azure ポータル](https://portal.azure.com/)に移動します。
 
 2. ホーム ページの **[Azure サービス]** で、**[リソース グループ]** を選択します。  
 
-3. [リソース グループ] で、**[+ 作成]** を選択します。
+3. [リソース グループ] で、 **[+ 作成]** を選択します。
 
 4. 次の表の情報を使用して、リソース グループを作成します。
 
@@ -75,7 +77,7 @@ Exercise:
 
  
 
-## <a name="task-2-create-the-coreservicesvnet-virtual-network-and-subnets"></a>タスク 2: CoreServicesVnet の仮想ネットワークとサブネットを作成する
+## タスク 2: CoreServicesVnet の仮想ネットワークとサブネットを作成する
 
 1. Azure portal のホーム ページで、グローバル検索バーに移動し、「**仮想ネットワーク**」を検索して、[サービス] の下の仮想ネットワークを選択します。  ![仮想ネットワークに対する Azure portal のホーム ページのグローバル検索バーの結果。](../media/global-search-bar.PNG)
 2. 仮想ネットワーク ページで、**[作成]** を選択します。  ![仮想ネットワークの作成ウィザード。](../media/create-virtual-network.png)
@@ -112,7 +114,7 @@ Exercise:
  
  8. 次の表に基づいて、VNet ごとにステップ 1 から 8 を繰り返します  
 
-## <a name="task-3-create-the-manufacturingvnet-virtual-network-and-subnets"></a>タスク 3: ManufacturingVnet の仮想ネットワークとサブネットを作成する
+## タスク 3: ManufacturingVnet の仮想ネットワークとサブネットを作成する
 
 
 | **Tab**      | **オプション**         | **Value**             |
@@ -136,7 +138,7 @@ Exercise:
 |                           | サブネットのアドレス範囲 | 10.30.22.0/24             |
  
 
-## <a name="task-4-create-the-researchvnet-virtual-network-and-subnets"></a>タスク 4: ResearchVnet の仮想ネットワークとサブネットを作成する
+## タスク 4: ResearchVnet の仮想ネットワークとサブネットを作成する
 
 
 | **Tab**      | **オプション**         | **Value**            |
@@ -152,22 +154,20 @@ Exercise:
 |                      | サブネットのアドレス範囲 | 10.40.0.0/24         |
  
 
-## <a name="task-5-verify-the-creation-of-vnets-and-subnets"></a>タスク 5: VNet とサブネットの作成を確認する
+## タスク 5: VNet とサブネットの作成を確認する
 
 1. Azure portal のホーム ページで、**[すべてのリソース]** を選択します。
 
 2. CoreServicesVnet、ManufacturingVnet、ResearchVnet が一覧に表示されていることを確認します。
 
-3. 使用するリージョンごとに、Azure によって Network Watcher が作成されることに注意してください。
+3 **CoreServicesVnet** を選択します。 
 
-4. **CoreServicesVnet** を選択します。 
+4. CoreServicesVnet の **[設定]** で、**[サブネット]** を選択します。
 
-5. CoreServicesVnet の **[設定]** で、**[サブネット]** を選択します。
-
-6. CoreServicesVnet の [サブネット] で、作成したサブネットが一覧にあり、IP アドレス範囲が正しいことを確認します。
+5. CoreServicesVnet の [サブネット] で、作成したサブネットが一覧にあり、IP アドレス範囲が正しいことを確認します。
 
    ![CoreServicesVnet のサブネットの一覧。](../media/verify-subnets-annotated.png)
 
-7. VNet ごとに手順 4 〜 6 を繰り返します。
+6. 各 VNet で手順 3 から 5 を繰り返します。
 
 お疲れさまでした。 リソース グループ、3 つの VNet、関連するサブネットが正常に作成されました。 
