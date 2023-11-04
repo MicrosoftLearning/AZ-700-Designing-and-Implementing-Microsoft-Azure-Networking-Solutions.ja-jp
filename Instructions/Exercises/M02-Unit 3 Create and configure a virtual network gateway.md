@@ -14,11 +14,11 @@ Exercise:
 + タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 + タスク 2:CoreServicesVM を作成する
 + タスク 3:ManufacturingVM を作成する
-+ タスク 4: RDP を使用してテスト VM に接続する
++ タスク 4: RDP を使って VM に接続する
 + タスク 5: VM 間の接続をテストする
 + タスク 6: CoreServicesVnet ゲートウェイを作成する
 + タスク 7: ManufacturingVnet ゲートウェイを作成する
-+ タスク 8: CoreServicesVnet から ManufacturingVnet 
++ タスク 8: CoreServicesVnet から ManufacturingVnet に接続する 
 + タスク 9: ManufacturingVnet を CoreServicesVnet に接続する
 + タスク 10: 接続が接続されていることを確認する 
 + タスク 11: VM 間の接続をテストする
@@ -30,7 +30,7 @@ Exercise:
 ## タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 
 1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
-
+ > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
 1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** ファイルと **azuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワークとサブネットを作成します。
@@ -83,23 +83,23 @@ Exercise:
 1. 仮想マシンが作成されていることを確認してください。
 
 
-## タスク 4: RDP を使用してテスト VM に接続する
+## タスク 4: RDP を使って VM に接続する
 
 1. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
 1. **ManufacturingVM** を選択します。
 1. **ManufacturingVM** で、 **[接続] &gt; [RDP]** を選択します。
 1. **[ManufacturingVM | 接続]** で、 **[RDP ファイルのダウンロード]** を選択します。
 1. RDP ファイルをデスクトップに保存します。
-1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使用して、ManufacturingTestVM に接続します。 接続後、RDP セッションを最小化します。
+1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使って、**ManufacturingVM** に接続します。 接続後、RDP セッションを最小化します。
 1. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
 1. **[CoreServicesVM]** を選択します。
 1. **[CoreServicesVM]** で **[接続] &gt; [RDP]** を選択します。
 1. **[CoreServicesVM | 接続]** で、 **[RDP ファイルのダウンロード]** を選択します。
 1. RDP ファイルをデスクトップに保存します。
-1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使用して、CoreServicesTestVM に接続します。
+1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使って、**CoreServicesVM** に接続します。
 1. 両方の VM で、**[デバイスのプライバシー設定の選択]** の **[同意する]** を選択します。
 1. 両方の VM で、**[ネットワーク]** の **[はい]** を選択します。
-1. CoreServicesTestVM で、PowerShell を開き、次のコマンドを実行します: ipconfig
+1. **CoreServicesVM** で PowerShell を開き、次のコマンドを実行します: ipconfig
 1. IPv4 アドレスをメモします。 
 
  

@@ -22,14 +22,14 @@ Exercise:
 + タスク 5: ロード バランサーの規則を作成する
 + タスク 6: バックエンド サーバーを作成する
 + タスク 7: バックエンド プールに VM を追加する
-+ タスク 8: VM に IIS をインストールする
-+ タスク 9: ロード バランサーをテストする
-+ タスク 10: Log Analytics ワークスペースを作成する
-+ タスク 11: [機能依存] ビューを使用する
-+ タスク 12: 詳細なメトリックを表示する
-+ タスク 13: リソース正常性を表示する
-+ タスク 14: 診断設定を構成する
-+ タスク 15: リソースをクリーンアップする
++ タスク 8: ロード バランサーをテストする
++ タスク 9: Log Analytics ワークスペースを作成する
++ タスク 10: [機能依存] ビューを使う
++ タスク 11: 詳細なメトリックを表示する
++ タスク 12: リソース正常性を表示する
++ タスク 13: 診断設定を構成する
++ タスク 14: リソースをクリーンアップする
+
 
                 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
@@ -191,8 +191,8 @@ Exercise:
 このセクションでは、ロード バランサーのバックエンド プールに対して 3 つの VM を作成し、それらの VM をバックエンド プールに追加してから、3 つの VM に IIS をインストールしてロード バランサーをテストします。
 
 1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
-
-1. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンをクリックし、ドロップダウン メニューで **[アップロード]** をクリックして、**azuredeploy.json**、**azuredeploy.parameters.vm1.json**、**azuredeploy.parameters.vm2.json**、および **azuredeploy.parameters.vm3.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M08 から Cloud Shell** のホーム ディレクトリに 1 つずつアップロードします。
+ > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
+1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** ファイルと **azuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M08** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワーク、サブネット、VM を作成します。
 
@@ -200,10 +200,8 @@ Exercise:
 
    ```powershell
    $RGName = "IntLB-RG"
-   
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
+
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
     > **注:**  これには、デプロイまでに数分かかります。 
@@ -226,24 +224,7 @@ Exercise:
 
  
 
-## タスク 8: VM に IIS をインストールする
-
-1. Azure portal のホームページで、 **[すべてのリソース]** を選択して、リソースの一覧から **[myVM1]** を選択します。
-1. **[概要]** ページで **[接続]** 、 **[要塞]** の順に選択します。
-1. **[Bastion を使用する]** を選択します。
-1. **[ユーザー名]** ボックスに「**TestUser**」 と入力し、 **[パスワード]** ボックスに、展開中に指定したパスワードを入力して、 **[接続]** を選択します。
-1. **[myVM1]** ウィンドウが別のブラウザー タブで開きます。
-1. **[ネットワーク]** ペインが表示されたら、 **[はい]** を選択します。
-1. ウィンドウの左下隅にある **[Windows の [スタート] アイコン]** を選択してから、 **[Windows PowerShell]** タイルを選択します。
-1. IIS をインストールするには、PowerShell で次のコマンドを実行します: Install-WindowsFeature -name Web-Server -IncludeManagementTools
-1. 既存のデフォルトの Web ホーム ページを削除するには、PowerShell で次のコマンドを実行します: Remove-Item C:\inetpub\wwwroot\iisstart.htm
-1. 新しいデフォルトの Web ホーム ページを追加して、そこにコンテンツを追加するには、PowerShell で次のコマンドを実行します: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
-1. ブラウザーのタブを閉じ、**myVM1** への Bastion セッションを終了します。
-1. 上記のステップ 1 〜 11 をさらに 2 回繰り返して、IIS と更新されたデフォルトのホーム ページを **myVM2** および **myVM3** 仮想マシンにインストールします。
-
- 
-
-## タスク 9: ロード バランサーをテストする
+## タスク 8: ロード バランサーをテストする
 
 このセクションでは、テスト VM を作成し、ロード バランサーをテストします。
 
@@ -319,7 +300,7 @@ Exercise:
 
     ![VM3 からの Hello World という応答を示すブラウザー ウィンドウ](../media/load-balancer-web-test-2.png)
 
-## タスク 10: Log Analytics ワークスペースを作成する
+## タスク 9: Log Analytics ワークスペースを作成する
 
 1. Azure portal のホーム ページで **[すべてのサービス]** を選択して、ページ上部の検索ボックスに **[Log Analytics]** と入力して、 **[Log Analytics ワークスペース]** を選択します。
 
@@ -342,7 +323,7 @@ Exercise:
 
 
 
-## タスク 11: [機能依存] ビューを使用する
+## タスク 10: [機能依存] ビューを使う
 
 1. Azure portal のホームページで、 **[すべてのリソース]** を選択して、リソースの一覧で **[myIntLoadBalancer]** を選択します。
 
@@ -371,7 +352,7 @@ Exercise:
 
  
 
-## タスク 12: 詳細なメトリックを表示する
+## タスク 11: 詳細なメトリックを表示する
 
 1. このネットワーク リソースのより包括的なメトリックを表示するには、 **[詳細なメトリックの表示]** を選択します。
    ![Azure Monitor Network Insights - [詳細なメトリックの表示] ボタンが強調表示されています](../media/network-insights-detailedmetrics-1.png)
@@ -393,7 +374,7 @@ Exercise:
 
  
 
-## タスク 13: リソース正常性を表示する
+## タスク 12: リソース正常性を表示する
 
 1. ロード バランサー リソースの正常性を表示するには、Azure portal のホームページで、 **[すべてのサービス]** を選択して、 **[監視]** を選択します。
 
@@ -413,7 +394,7 @@ Exercise:
 
  
 
-## タスク 14: 診断設定を構成する
+## タスク 13: 診断設定を構成する
 
 1. Azure portal のホーム ページで **[リソース グループ]** を選択して、リストから **[IntLB-RG]** リソース グループを選択します。
 
@@ -435,9 +416,7 @@ Exercise:
 
  
 
- 
-
-## タスク 15: リソースをクリーンアップする
+## タスク 14: リソースをクリーンアップする
 
    >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
