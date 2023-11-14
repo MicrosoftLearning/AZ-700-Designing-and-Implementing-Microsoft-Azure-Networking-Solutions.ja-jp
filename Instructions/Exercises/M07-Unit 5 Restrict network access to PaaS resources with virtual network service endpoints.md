@@ -23,7 +23,7 @@ Exercise:
 + タスク 10: ストレージ アカウントへのアクセスを確認する
 + タスク 11: リソースをクリーンアップする
 
-                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 #### 推定時間: 35 分
 
@@ -123,9 +123,9 @@ Exercise:
    | 宛先サービス タグ | **[Storage]** を選びます        |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
+   | Protocol                | [任意]                       |
    | アクション                  | Allow                     |
-   | Priority                | 100                       |
+   | 優先度                | 100                       |
    | Name                    | Allow-Storage-All         |
 
 1. **[追加]** を選択します。
@@ -148,8 +148,8 @@ Exercise:
    | 宛先サービス タグ | **[インターネット]** を選びます       |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | *                         |
-   | Protocol                | Any                       |
-   | アクション                  | 拒否                      |
+   | Protocol                | [任意]                       |
+   | アクション                  | Deny                      |
    | Priority                | 110                       |
    | Name                    | Deny-Internet-All         |
 
@@ -167,12 +167,12 @@ Exercise:
 
    | **設定**             | **Value**                 |
    | ----------------------- | ------------------------- |
-   | source                  | Any                       |
-   | Source port ranges      | *                         |
+   | source                  | [任意]                       |
+   | ソース ポート範囲      | *                         |
    | 宛先             | **VirtualNetwork** を選びます。 |
    | サービス                 | Custom                    |
    | 宛先ポート範囲 | 3389                      |
-   | Protocol                | Any                       |
+   | Protocol                | [任意]                       |
    | アクション                  | Allow                     |
    | Priority                | 120                       |
    | Name                    | Allow-RDP-All             |
@@ -237,7 +237,7 @@ Exercise:
    | ---------------- | ---------------------------- |
    | サブスクリプション     | サブスクリプションを選択します。    |
    | 仮想ネットワーク | [CoreServicesVNet] を選択します **。** |
-   | サブネット          | **[プライベート]** を選択します。          |
+   | サブネット          | **[Private]** を選択します。          |
 
 1. **[追加]** を選択します。
 
