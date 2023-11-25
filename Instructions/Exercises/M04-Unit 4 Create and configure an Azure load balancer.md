@@ -9,7 +9,7 @@ Exercise:
 
 この演習では、架空の組織 Contoso Ltd. 用の内部ロード バランサーを作成します。 
 
-                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 #### 推定時間: 60 分 (最大 45 分のデプロイ待機時間を含む)
 
@@ -79,7 +79,7 @@ Exercise:
 
 このセクションでは、ロード バランサーのバックエンド プールに対して同じ可用性セットに含まれる 3 つの VM を作成し、それらの VM をバックエンド プールに追加してから、3 つの VM に IIS をインストールしてロード バランサーをテストします。
 
-1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
  > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
 2. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、azuredeploy.json、azuredeploy.parameters.vm1.json、azuredeploy.parameters.vm2.json、azuredeploy.parameters.vm3.json の各ファイルを Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
@@ -237,7 +237,7 @@ Exercise:
    | Resource group       | **IntLB-RG**                                 |
    | 仮想マシン名 | **myTestVM**                                 |
    | リージョン               | **(米国) 米国東部**                             |
-   | 可用性のオプション | **インフラストラクチャの冗長性は必要ありません**    |
+   | 可用性のオプション | **インフラストラクチャ冗長は必要ありません**    |
    | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
    | サイズ                 | **Standard_DS2_v3 - 2 vcpu、8 GiB メモリ**   |
    | ユーザー名             | **TestUser**                                 |
@@ -255,7 +255,7 @@ Exercise:
    | Subnet                                                       | **myBackendSubnet**           |
    | パブリック IP                                                    | **[なし]** に変更する            |
    | NIC ネットワーク セキュリティ グループ                                   | **詳細**                  |
-   | ネットワーク セキュリティ グループを構成する                             | 既存の **[myNSG]** を選択します |
+   | ネットワーク セキュリティ グループを構成する                             | 既存の **[(新規)myTestVMNSG]** のまま |
    | 負荷分散のオプション                                       | **なし**                      |
 
 

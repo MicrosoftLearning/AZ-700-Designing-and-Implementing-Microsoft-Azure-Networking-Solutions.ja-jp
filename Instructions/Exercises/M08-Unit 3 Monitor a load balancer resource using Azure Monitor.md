@@ -31,7 +31,7 @@ Exercise:
 + タスク 14: リソースをクリーンアップする
 
 
-                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 
 > [!Note]  
@@ -77,7 +77,7 @@ Exercise:
     | **設定**                       | **Value**                                              |
     | --------------------------------- | ------------------------------------------------------ |
     | 要塞名                      | **myBastionHost**                                      |
-    | AzureBastionSubnet のアドレス空間  | **10.1.1.0/24**                                        |
+    | [AzureBastionSubnet のアドレス空間]  | **10.1.1.0/24**                                        |
     | パブリック IP アドレス                 | **[新規作成]** を選択します<br /><br />名前: **myBastionIP** |
 
 1. **[Review + create](レビュー + 作成)** を選択します。
@@ -243,7 +243,7 @@ Exercise:
    | Resource group       | **IntLB-RG**                                 |
    | 仮想マシン名 | **myTestVM**                                 |
    | リージョン               | **(米国) 米国西部**                             |
-   | 可用性のオプション | **インフラストラクチャの冗長性は必要ありません**    |
+   | 可用性のオプション | **インフラストラクチャ冗長は必要ありません**    |
    | Image                | **[Windows Server 2019 Datacenter - Gen 1]**   |
    | サイズ                 | **Standard_DS2_v3 - 2 vcpu、8 GiB メモリ** |
    | ユーザー名             | **TestUser**                                 |

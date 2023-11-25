@@ -14,16 +14,16 @@ Exercise:
 + タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 + タスク 2:CoreServicesVM を作成する
 + タスク 3:ManufacturingVM を作成する
-+ タスク 4: RDP を使って VM に接続する
++ タスク 4:RDP を使用して VM に接続する
 + タスク 5: VM 間の接続をテストする
 + タスク 6: CoreServicesVnet ゲートウェイを作成する
 + タスク 7: ManufacturingVnet ゲートウェイを作成する
-+ タスク 8: CoreServicesVnet から ManufacturingVnet に接続する 
++ タスク 8:CoreServicesVnet を ManufacturingVnet に接続する 
 + タスク 9: ManufacturingVnet を CoreServicesVnet に接続する
 + タスク 10: 接続が接続されていることを確認する 
 + タスク 11: VM 間の接続をテストする
 
-                **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 #### 推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
 
@@ -133,7 +133,7 @@ Exercise:
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
-   |                 | インスタンスの詳細  | Name                                        | CoreServicesVnetGateway      |
+   |                 | インスタンスの詳細  | 名前                                        | CoreServicesVnetGateway      |
    |                 |                   | リージョン                                      | 米国東部                      |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | VPN の種類                                    | ルート ベース                  |
