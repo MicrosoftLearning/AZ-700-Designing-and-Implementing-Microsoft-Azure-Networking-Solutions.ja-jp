@@ -11,7 +11,7 @@ Exercise:
 
 #### 推定時間:15 分
 
-![演習用の ExpressRoute 回線のレイアウト図](../media/environment-diagram.png)
+![演習用の ExpressRoute 回線のレイアウト図](../media/5-exercise-provision-expressroute-circuit.png)
 
 
 

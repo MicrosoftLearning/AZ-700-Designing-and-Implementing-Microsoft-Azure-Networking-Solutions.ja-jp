@@ -9,7 +9,9 @@ Exercise:
 ## 演習のシナリオ 
 このユニットでは、Contoso Ltd の DNS 名前解決を構成します。contoso.com という名前のプライベート DNS ゾーンを作成し、登録と解決のために VNet をリンクした後、2 つの仮想マシンを作成して構成をテストします。
 
-この演習では、以下のことを行います。
+![DNS アーキテクチャの図。](../media/6-exercise-configure-domain-name-servers-configuration-azure.png)
+
+この演習では、次のことを行います。
 
 + タスク 1: プライベート DNS ゾーンを作成する
 + タスク 2: 自動登録のためにサブネットをリンクする
