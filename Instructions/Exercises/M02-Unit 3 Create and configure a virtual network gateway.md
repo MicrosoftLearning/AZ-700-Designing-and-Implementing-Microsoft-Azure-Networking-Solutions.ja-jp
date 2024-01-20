@@ -9,7 +9,9 @@ Exercise:
 
 この演習では、Contoso Core Services VNet と Manufacturing VNet を接続する仮想ネットワーク ゲートウェイを構成します。 
 
-この演習では、以下のことを行います。
+![仮想ネットワーク ゲートウェイの図。](../media/3-exercise-create-configure-local-network-gateway.png)
+
+この演習では、次のことを行います。
 
 + タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 + タスク 2:CoreServicesVM を作成する

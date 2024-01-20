@@ -8,12 +8,14 @@ Exercise:
 ## 演習のシナリオ 
 このユニットでは、トラフィック フローを許可するピアリングを追加することにより、CoreServicesVnet と ManufacturingVnet の間の接続を構成します。 
 
+![仮想ネットワーク ピアリングの図。](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
+
 このユニットでは、次のことを行います。
 
 + タスク 1: 構成をテストするための仮想マシンを作成する
-+ タスク 2: RDP を使用してテスト VM に接続する
-+ タスク 3: VM 間の接続をテストする
-+ タスク 4: CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
++ タスク 2:RDP を使用してテスト VM に接続する
++ タスク 3:VM 間の接続をテストする
++ タスク 4:CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
 + タスク 5: VM 間の接続をテストする
 + タスク 6: リソースをクリーンアップする
 

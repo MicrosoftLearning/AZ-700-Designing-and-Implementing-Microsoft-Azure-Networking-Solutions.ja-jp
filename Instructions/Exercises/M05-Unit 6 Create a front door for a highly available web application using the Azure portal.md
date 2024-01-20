@@ -12,7 +12,7 @@ Exercise:
 
 この演習では、別々の Azure リージョンで実行される、Web アプリケーションの 2 つのインスタンスをプールする Azure Front Door の構成を設定します。 この構成では、アプリケーションが実行されている最も近いサイトにトラフィックが誘導されます。 Web アプリケーションは、Azure Front Door によって絶えず監視されます。 最も近いサイトが利用できなくなったときに、使用可能な次のサイトに自動フェールオーバーする方法について説明します。 次の図に、ネットワーク構成を示します。
 
-![Azure Front Door のネットワーク構成](../media/front-door-environment-diagram.png)
+![Azure Front Door のネットワーク構成](../media/6-exercise-create-front-door-for-highly-available.png)
 
 この演習では、以下のことを行います。
 

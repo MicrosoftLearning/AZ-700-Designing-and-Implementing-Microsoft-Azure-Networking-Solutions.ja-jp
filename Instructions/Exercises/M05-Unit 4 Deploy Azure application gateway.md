@@ -9,7 +9,10 @@ Exercise:
 
 この演習では、Azure portal を使用してアプリケーション ゲートウェイを作成します。 さらに、それをテストし、正しく動作することを確認します。
 
->**注**: このラボをご自分のペースでクリックして進めることができる、 **[対話型ラボ シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+![アプリケーション ゲートウェイ アーキテクチャの図。](../media/4-exercise-deploy-azure-application-gateway.png)
+
+
+>**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 #### 推定時間: 25 分
 
