@@ -43,6 +43,7 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+ > **注:**  現在、西ヨーロッパ リージョンで、ゲートウェイのデプロイに影響する問題が発生しています。 回避策として、このデプロイでは、ManufacturingVnet のリージョンが北ヨーロッパに変更されました。 
 
 ## タスク 2:CoreServicesVM を作成する
 
@@ -167,7 +168,7 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | リージョン                                      | 西ヨーロッパ                  |
+   |                 |                   | リージョン                                      | 北ヨーロッパ                  |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |

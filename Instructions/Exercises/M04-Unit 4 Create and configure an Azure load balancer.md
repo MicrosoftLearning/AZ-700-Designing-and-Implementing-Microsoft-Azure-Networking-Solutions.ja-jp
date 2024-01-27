@@ -15,9 +15,8 @@ Exercise:
 
 内部ロード バランサーを作成する手順は、このモジュールで既に学習した、パブリック ロード バランサーを作成する手順とよく似ています。 主な違いは、パブリック ロード バランサーでは、フロントエンドにはパブリック IP アドレスを使用してアクセスされ、仮想ネットワークの外部に配置されているホストから接続をテストしますが、一方で内部ロード バランサーでは、フロントエンドは仮想ネットワーク内のプライベート IP アドレスであり、同じネットワーク内のホストから接続をテストします。
 
-次の図は、この演習でデプロイする環境を示しています。
 
-![内部 Standard Load Balancer の図](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
+![内部 Standard Load Balancer の図](../media/4-exercise-create-configure-azure-load-balancer.png)
 
  
 この演習では、以下のことを行います。
@@ -42,7 +41,7 @@ Exercise:
 
    | **設定**    | **Value**                                  |
    | -------------- | ------------------------------------------ |
-   | サブスクリプション   | サブスクリプションを選択します                   |
+   | サブスクリプション   | サブスクリプションを選択します。                   |
    | Resource group | **[新規作成]** を選択  名前: **IntLB-RG** |
    | 名前           | **IntLB-VNet**                             |
    | リージョン         | **(米国) 米国東部**                           |
@@ -81,7 +80,7 @@ Exercise:
 
 1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
  > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
-2. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、azuredeploy.json、azuredeploy.parameters.vm1.json、azuredeploy.parameters.vm2.json、azuredeploy.parameters.vm3.json の各ファイルを Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
+2. [Cloud Shell] ペインのツール バーで、**[ファイルのアップロード/ダウンロード]** アイコンを選び、ドロップダウン メニューで **[アップロード]** を選んで、azuredeploy.json と azuredeploy.parameters.json ファイルを Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 3. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -90,9 +89,7 @@ Exercise:
    ```powershell
    $RGName = "IntLB-RG"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
 これらの 3 つの VM の作成には 5 分から 10 分かかる場合があります。 このジョブが完了するまで待つ必要はありません。すぐに次のタスクを続行できます。
@@ -113,12 +110,13 @@ Exercise:
 
    | **設定**           | **Value**                |
    | --------------------- | ------------------------ |
-   | サブスクリプション          | サブスクリプションを選択します |
+   | サブスクリプション          | サブスクリプションを選択します。 |
    | Resource group        | **IntLB-RG**             |
    | 名前                  | **myIntLoadBalancer**    |
    | リージョン                | **(米国) 米国東部**         |
-   | Type                  | **内部**             |
    | SKU                   | **Standard**             |
+   | Type                  | **内部**             |
+   | レベル                  | **Regional**             |
 
 
 1. **[次へ: フロントエンド IP 構成]** を選択します。
@@ -161,7 +159,7 @@ Exercise:
 
 1. 3 つの VM (**myVM1**、**myVM2**、**myVM3**) のチェックボックスをオンにして、 **[追加]** を選択します。
 
-1. **[追加]** を選択します。
+1. **[保存]** を選択します。
    ![画像 7](../media/add-vms-backendpool.png)
    
 
@@ -180,7 +178,6 @@ Exercise:
    | Port                | **80**            |
    | パス                | **/**             |
    | Interval            | **15**            |
-   | 異常のしきい値 | **2**             |
 
 
 1. **[追加]** を選択します。
@@ -192,7 +189,7 @@ Exercise:
 
 ロード バランサー規則の目的は、一連の VM に対するトラフィックの分散方法を定義することです。 着信トラフィック用のフロントエンド IP 構成と、トラフィックを受信するためのバックエンド IP プールを定義します。 送信元と送信先のポートは、この規則で定義します。 ここでは、ロード バランサーの規則を作成します。
 
-1. ロード バランサーの **[バックエンド プール]** ページの **[設定]** で、 **[負荷分散規則]** を選択して、 **[追加]** を選択します。
+1. **[設定]** で、**[負荷分散規則]**、**[追加]** の順に選択します。
 
 1. **[負荷分散規則の追加]** ページで、次の表の情報を入力します。
 
@@ -201,17 +198,17 @@ Exercise:
    | 名前                   | **myHTTPRule**           |
    | IP バージョン             | **IPv4**                 |
    | フロントエンド IP アドレス    | **LoadBalancerFrontEnd** |
+   | バックエンド プール           | **myBackendPool**        |
    | Protocol               | **TCP**                  |
    | Port                   | **80**                   |
    | バックエンド ポート           | **80**                   |
-   | バックエンド プール           | **myBackendPool**        |
    | 正常性プローブ           | **myHealthProbe**        |
    | セッション永続化    | **なし**                 |
    | アイドル タイムアウト (分) | **15**                   |
    | フローティング IP            | **無効**             |
 
 
-1. **[追加]** を選択します。
+1. **[保存]** を選択します。
    ![画像 6](../media/create-loadbalancerrule.png)
 
  
@@ -233,7 +230,7 @@ Exercise:
 
    | **設定**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
-   | サブスクリプション         | サブスクリプションを選択します                     |
+   | サブスクリプション         | サブスクリプションを選択します。                     |
    | Resource group       | **IntLB-RG**                                 |
    | 仮想マシン名 | **myTestVM**                                 |
    | リージョン               | **(米国) 米国東部**                             |
