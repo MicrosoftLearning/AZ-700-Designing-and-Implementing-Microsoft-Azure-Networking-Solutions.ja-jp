@@ -5,8 +5,9 @@ Exercise:
 ---
 # M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
 
-## 演習のシナリオ 
-このユニットでは、トラフィック フローを許可するピアリングを追加することにより、CoreServicesVnet と ManufacturingVnet の間の接続を構成します。 
+## 演習のシナリオ
+
+このユニットでは、トラフィック フローを許可するピアリングを追加することにより、CoreServicesVnet と ManufacturingVnet の間の接続を構成します。
 
 ![仮想ネットワーク ピアリングの図。](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
 
@@ -21,7 +22,7 @@ Exercise:
 
 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
-#### 推定時間:20 分
+### 推定時間:20 分
 
 ## タスク 1: 構成をテストするための仮想マシンを作成する
 
@@ -80,9 +81,7 @@ Exercise:
 
 1. TestVM1 で PowerShell プロンプトを開き、次のコマンドを実行します: ipconfig
 
-1. IPv4 アドレスを記録しておきます。 
-
- 
+1. IPv4 アドレスを記録しておきます。
 
 ## タスク 3: VM 間の接続をテストする
 
@@ -94,10 +93,7 @@ Exercise:
     Test-NetConnection 10.20.20.4 -port 3389
     ```
 
-
 1. テスト接続が失敗すると、次のような結果が表示されます。![Test-NetConnection 10.20.20.4 -port 3389 が失敗したことを示す PowerShell ウィンドウ](../media/test-netconnection-fail.png)
-
- 
 
 ## タスク 4: CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
 
@@ -135,24 +131,19 @@ Exercise:
 
 1. [仮想ネットワーク] で **ManufacturingVnet** を選択し、**ManufacturingVnet-to-CoreServicesVnet** ピアリングが一覧に表示されることを確認します。
 
- 
-
 ## タスク 5: VM 間の接続をテストする
 
 1. ManufacturingVM で、PowerShell プロンプトを開きます。
 
-1. 次のコマンドを使用して、今度は CoreServicesVnet 上の TestVM1 への接続があることを確認します。 
+1. 次のコマンドを使用して、今度は CoreServicesVnet 上の TestVM1 への接続があることを確認します。
 
    ```powershell
     Test-NetConnection 10.20.20.4 -port 3389
     ```
 
-
 1. テスト接続が成功すると、次のような結果が表示されます。![TCP テストが成功したことを示す Test-NetConnection 10.20.20.4 -port 3389 の PowerShell ウィンドウ: true](../media/test-connection-succeeded.png)
 
- 
-
-お疲れさまでした。 ピアリングを追加することで、VNet 間の接続が正常に構成されました。 
+お疲れさまでした。 ピアリングを追加することで、VNet 間の接続が正常に構成されました。
 
 ## タスク 6: リソースをクリーンアップする
 

@@ -5,15 +5,15 @@ Exercise:
 ---
 # M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
-この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。 
+## 演習のシナリオ
+
+この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。
 
 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
-#### 推定時間:15 分
+### 推定時間:15 分
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/5-exercise-provision-expressroute-circuit.png)
-
-
 
 この演習では、以下のことを行います。
 
@@ -22,14 +22,11 @@ Exercise:
 + タスク 3: ExpressRoute 回線をプロビジョニング解除する
 + タスク 4: リソースをクリーンアップする
 
-
 ## タスク 1: ExpressRoute 回線を作成してプロビジョニングする
-
- 
 
 1. ブラウザーから [Azure ポータル](https://portal.azure.com/) に移動し、Azure アカウントでサインインします。
 
-   > [!Important] 
+   > [!Important]
    >
    > ExpressRoute 回線の課金は、サービス キーが発行されたときから始まります。 接続プロバイダーが回線をプロビジョニングする準備ができたら、この操作を実行します。
 
@@ -45,42 +42,38 @@ Exercise:
 
 1. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
 
-
 ![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration2.png)
 
- 
-
-- [ポートの種類] により、サービス プロバイダーに接続するか、またはピアリングの場所で Microsoft のグローバル ネットワークに直接接続するかが決まります。
-- [新規作成またはクラシックからインポート] では、新しい回線を作成するか、従来の回線を Azure Resource Manager に移行するかを指定します。
-- [プロバイダー] は、サービスの要求先となるインターネット サービス プロバイダーです。
-- ピアリングの場所とは、Microsoft とピアリングしている物理的な場所です。
++ [ポートの種類] により、サービス プロバイダーに接続するか、またはピアリングの場所で Microsoft のグローバル ネットワークに直接接続するかが決まります。
++ [新規作成またはクラシックからインポート] では、新しい回線を作成するか、従来の回線を Azure Resource Manager に移行するかを指定します。
++ [プロバイダー] は、サービスの要求先となるインターネット サービス プロバイダーです。
++ ピアリングの場所とは、Microsoft とピアリングしている物理的な場所です。
 
 > [!Important]
 >
 > ピアリングの場所は、Microsoft とピアリングしている[物理的な場所](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations)を示します。 この場所は "Location" プロパティにリンクされていません。それは、Azure Network Resource Provider が配置されている地理的な場所を参照します。 それらは関連付けられていませんが、回路のピアリングの場所と地理的に近い場所にある Network Resource Provider を選択することをお勧めします。
 
-- **[SKU]** によって、ExpressRoute Local、ExpressRoute Standard、または ExpressRoute Premium のどのアドオンを有効にするかが決まります。 ローカルの SKU を取得する場合は **[Local]** 、標準の SKU を取得する場合は **[Standard]** 、Premium アドオンの場合は **[Premium]** を指定できます。 SKU を変更し、プレミアム アドオンを有効にすることができます。
++ **[SKU]** によって、ExpressRoute Local、ExpressRoute Standard、または ExpressRoute Premium のどのアドオンを有効にするかが決まります。 ローカルの SKU を取得する場合は **[Local]** 、標準の SKU を取得する場合は **[Standard]** 、Premium アドオンの場合は **[Premium]** を指定できます。 SKU を変更し、プレミアム アドオンを有効にすることができます。
 
 > [!Important]
 >
 > SKU を [Standard] または [Premium] から [Local] に変更することはできません。
 
-- **[課金モデル]** により、課金の種類が決まります。 従量制課金データ プランの場合は **[従量制]** を、無制限データ プランの場合は **[無制限]** を指定できます。 課金の種類を **[従量制]** から **[無制限]** に変更することができます。
++ **[課金モデル]** により、課金の種類が決まります。 従量制課金データ プランの場合は **[従量制]** を、無制限データ プランの場合は **[無制限]** を指定できます。 課金の種類を **[従量制]** から **[無制限]** に変更することができます。
 
 > [!Important]
 >
 > 種類は [無制限] から [従量制] に変更することはできません。
 
-- **[Allow classic operation](クラシック操作を許可する)** により、従来の仮想ネットワークを回線にリンクすることができます。
++ **[Allow classic operation](クラシック操作を許可する)** により、従来の仮想ネットワークを回線にリンクすることができます。
 
 ## タスク 2: サービス キーを取得する
- 
 
 1. **[すべてのサービス] &gt; [ネットワーク] &gt; [ExpressRoute 回線]** を選択すると、作成したすべての回線を表示できます。
 
    ![Azure portal - ExpressRoute リソースの作成のメニュー](../media/expressroute-circuit-menu.png)
 
-1. サブスクリプション内で作成されたすべての ExpressRoute 回線がここに表示されます。 
+1. サブスクリプション内で作成されたすべての ExpressRoute 回線がここに表示されます。
 
    ![Azure portal - 既存の Expressroute 回線を表示する](../media/expressroute-circuit-list.png)
 
@@ -88,26 +81,22 @@ Exercise:
 
    ![Azure portal - サービス キーが表示されている ExpressRoute 回線のプロパティ](../media/expressroute-circuit-overview.png)
 
-1. このページの **[プロバイダーの状態]** には、サービス プロバイダー側でのプロビジョニングの現在の状態が表示されます。 **[回線の状態]** は、Microsoft 側での状態を提供します。 
+1. このページの **[プロバイダーの状態]** には、サービス プロバイダー側でのプロビジョニングの現在の状態が表示されます。 **[回線の状態]** は、Microsoft 側での状態を提供します。
 
 1. 新しい ExpressRoute 回線を作成する場合、この回線は次の状態になります。
 
-   - プロバイダーの状態: 未プロビジョニング
-   - 回線の状態: 有効
+   + プロバイダーの状態: 未プロビジョニング
+   + 回線の状態: 有効
 
-
-
-   - 回線は、接続プロバイダーが有効にしている間、次の状態に変化します。
-     - プロバイダーの状態: プロビジョニング中
-     - 回線の状態: 有効
-   - ExpressRoute 回線を使用するには、次の状態になっている必要があります。
-     - プロバイダーの状態: プロビジョニング済み
-     - 回線の状態: 有効
-   - プロビジョニングの状態と回線の状態を定期的に調べる必要があります。
+   + 回線は、接続プロバイダーが有効にしている間、次の状態に変化します。
+     + プロバイダーの状態: プロビジョニング中
+     + 回線の状態: 有効
+   + ExpressRoute 回線を使用するには、次の状態になっている必要があります。
+     + プロバイダーの状態: プロビジョニング済み
+     + 回線の状態: 有効
+   + プロビジョニングの状態と回線の状態を定期的に調べる必要があります。
 
 ![Azure portal - 状態がプロビジョニング済みであることが表示されている ExpressRoute 回線のプロパティ](../media/provisioned.png)
-
- 
 
 おめでとうございます。 あなたは ExpressRoute 回線を作成し、回線のプロビジョニングを完了するために必要になるサービス キーを見つけました。
 
@@ -127,7 +116,6 @@ ExpressRoute 回線サービス プロバイダーのプロビジョニング状
 
 ![Azure portal - ExpressRoute 回線を削除する](../media/expressroute-circuit-delete.png)
 
-
    >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
 1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
@@ -138,6 +126,5 @@ ExpressRoute 回線サービス プロバイダーのプロビジョニング状
    Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
    Remove-AzResourceGroup -Name 'ExpressRouteResourceGroup' -Force -AsJob
    ```
+
    >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
-
-

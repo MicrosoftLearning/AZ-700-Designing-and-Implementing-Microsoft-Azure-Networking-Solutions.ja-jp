@@ -6,14 +6,16 @@ Exercise:
 
 # M07-ユニット 6 Azure PowerShell を使用して Azure プライベート エンドポイントを作成する
 
-プライベート エンドポイントを使用して Azure Web アプリに安全に接続することにより、Azure Private Link の使用を開始します。 ポータル、CLI、PowerShell などを含むエンドポイントを作成する方法はたくさんあります。 
+## 演習のシナリオ
+
+プライベート エンドポイントを使用して Azure Web アプリに安全に接続することにより、Azure Private Link の使用を開始します。 ポータル、CLI、PowerShell などを含むエンドポイントを作成する方法はたくさんあります。
 
 ![プライベート エンドポイント アーキテクチャの図。](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
 
 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
-#### 予想所要時間: 45 分
+### 予想所要時間: 45 分
 
 Azure Web アプリのプライベート エンドポイントを作成し、仮想マシンをデプロイしてプライベート接続をテストします。
 
@@ -35,13 +37,13 @@ PowerShell をインストールしてローカルで使用する場合、この
 
 この演習では、以下のことを行います。
 
-+ タスク 1: リソース グループを作成する
-+ タスク 2: 仮想ネットワークと bastion ホストを作成する
-+ タスク 3: テスト仮想マシンを作成する
-+ タスク 4: プライベート エンドポイントを作成する
-+ タスク 5: プライベート DNS ゾーンを構成する
-+ タスク 6: プライベート エンドポイントへの接続をテストする
-+ タスク 7: リソースをクリーンアップする
+- タスク 1: リソース グループを作成する
+- タスク 2: 仮想ネットワークと bastion ホストを作成する
+- タスク 3: テスト仮想マシンを作成する
+- タスク 4: プライベート エンドポイントを作成する
+- タスク 5: プライベート DNS ゾーンを構成する
+- タスク 6: プライベート エンドポイントへの接続をテストする
+- タスク 7: リソースをクリーンアップする
 
 ## タスク 1:リソース グループを作成し、前提条件の Web アプリをデプロイする
 
@@ -52,6 +54,7 @@ Azure リソース グループとは、Azure リソースのデプロイと管�
 ```PowerShell
 New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
 ```
+
 次の ARM テンプレートをデプロイして、この演習に必要な PremiumV2 層の Azure Web アプリを作成します。
 
    ```powershell
@@ -59,6 +62,7 @@ New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
+
 (たとえばポータルでデプロイ状態を確認しているときなどに) "指定された名前 GEN-UNIQUE の Web サイトは既に存在します" のようなエラーを受け取った場合は、 必ず、テンプレートの編集に関する前述の「前提条件」を確認してください。
 
 ## タスク 2: 仮想ネットワークと bastion ホストを作成する
@@ -74,8 +78,6 @@ bastion ホストは、プライベート エンドポイントをテストす�
 - New-AzPublicIpAddress
 
 - New-AzBastion
-
- 
 
 ```PowerShell
 ## Create backend subnet config. ##
@@ -138,9 +140,6 @@ $parameters3 = @{
 
 New-AzBastion @parameters3
 ```
-
-
-
 
 ## タスク 3: テスト仮想マシンを作成する
 
@@ -226,9 +225,6 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 ```
 
-
-
-
 パブリック IP アドレスが割り当てられていないか、内部の Basic Azure Load Balancer のバックエンドプールにある Azure Virtual Machines に対しては、Azure によってエフェメラル IP が提供されます。 エフェメラル IP メカニズムは、構成できないアウトバウンド IP アドレスを提供します。
 
 パブリック IP アドレスが仮想マシンに割り当てられている場合、またはアウトバウンド規則の有無にかかわらず仮想マシンが Standard Load Balancer のバックエンド プールに配置されている場合、エフェメラル IP は無効になります。 Azure Virtual Network NAT ゲートウェイ リソースが仮想マシンのサブネットに割り当てられている場合、エフェメラル IP は無効になります。
@@ -242,8 +238,6 @@ Azure でのアウトバウンド接続の詳細については、「アウト�
 - New-AzPrivateLinkServiceConnection
 
 - New-AzPrivateEndpoint
-
- 
 
 ```PowerShell
 ## Place web app into variable. This assumes that only one web app exists in the resource group. ##
@@ -292,9 +286,6 @@ $parameters2 = @{
 
 New-AzPrivateEndpoint @parameters2 
 ```
-
-
-
 
 ## タスク 5: プライベート DNS ゾーンを構成する
 
@@ -370,7 +361,6 @@ $parameters4 = @{
 New-AzPrivateDnsZoneGroup @parameters4 
 ```
 
-
 ## タスク 6: プライベート エンドポイントへの接続をテストする
 
 このセクションでは、前の手順で作成した仮想マシンを使用し、プライベート エンドポイントを通じて Web アプリに接続します。
@@ -407,13 +397,12 @@ New-AzPrivateDnsZoneGroup @parameters4
   Aliases: mywebapp8675.azurewebsites.net 
   ```  
 
-
 Web アプリ名に対応する **10.0.0.5** というプライベート IP アドレスが返されます。 このアドレスは、先ほど作成した仮想ネットワークのサブネット内に存在します。
 
 1. **myVM** への bastion 接続で、Internet Explorer を開きます。
 1. Web アプリの URL (**https://&lt;your-webapp-name&gt;.azurewebsites.net**) を入力します。
 1. アプリケーションをデプロイしていない場合は、既定の Web アプリ ページが表示されます。![アプリ サービスが起動し、稼働していることを示す Azure のページのスクリーン ショット](../media/web-app-default-page.png)
-1. **myVM** への接続を閉じます。 
+1. **myVM** への接続を閉じます。
 
 ## タスク 7: リソースをクリーンアップする
 
@@ -422,8 +411,3 @@ Web アプリ名に対応する **10.0.0.5** というプライベート IP ア�
 ```PowerShell
 Remove-AzResourceGroup -Name CreatePrivateEndpointQS-rg -Force -AsJob
 ```
-
-
-
-
-
