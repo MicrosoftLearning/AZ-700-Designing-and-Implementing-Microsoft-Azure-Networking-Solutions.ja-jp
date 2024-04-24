@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmName": {
-            "value": "myVM3"
+            "value": "myVM"
         },
         "nicName": {
-            "value": "myVMnic3"
+            "value": "myVMnic"
         },
         "vmSize": {
             "value": "Standard_DS1_v2"
