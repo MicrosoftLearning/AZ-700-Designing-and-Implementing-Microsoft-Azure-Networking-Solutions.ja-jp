@@ -3,7 +3,8 @@ Exercise:
   title: M01 - ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# M01-ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
+
+# M01 - ユニット 8 グローバル仮想ネットワーク ピアリングを使用して 2 つの Azure 仮想ネットワークを接続する
 
 ## 演習のシナリオ
 
@@ -30,8 +31,10 @@ Exercise:
 
 ### ManufacturingVM を作成する
 
-1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
-  > **注:**  Cloud Shell を開いたのが初めてである場合、ストレージ アカウントを作成するよう求められる場合があります。 **[Create storage](ストレージの作成)** を選択します。
+1. Azure portal で、右上の [Cloud Shell] アイコンを選択します。 必要に応じて、シェルを構成します。  
+    + **[PowerShell]** を選択します。
+    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択し、**[適用]** を選択します。
+    + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
 1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
@@ -57,7 +60,7 @@ Exercise:
 
 1. ManufacturingVM で、 **[接続] &gt; [RDP]** を選択します。
 
-1. [ManufacturingVM | 接続] で、 **[RDP ファイルのダウンロード]** を選択します。
+1. [ManufacturingVM \| 接続] で、**[RDP ファイルのダウンロード]** を選択します。
 
 1. RDP ファイルをデスクトップに保存します。
 
@@ -69,7 +72,7 @@ Exercise:
 
 1. TestVM1 で、 **[接続] &gt; [RDP]** を選択します。
 
-1. [TestVM1 | 接続] で、 **[RDP ファイルのダウンロード]** を選択します。
+1. [TestVM1 \| 接続] で、 **[RDP ファイルのダウンロード]** を選択します。
 
 1. RDP ファイルをデスクトップに保存します。
 
@@ -100,34 +103,34 @@ Exercise:
 1. Azure のホーム ページで **[仮想ネットワーク]** を選択し、**CoreServicesVnet** を選択します。
 
 1. CoreServicesVnet の **[設定]** で、**[ピアリング]** を選択します。
-   ![CoreServicesVnet のピアリング設定のスクリーンショット ](../media/create-peering-on-coreservicesvnet.png)
+   ![CoreServicesVnet のピアリング設定のスクリーンショット](../media/create-peering-on-coreservicesvnet.png)
 
-1. [CoreServicesVnet |ピアリング] で、**[+ 追加]** を選択します。
+1. [CoreServicesVnet \| ピアリング] で、**[+ 追加]** を選択します。
 
 1. 次の表の情報を使用して、ピアリングを作成します。
 
-| **セクション**                          | **オプション**                                    | **Value**                             |
-| ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-| この仮想ネットワーク                 |                                               |                                       |
-|                                      | [Peering link name](ピアリング リンク名)                             | CoreServicesVnet-to-ManufacturingVnet |
-|                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
-|                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
-|                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
-| リモート仮想ネットワーク               |                                               |                                       |
-|                                      | [Peering link name](ピアリング リンク名)                             | ManufacturingVnet-to-CoreServicesVnet |
-|                                      | 仮想ネットワークのデプロイ モデル              | Resource Manager                      |
-|                                      | リソース ID を知っている                         | オフ                          |
-|                                      | サブスクリプション                                  | 指定されたサブスクリプションを選択します      |
-|                                      | 仮想ネットワーク                               | ManufacturingVnet                     |
-|                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
-|                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
-|                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
-| 設定を確認し、[追加] を選択します。 |                                               |                                       |
-|                                      |                                               |                                       |
+   | **セクション**                          | **オプション**                                    | **Value**                             |
+   | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
+   | この仮想ネットワーク                 |                                               |                                       |
+   |                                      | [Peering link name](ピアリング リンク名)                             | CoreServicesVnet-to-ManufacturingVnet |
+   |                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
+   |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
+   |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
+   | リモート仮想ネットワーク               |                                               |                                       |
+   |                                      | [Peering link name](ピアリング リンク名)                             | ManufacturingVnet-to-CoreServicesVnet |
+   |                                      | 仮想ネットワークのデプロイ モデル              | Resource Manager                      |
+   |                                      | リソース ID を知っている                         | オフ                          |
+   |                                      | サブスクリプション                                  | 指定されたサブスクリプションを選択します      |
+   |                                      | 仮想ネットワーク                               | ManufacturingVnet                     |
+   |                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
+   |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
+   |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
+   | 設定を確認し、[追加] を選択します。 |                                               |                                       |
+   |                                      |                                               |                                       |
 
- >**注**:"MOC サブスクリプション" をお持ちでない場合は、以前に使用したサブスクリプションを使用してください。 それは単なる名前です。
+   >**注**:"MOC サブスクリプション" をお持ちでない場合は、以前に使用したサブスクリプションを使用してください。
 
-1. [CoreServicesVnet | ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。
+1. [CoreServicesVnet \| ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。
 
 1. [仮想ネットワーク] で **ManufacturingVnet** を選択し、**ManufacturingVnet-to-CoreServicesVnet** ピアリングが一覧に表示されることを確認します。
 
@@ -157,4 +160,4 @@ Exercise:
    Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
    ```
 
-    >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+   >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。

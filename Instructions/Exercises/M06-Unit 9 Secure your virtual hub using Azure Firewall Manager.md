@@ -135,7 +135,10 @@ Exercise:
 
 ## タスク 4: サーバーをデプロイする
 
-1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+1. Azure portal で、右上の [Cloud Shell] アイコンを選択します。 必要に応じて、シェルを構成します。  
+    + **[PowerShell]** を選択します。
+    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択し、**[適用]** を選択します。
+    + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
 1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**FirewallManager.json** と **FirewallManager.parameters.json** の各ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M06** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
