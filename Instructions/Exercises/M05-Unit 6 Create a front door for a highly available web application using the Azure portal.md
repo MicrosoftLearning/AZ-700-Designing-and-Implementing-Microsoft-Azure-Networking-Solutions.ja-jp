@@ -47,7 +47,7 @@ Exercise:
    | オペレーティング システム | **[Windows]** を選択します。                                          |
    | リージョン           | **[米国中部]** を選択します。                                       |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanCentralUS」と入力します。 |
-   | 価格設定プラン    | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
+   | 料金プラン    | **[Standard S1 100 total ACU, 1.75 GB memory](Standard S1 合計 100 ACU、1.75 GB メモリ)** を選択します。        |
 
 1. **[確認および作成]** を選択し、[概要] を確認して、**[作成]** を選択します。
    ‎デプロイが完了するまでに数分かかる場合があります。
