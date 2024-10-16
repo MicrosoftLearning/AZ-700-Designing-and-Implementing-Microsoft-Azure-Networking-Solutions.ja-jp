@@ -1,13 +1,15 @@
 ---
 demo:
-  module: Module 01 - Introduction to Azure Virtual Networks
-  title: 仮想ネットワーク
+  module: 'Module 01 - Introduction to Azure Virtual Networks '
+  title: 仮想ネットワーク (モジュール 01)
 ---
 ## 仮想ネットワークの構成
 
 このデモには、仮想ネットワークを作成します。
 
 **参照**: [クイックスタート: 仮想ネットワークを作成する - Azure portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
+
+**シミュレーション:** [仮想ネットワークを構成する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)
 
 ## Portal で仮想ネットワークを作成する
 

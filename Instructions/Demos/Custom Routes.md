@@ -1,7 +1,7 @@
 ---
 demo:
   module: Module 01 - Introduction to Azure Virtual Networks
-  title: モジュール 01 - カスタム ルート
+  title: カスタム ルート (モジュール 01)
 ---
 ## ネットワーク ルーティングおよびエンドポイントを構成する
 

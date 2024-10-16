@@ -1,6 +1,6 @@
 ---
 demo:
-  title: 共有サービスへのルーティング
+  title: 'モジュール 02: 共有サービスへのルーティング'
   module: Module 02 - Design and implement hybrid networking
 ---
 これを受講者に示すことを検討してください。 

@@ -1,11 +1,13 @@
 ---
 demo:
-  title: モジュール 05 - Application Gateway
   module: Module 05 - Load balancing HTTPS traffic
+  title: Application Gateway (モジュール 05)
 ---
 ## Azure Application Gateway を構成する
 
 このデモでは、Azure Application Gateway を作成する方法について学習します。 
+
+**シミュレーション:** [Azure Application Gateway をデプロイする](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)
 
 **リファレンス**: [クイック スタート - Azure Application Gateway による Web トラフィックのルーティング - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
 

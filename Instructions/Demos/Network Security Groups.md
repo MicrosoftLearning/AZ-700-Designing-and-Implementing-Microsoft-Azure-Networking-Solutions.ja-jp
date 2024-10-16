@@ -1,6 +1,6 @@
 ---
 demo:
-  title: モジュール 06 - ネットワーク セキュリティ グループ
+  title: ネットワーク セキュリティ グループ (モジュール 06)
   module: Module 06 - Design and Implement Network Security
 ---
 ## ネットワーク セキュリティ グループを構成する
