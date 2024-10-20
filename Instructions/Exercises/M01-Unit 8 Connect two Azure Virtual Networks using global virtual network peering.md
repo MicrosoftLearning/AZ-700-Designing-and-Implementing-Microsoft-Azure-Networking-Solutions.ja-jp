@@ -33,10 +33,10 @@ Exercise:
 
 1. Azure portal で、右上の [Cloud Shell] アイコンを選択します。 必要に応じて、シェルを構成します。  
     + **[PowerShell]** を選択します。
-    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択し、**[適用]** を選択します。
+    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
-1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -107,29 +107,35 @@ Exercise:
 
 1. [CoreServicesVnet \| ピアリング] で、**[+ 追加]** を選択します。
 
-1. 次の表の情報を使用して、ピアリングを作成します。
+1. この情報を使用して、ピアリングを作成します。 完了したら、**[追加]** を選択します。 
 
-   | **セクション**                          | **オプション**                                    | **Value**                             |
-   | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-   | この仮想ネットワーク                 |                                               |                                       |
-   |                                      | [Peering link name](ピアリング リンク名)                             | CoreServicesVnet-to-ManufacturingVnet |
-   |                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
-   |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
-   |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
-   | リモート仮想ネットワーク               |                                               |                                       |
-   |                                      | [Peering link name](ピアリング リンク名)                             | ManufacturingVnet-to-CoreServicesVnet |
-   |                                      | 仮想ネットワークのデプロイ モデル              | Resource Manager                      |
-   |                                      | リソース ID を知っている                         | オフ                          |
-   |                                      | サブスクリプション                                  | 指定されたサブスクリプションを選択します      |
-   |                                      | 仮想ネットワーク                               | ManufacturingVnet                     |
-   |                                      | [Traffic to remote virtual network](リモート仮想ネットワークへのトラフィック)             | 許可 (既定)                       |
-   |                                      | [Traffic forwarded from remote virtual network](リモート仮想ネットワークから転送されるトラフィック) | 許可 (既定)                       |
-   |                                      | 仮想ネットワーク ゲートウェイまたは Route Server       | なし (既定値)                        |
-   | 設定を確認し、[追加] を選択します。 |                                               |                                       |
-   |                                      |                                               |                                       |
+   **リモート仮想ネットワークの概要**
 
-   >**注**:"MOC サブスクリプション" をお持ちでない場合は、以前に使用したサブスクリプションを使用してください。
+   | **オプション**                                    | **Value**                             |
+   | ------------------------------------ | --------------------------------------------- | 
+   | [Peering link name](ピアリング リンク名)    | `CoreServicesVnet-to-ManufacturingVnet` |
+   | 仮想ネットワーク | ManufacturingVnet |
 
+    **リモート仮想ネットワーク ピアリングの設定**
+   
+   | **オプション**                                    | **Value**                             |
+   | ------------------------------------ | --------------------------------------------- | 
+   | CoreServicesVnet へのアクセスを ManufacturingVnet に許可する | Enabled |
+   |ManufacturingVnet が CoreServicesVnet からのトラフィック転送を受信する | Enabled |
+ 
+    **ローカル仮想ネットワークの概要**
+
+    | **オプション**                                    | **Value**                             |
+    | ------------------------------------ | --------------------------------------------- | 
+    | [Peering link name](ピアリング リンク名) | `CoreServicesVnet-to-ManufacturingVnet` |
+ 
+    **リモート仮想ネットワーク ピアリングの設定**
+   
+    | **オプション**                                    | **Value**                             |
+    | ------------------------------------ | --------------------------------------------- | 
+    | ManufacturingVnet へのアクセスを CoreServicesVnet に許可する | Enabled
+    | CoreServicesVnet が ManufacturingVnet からのトラフィック転送を受信することを許可する | Enabled |
+ 
 1. [CoreServicesVnet \| ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。
 
 1. [仮想ネットワーク] で **ManufacturingVnet** を選択し、**ManufacturingVnet-to-CoreServicesVnet** ピアリングが一覧に表示されることを確認します。
