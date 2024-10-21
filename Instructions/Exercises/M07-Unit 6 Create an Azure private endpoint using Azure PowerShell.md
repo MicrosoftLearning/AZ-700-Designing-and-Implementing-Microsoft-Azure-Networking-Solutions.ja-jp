@@ -31,7 +31,7 @@ Azure Web アプリのプライベート エンドポイントを作成し、仮
 
 1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
-1. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、次のファイル **template.json** および **parameters.json** を Cloud Shell ホーム ディレクトリに 1 つずつアップロードします。
+1. Cloud Shell 画面のツールバーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**template.json** ファイルと **parameters.json** ファイルを Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 PowerShell をインストールしてローカルで使用する場合、この例では Azure PowerShell モジュール バージョン 5.4.1 以降が必要になります。 インストールされているバージョンを確認するには、```Get-Module -ListAvailable Az``` を実行します。 アップグレードする必要がある場合は、[Azure PowerShell モジュールのインストール](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)に関するページを参照してください。 PowerShell をローカルで実行している場合、```Connect-AzAccount``` を実行して Azure との接続を作成することも必要です。
 

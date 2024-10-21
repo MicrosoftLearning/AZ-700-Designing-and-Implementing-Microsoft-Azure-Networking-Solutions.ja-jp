@@ -35,10 +35,10 @@ Exercise:
 
 1. Azure portal で、右上の [Cloud Shell] アイコンを選択します。 必要に応じて、シェルを構成します。  
     + **[PowerShell]** を選択します。
-    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択し、**[適用]** を選択します。
+    + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
-1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** ファイルと **azuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** ファイルと **azuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワークとサブネットを作成します。
 
@@ -55,7 +55,7 @@ Exercise:
 
 1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
 
-1. [Cloud Shell] ペインのツールバーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**CoreServicesVMazuredeploy.json** ファイルと **CoreServicesVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**CoreServicesVMazuredeploy.json** ファイルと **CoreServicesVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -75,7 +75,7 @@ Exercise:
 
 1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
 
-1. [Cloud Shell] ペインのツール バーで、 **[ファイルのアップロード/ダウンロード]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
