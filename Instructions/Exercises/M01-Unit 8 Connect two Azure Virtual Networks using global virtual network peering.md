@@ -36,7 +36,7 @@ Exercise:
     + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
-1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリにアップロードします。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
@@ -120,8 +120,8 @@ Exercise:
    
    | **オプション**                                    | **Value**                             |
    | ------------------------------------ | --------------------------------------------- | 
-   | CoreServicesVnet へのアクセスを ManufacturingVnet に許可する | Enabled |
-   |ManufacturingVnet が CoreServicesVnet からのトラフィック転送を受信する | Enabled |
+   | 'CoreServicesVnet' に対するアクセスを 'ManufacturingVnet' に許可する | Enabled |
+   |'CoreServicesVnet' からのトラフィック転送を 'ManufacturingVnet' が受信する | Enabled |
  
     **ローカル仮想ネットワークの概要**
 
@@ -133,12 +133,12 @@ Exercise:
    
     | **オプション**                                    | **Value**                             |
     | ------------------------------------ | --------------------------------------------- | 
-    | ManufacturingVnet へのアクセスを CoreServicesVnet に許可する | Enabled
-    | CoreServicesVnet が ManufacturingVnet からのトラフィック転送を受信することを許可する | Enabled |
+    | 'ManufacturingVnet' へのアクセスを 'CoreServicesVnet' に許可する | Enabled
+    | 'CoreServicesVnet' が 'ManufacturingVnet' からのトラフィック転送を受信することを許可する | Enabled |
  
-1. [CoreServicesVnet \| ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが一覧に表示されることを確認します。
+1. [CoreServicesVnet \| ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが**接続済み** であることを確認します。
 
-1. [仮想ネットワーク] で **ManufacturingVnet** を選択し、**ManufacturingVnet-to-CoreServicesVnet** ピアリングが一覧に表示されることを確認します。
+1. [仮想ネットワーク] で **ManufacturingVnet** を選択し、**ManufacturingVnet-to-CoreServicesVnet** ピアリングが **接続済み** であることを確認します。
 
 ## タスク 5: VM 間の接続をテストする
 
