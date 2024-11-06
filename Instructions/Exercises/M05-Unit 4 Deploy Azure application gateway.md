@@ -223,5 +223,37 @@ IIS はアプリケーション ゲートウェイを作成するのに必要で
 
 1. ブラウザーを何度か更新すると、BackendVM1 と BackendVM2 の両方への接続が表示されます。
 
+## リソースをクリーンアップする
 
-お疲れさまでした。 これで、Azure Application Gateway の構成とテストが完了しました。
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
+
+1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
+
+1. 次のコマンドを実行して、このモジュールのラボ全体を通して作成したすべてのリソース グループを削除します。
+
+   ```powershell
+   Remove-AzResourceGroup -Name 'IntLB-RG' -Force -AsJob
+   ```
+
+>**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ Azure Application Gateway は要求をどのようにルーティングしますか?
++ Azure Application Gateway には、どのようなセキュリティ機能が備わっていますか?
++ Azure Application Gateway を Azure Load Balancer と比較してください。 各製品を使用する状況の例を示してください。
+
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Application Gateway の概要](https://learn.microsoft.com/training/modules/intro-to-azure-application-gateway/)。 このモジュールでは、Azure Application Gateway の機能とそのしくみ、また組織のニーズを満たすソリューションとして Application Gateway を使用することを選択すべきなのはどのような場合かについて説明します。
++ [Application Gateway で Web サービスのトラフィックを負荷分散する](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/)。 このモジュールでは、URL パスベースのルーティングを使用して Application Gateway を作成および構成する方法について説明します。
++ [Azure で HTTP(S) トラフィックを負荷分散する](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/)。 このモジュールでは、Azure Application Gateway の設計と実装の方法について説明します。
+
+## 要点
+
+以上でラボは完了です。 このラボの要点は次のとおりです。 
++ Azure Application Gateway は、Web アプリケーションに対するトラフィックを管理できる Web トラフィック (OSI レイヤー 7) ロード バランサーです。
++ Application Gateway では、URI パスやホスト ヘッダーなど、HTTP 要求の追加属性に基づいてルーティングを決定できます。
++ 単一のリージョンでホストされているアプリケーションに対して、および URL ベースのルーティングが必要な場合には、Application Gateway を使用します。 
