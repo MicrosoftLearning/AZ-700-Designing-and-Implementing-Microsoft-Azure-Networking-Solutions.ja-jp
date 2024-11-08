@@ -62,9 +62,7 @@ Exercise:
 
 1. VNet が検証に合格することを確認してから、**[作成]** を選択します。
 
-> [!Note]  
->
-> デュアル スタック仮想ネットワークを使用していて、ExpressRoute を介して IPv6 ベースのプライベート ピアリングを使用する予定の場合は、[IP6 アドレス空間の追加] を選択して、IPv6 アドレス範囲の値を入力します。
+>**注:** デュアル スタック仮想ネットワークを使用していて、ExpressRoute を介して IPv6 ベースのプライベート ピアリングを使用する予定の場合は、[IPv6 アドレス空間の追加] を選択して、IPv6 アドレス範囲の値を入力します。
 
 ## タスク 2: 仮想ネットワーク ゲートウェイを作成する
 
@@ -87,8 +85,7 @@ Exercise:
    | **パブリック IP アドレス**     |                            |
    | パブリック IP アドレス         | 新規作成                 |
    | パブリック IP アドレス名    | CoreServicesVnetGateway-IP |
-   | パブリック IP アドレスの SKU     | Basic                      |
-   | 割り当て                | 構成できません。           |
+   | 譲渡                | 構成できません。           |
 
 1. **[確認および作成]** を選択します。
 
@@ -96,8 +93,25 @@ Exercise:
 
 1. デプロイが完了したら、**[リソースに移動]** を選択します
 
-> [!Note]
->
-> ゲートウェイをデプロイするには最大 45 分かかることがあります。
+>**注:** ゲートウェイのデプロイには最大 45 分かかる場合があります。
 
-お疲れさまでした。 あなたは、仮想ネットワーク、ゲートウェイ サブネット、ExpressRoute ゲートウェイを正常に作成しました。
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ Azure ExpressRoute と Virtual WAN の違いは何ですか? これらのテクノロジは一緒に使用できますか? 例を挙げます。
++ ExpressRoute プロバイダー モデルと ExpressRoute Direct のどちらかを選択する場合に考慮すべきことは何ですか?
++ Azure ExpressRoute SKU とその機能をまとめた表を作成してください。
+
+## 自習トレーニングでさらに学習する
+
++ [Azure ExpressRoute の概要](https://learn.microsoft.com/training/modules/intro-to-azure-expressroute/)。 このモジュールでは、Azure ExpressRoute の概要と提供される機能について説明しています。
++ [ExpressRoute を設計して実装する](https://learn.microsoft.com/training/modules/design-implement-azure-expressroute/)。 このモジュールでは、Azure ExpressRoute、ExpressRoute Global Reach、ExpressRoute FastPath を設計して実装する方法について説明しています。
+
+## 要点
+
+以上でラボは完了です。 このラボの要点は次のとおりです。 
++ Azure ExpressRoute を使用すると、組織はオンプレミスのネットワークを直接 Microsoft Azure や Microsoft 365 のクラウドに接続できます。 Azure ExpressRoute は、Microsoft パートナーによって提供される専用の高帯域幅接続を使用します。
++ Microsoft では、ExpressRoute 専用接続に対して最低 99.95% の可用性を保証します。 接続はプライベートであり、専用回線で行われるため、サード パーティはトラフィックを傍受できません。
++ オンプレミスのネットワークと Microsoft クラウドの間の接続は、CloudExchange での同一場所配置、ポイント ツー ポイントのイーサネット接続、任意の環境間 (IPVPN) 接続、ExpressRoute Direct という 4 つの異なる方法で作成できます。
++ ExpressRoute の機能は、SKU (Local、Standard、Premuium) で決まります。 
