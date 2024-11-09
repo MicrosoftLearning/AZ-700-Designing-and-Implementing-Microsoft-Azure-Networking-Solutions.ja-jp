@@ -17,7 +17,7 @@ Exercise:
 + タスク 1: Virtual WAN を作成する
 + タスク 2:Azure portal を使用してハブを作成する
 + タスク 3: 仮想ハブに VNet を接続する
-+ タスク 4: リソースをクリーンアップする
+
 
 **メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
@@ -101,11 +101,9 @@ Exercise:
 
 1. **［作成］** を選択します
 
-お疲れさまでした。 Virtual WAN と Virtual WAN ハブを作成し、ResearchVNet をハブに接続しました。
+## リソースをクリーンアップする
 
-## タスク 4: リソースをクリーンアップする
-
-   >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
+>**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
 1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
@@ -115,4 +113,34 @@ Exercise:
    Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
    ```
 
-    >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+>**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ Azure VWAN はどの種類のネットワーク アーキテクチャを使用しますか?
++ Azure VWAN の Basic と Standard の違いは何ですか? 例を挙げます。
++ スクリプト ツールを使用して Azure VWAN を作成できますか?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Virtual WAN の概要](https://learn.microsoft.com/training/modules/introduction-azure-virtual-wan/)。 このモジュールでは、Azure Virtual WAN の機能と特徴について説明しています。 
++ [ハイブリッド ネットワークを設計して実装する](https://learn.microsoft.com/training/modules/design-implement-hybrid-networking/)。 このモジュールでは、Azure Virtual WAN を設計して実装する方法について説明しています。
+
+## 要点
+
+以上でラボは完了です。 このラボの要点は次のとおりです。 
+
++ Azure Virtual WAN は、ネットワーク、セキュリティ、ルーティングのさまざまな機能をまとめて、1 つの運用インターフェイスを提供するネットワーク サービスです
++ Virtual WAN アーキテクチャは、ブランチ、ユーザー、ExpressRoute 回路、仮想ネットワーク向けにスケールとパフォーマンスが組み込まれたハブおよびスポーク グループ アーキテクチャです。
++ 仮想 WAN には、サイト間、ポイント対サイト、ExpressRoute という 3 つの主なユース ケースがあります。 
++ 仮想 WAN には、Basic (サイト間 VPN のみ) と Standard という 2 つの種類があります。
+
+
+
+
+
+
+
+
+
