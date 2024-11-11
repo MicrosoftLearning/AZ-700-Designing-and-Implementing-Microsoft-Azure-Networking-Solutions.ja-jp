@@ -43,7 +43,6 @@ PowerShell をインストールしてローカルで使用する場合、この
 - タスク 4: プライベート エンドポイントを作成する
 - タスク 5: プライベート DNS ゾーンを構成する
 - タスク 6: プライベート エンドポイントへの接続をテストする
-- タスク 7: リソースをクリーンアップする
 
 ## タスク 1:リソース グループを作成し、前提条件の Web アプリをデプロイする
 
@@ -401,13 +400,29 @@ Web アプリ名に対応する **10.0.0.5** というプライベート IP ア�
 
 1. **myVM** への bastion 接続で、Internet Explorer を開きます。
 1. Web アプリの URL (**https://&lt;your-webapp-name&gt;.azurewebsites.net**) を入力します。
-1. アプリケーションをデプロイしていない場合は、既定の Web アプリ ページが表示されます。![アプリ サービスが起動し、稼働していることを示す Azure のページのスクリーン ショット](../media/web-app-default-page.png)
+1. アプリケーションをデプロイしていない場合は、既定の Web アプリ ページが表示されます。![アプリ サービスが起動し、稼働していることを示す Azure のページのスクリーンショット](../media/web-app-default-page.png)
 1. **myVM** への接続を閉じます。
 
-## タスク 7: リソースをクリーンアップする
+## リソースをクリーンアップする
 
 プライベート エンドポイントと VM を使い終わったら、[Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup) を使用して、リソース グループとそのすべてのリソースを削除します。
 
 ```PowerShell
 Remove-AzResourceGroup -Name CreatePrivateEndpointQS-rg -Force -AsJob
 ```
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ サービス エンドポイントの代わりにプライベート エンドポイントを使用する場合の例を示します。
++ プライベート エンドポイントの接続に関する問題をトラブルシューティングするにはどうすればよいですか?
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Private Link の概要](https://learn.microsoft.com/training/modules/introduction-azure-private-link/) このモジュールでは、Azure Private Link を使用して Azure サービスへのプライベート接続を実現する方法をその機能やユース ケースを含めて説明します。
++ [Azure サービスへのプライベート アクセスの設計と実装](https://learn.microsoft.com/en-us/training/modules/design-implement-private-access-to-azure-services/)。 このモジュールでは、Azure Private Link と仮想ネットワーク サービス エンドポイントを使用して、Azure サービスへのプライベート アクセスを設計し、実装する方法を説明します。
+
+## 要点
+
++ Azure Private Link を使用すると、仮想ネットワーク内のプライベート エンドポイント経由で、Azure PaaS サービス (Azure Storage、SQL Database など) や、Azure でホストされている顧客所有のサービスまたはパートナー サービスにアクセスできます。
++ プライベート エンドポイントは、仮想ネットワークのプライベート IP アドレスを使用するネットワーク インターフェイスです。 ユーザーはこのネットワーク インターフェイスにより、Azure Private Link を利用するサービスに非公開で安全に接続します。 

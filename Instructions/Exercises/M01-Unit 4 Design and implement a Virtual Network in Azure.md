@@ -162,13 +162,13 @@ Exercise:
 
 Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
 + 実際のシナリオで 10.30.0.0/16 IP アドレスを使用する方法の例を示すことができますか?
-+ 東部 (米国) リージョンに CoreServicesVnet という仮想ネットワークを作成する Azure PowerShell コマンドは何ですか?  この仮想ネットワークは、10.20.0.0/16 IP アドレス空間を使用する必要があります。
-+ 西ヨーロッパ リージョンに ManufacturingVnet という仮想ネットワークを作成する Azure CLI コマンドは何ですか?  この仮想ネットワークは、10.30.0.0/16 IP アドレス空間を使用する必要があります。
++ 米国東部地域に CoreServicesVnet という仮想ネットワークを作成するための Azure PowerShell コマンドは何ですか? この仮想ネットワークは、10.20.0.0/16 IP アドレス空間を使用する必要があります。
++ 西ヨーロッパ地域に ManufacturingVnet という仮想ネットワークを作成するための Azure CLI コマンドは何ですか? この仮想ネットワークは、10.30.0.0/16 IP アドレス空間を使用する必要があります。
 
 ## 自習トレーニングでさらに学習する
 
-+ [Azure デプロイの IP アドレス指定スキーマを設計する](https://learn.microsoft.com/en-us/training/modules/design-ip-addressing-for-azure/)。 このモジュールでは、Azure 仮想ネットワークのパブリックおよびプライベートの IP アドレス指定機能について説明しています。
-+ [Azure 仮想ネットワークの概要](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/)。 このモジュールでは、Azure ネットワーク サービスの設計と実装の方法について説明します。 仮想ネットワーク、パブリック IP とプライベート IP、DNS、仮想ネットワーク ピアリング、ルーティング、Azure Virtual Network NAT などを取り上げます。
++ [Azure デプロイの IP アドレス指定スキーマを設計する](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/)。 このモジュールでは、Azure 仮想ネットワークのパブリックおよびプライベートの IP アドレス指定機能について説明します。
++ [Azure 仮想ネットワークの概要](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/)。 このモジュールでは、Azure ネットワーク サービスの設計と実装の方法について説明します。 仮想ネットワーク、パブリック IP とプライベート IP、DNS、仮想ネットワーク ピアリング、ルーティング、Azure Virtual Network NAT などを取り上げます。
 
 ## 要点
 
