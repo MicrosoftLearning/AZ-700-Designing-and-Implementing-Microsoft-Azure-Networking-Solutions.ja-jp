@@ -13,7 +13,7 @@ Exercise:
 ![アプリケーション ゲートウェイ アーキテクチャの図。](../media/4-exercise-deploy-azure-application-gateway.png)
 
 
->**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 ### 推定時間: 25 分
 
@@ -151,14 +151,14 @@ Exercise:
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
->**注**: 管理者パスワードを入力するように求められます。 
+   >**注**: 管理者パスワードを入力するように求められます。 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
->**注**: 時間をかけて **backend.json** ファイルの内容を確認します。 2 つの仮想マシンがデプロイされます。 この処理には数分かかります。 
+   >**注**: 時間をかけて **backend.json** ファイルの内容を確認します。 2 つの仮想マシンがデプロイされます。 この処理には数分かかります。 
 
 1. コマンドは正常に完了し、 **BackendVM1** と **BackendVM2** を一覧表示します。
 
@@ -172,14 +172,14 @@ Exercise:
    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
    ```
 
->**注**: 待機中に PowerShell スクリプトを確認します。 IIS ホーム ページは、仮想マシン名を指定するようにカスタマイズされていることに注意してください。
+   >**注**: 待機中に PowerShell スクリプトを確認します。 IIS ホーム ページは、仮想マシン名を指定するようにカスタマイズされていることに注意してください。
 
 1. **BackendVM2**のコマンドをもう一度実行します。
 
    ```powershell
    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
    ```
->**注:** コマンドが完了するまでに数分かかります。
+   >**注:** コマンドが完了するまでに数分かかります。
 
 ## タスク 3: バックエンド プールにバックエンド サーバーを追加する
 
@@ -225,7 +225,7 @@ IIS はアプリケーション ゲートウェイを作成するのに必要で
 
 ## リソースをクリーンアップする
 
->**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
+   >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 
 1. Azure portal で、 **[Cloud Shell]** ペイン内に **PowerShell** セッションを開きます。
 
