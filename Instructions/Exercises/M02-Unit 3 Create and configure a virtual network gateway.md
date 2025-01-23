@@ -11,6 +11,8 @@ Exercise:
 
 この演習では、Contoso Core Services VNet と Manufacturing VNet を接続する仮想ネットワーク ゲートウェイを構成します。
 
+   >**重要**: このデザインを詳しく見てみましょう。 CoreServicesSubnet が GatewaySubnet と重複していることに気付きましたか? ベスト プラクティスとして、接続の問題の可能性を回避するために、これらのサブネットを分離する必要があります。 
+
 ![仮想ネットワーク ゲートウェイの図。](../media/3-exercise-create-configure-local-network-gateway.png)
 
 この演習では、次のことを行います。
@@ -27,7 +29,7 @@ Exercise:
 + タスク 10: 接続が接続されていることを確認する
 + タスク 11: VM 間の接続をテストする
 
-**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+>**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 ### 推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
 
@@ -49,7 +51,7 @@ Exercise:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
- > **注:**  現在、西ヨーロッパ リージョンで、ゲートウェイのデプロイに影響する問題が発生しています。 回避策として、このデプロイでは、ManufacturingVnet のリージョンが北ヨーロッパに変更されました。
+   >**注:**  現在、西ヨーロッパ リージョンで、ゲートウェイのデプロイに影響する問題が発生しています。 回避策として、このデプロイでは、ManufacturingVnet のリージョンが北ヨーロッパに変更されました。
 
 ## タスク 2:CoreServicesVM を作成する
 
@@ -94,20 +96,35 @@ Exercise:
 ## タスク 4: RDP を使って VM に接続する
 
 1. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
+
 1. **ManufacturingVM** を選択します。
-1. **ManufacturingVM** で、 **[接続] &gt; [RDP]** を選択します。
-1. **[ManufacturingVM | 接続]** で、 **[RDP ファイルのダウンロード]** を選択します。
+
+1. **ManufacturingVM** で、**[接続]** を選択してから **[RDP]** を選択します。
+
+1. **[RDP ファイルのダウンロード]** を選択します。
+
 1. RDP ファイルをデスクトップに保存します。
+
 1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使って、**ManufacturingVM** に接続します。 接続後、RDP セッションを最小化します。
+
 1. Azure portal のホーム ページで、「**仮想マシン**」を選択します。
+
 1. **[CoreServicesVM]** を選択します。
-1. **[CoreServicesVM]** で **[接続] &gt; [RDP]** を選択します。
-1. **[CoreServicesVM | 接続]** で、 **[RDP ファイルのダウンロード]** を選択します。
+
+1. **[CoreServicesVM]** で、**[接続]** を選択してから **[RDP]** を選択します。
+
+1. **[RDP ファイルのダウンロード]** を選択します。
+
 1. RDP ファイルをデスクトップに保存します。
+
 1. RDP ファイル、およびデプロイ時に指定したユーザー名 **TestUser** とパスワードを使って、**CoreServicesVM** に接続します。
+
 1. 両方の VM で、**[デバイスのプライバシー設定の選択]** の **[同意する]** を選択します。
+
 1. 両方の VM で、**[ネットワーク]** の **[はい]** を選択します。
+
 1. **CoreServicesVM** で PowerShell を開き、次のコマンドを実行します: ipconfig
+
 1. IPv4 アドレスをメモします。
 
 ## タスク 5: VM 間の接続をテストする
@@ -152,15 +169,13 @@ Exercise:
    |                 |                   | BGP の構成                               | 無効                     |
    | [確認および作成] |                   | 設定を確認し、 **[作成]** を選択します。 |                              |
 
-   > [!NOTE]
-   >
-   > 仮想ネットワーク ゲートウェイの作成には、最大で 15 分から 30 分かかる場合があります。 デプロイが完了するまで待機する必要はありません。 次のゲートウェイの作成に進みます。 
+   >**注**: 仮想ネットワーク ゲートウェイの作成には、最大で 15 分から 30 分かかる場合があります。 デプロイが完了するまで待機する必要はありません。 次のゲートウェイの作成に進みます。 
 
 ## タスク 7: ManufacturingVnet ゲートウェイを作成する
 
 ### GatewaySubnet を作成します
 
-**注:** テンプレートによって、CoreServicesVnet の GatewaySubnet が作成されました。 ここでは、手動でサブネットを作成します。 
+   >**注:** テンプレートによって、CoreServicesVnet の GatewaySubnet が作成されました。 ここでは、手動でサブネットを作成します。 
 
 1. **ManufacturingVnet** を検索して選択します。
 
@@ -200,9 +215,7 @@ Exercise:
    |                 |                   | BGP の構成                               | 無効                     |
    | [確認および作成] |                   | 設定を確認し、 **[作成]** を選択します。 |                              |
 
-   > [!NOTE]
-   >
-   > 仮想ネットワーク ゲートウェイの作成には、最大で 15 分から 30 分かかる場合があります。
+   >**注**: 仮想ネットワーク ゲートウェイの作成には、最大で 15 分から 30 分かかる場合があります。
 
 ## タスク 8: CoreServicesVnet から ManufacturingVnet に接続する
 
@@ -212,9 +225,7 @@ Exercise:
 
 1. CoreServicesGateway で、**[接続]** を選択し、**[+ 追加]** を選択します。
 
-   > [!NOTE]
-   >
-   >  仮想ネットワーク ゲートウェイが完全にデプロイされるまで、この構成を完了することはできません。
+   >**注**: 仮想ネットワーク ゲートウェイが完全にデプロイされるまで、この構成を完了することはできません。
 
 1. この情報と **[設定]** タブを使用して、仮想ネットワーク ゲートウェイを作成します。 
 
@@ -250,7 +261,7 @@ Exercise:
    | ------------------------------ | --------------------------------- |
    | 名前                           | ManufacturingGW-to-CoreServicesGW |
    | 接続の種類                | VNet 間                      |
-   | 場所                       | 西ヨーロッパ                       |
+   | Location                       | 西ヨーロッパ                       |
    | 最初の仮想ネットワーク ゲートウェイ  | ManufacturingVnetGateway          |
    | 2 番目の仮想ネットワーク ゲートウェイ | CoreServicesVnetGateway           |
    | 共有キー (PSK)               | abc123                            |

@@ -12,7 +12,7 @@ Exercise:
 
 ここで考える架空の組織 Contoso Ltd は、インフラストラクチャとアプリケーションを Azure に移行している途中です。 ネットワーク エンジニアとしての役割を持つあなたは、それらの仮想ネットワーク内のリソースをサポートするため、3 つの仮想ネットワークとサブネットを計画して実装する必要があります。
 
-**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
 
 ### 推定時間:20 分
 
@@ -77,6 +77,7 @@ Exercise:
 1. Azure portal のホーム ページで、グローバル検索バーに移動し、「**仮想ネットワーク**」を検索して、[サービス] の下の仮想ネットワークを選択します。  ![仮想ネットワークに対する Azure portal のホーム ページのグローバル検索バーの結果。](../media/global-search-bar.PNG)
 
 1. 仮想ネットワーク ページで、**[作成]** を選択します。  ![仮想ネットワークの作成ウィザード。](../media/create-virtual-network.png)
+   
 1. 次の表の情報を使用して、CoreServicesVnet 仮想ネットワークを作成します。  
    既定の IP アドレス空間を削除または上書きします ![Azure 仮想ネットワークのデプロイのための IP アドレスの構成 ](../media/default-vnet-ip-address-range-annotated.png)
 
