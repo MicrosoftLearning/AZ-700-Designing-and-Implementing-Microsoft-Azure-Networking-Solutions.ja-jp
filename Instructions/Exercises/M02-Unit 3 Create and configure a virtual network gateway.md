@@ -11,8 +11,6 @@ Exercise:
 
 この演習では、Contoso Core Services VNet と Manufacturing VNet を接続する仮想ネットワーク ゲートウェイを構成します。
 
-   >**重要**: このデザインを詳しく見てみましょう。 CoreServicesSubnet が GatewaySubnet と重複していることに気付きましたか? ベスト プラクティスとして、接続の問題の可能性を回避するために、これらのサブネットを分離する必要があります。 
-
 ![仮想ネットワーク ゲートウェイの図。](../media/3-exercise-create-configure-local-network-gateway.png)
 
 この演習では、次のことを行います。
@@ -50,9 +48,7 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-
-   >**注:**  現在、西ヨーロッパ リージョンで、ゲートウェイのデプロイに影響する問題が発生しています。 回避策として、このデプロイでは、ManufacturingVnet のリージョンが北ヨーロッパに変更されました。
-
+   
 ## タスク 2:CoreServicesVM を作成する
 
 1. Azure portal の **[Cloud Shell]** ペイン内で **PowerShell** セッションを開きます。
@@ -157,7 +153,6 @@ Exercise:
    |                 | インスタンスの詳細  | 名前                                        | CoreServicesVnetGateway      |
    |                 |                   | リージョン                                      | 米国東部                      |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
-   |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | CoreServicesVnet             |
@@ -201,9 +196,8 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | リージョン                                      | 北ヨーロッパ                  |
+   |                 |                   | リージョン                                      | 北ヨーロッパ                 |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
-   |                 |                   | VPN の種類                                    | ルート ベース                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | ManufacturingVnet            |
@@ -261,7 +255,7 @@ Exercise:
    | ------------------------------ | --------------------------------- |
    | 名前                           | ManufacturingGW-to-CoreServicesGW |
    | 接続の種類                | VNet 間                      |
-   | Location                       | 西ヨーロッパ                       |
+   | Location                       | 北ヨーロッパ                      |
    | 最初の仮想ネットワーク ゲートウェイ  | ManufacturingVnetGateway          |
    | 2 番目の仮想ネットワーク ゲートウェイ | CoreServicesVnetGateway           |
    | 共有キー (PSK)               | abc123                            |

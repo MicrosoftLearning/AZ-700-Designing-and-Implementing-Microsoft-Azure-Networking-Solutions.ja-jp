@@ -32,9 +32,9 @@ Exercise:
 
    ![Azure portal - ExpressRoute 回線の作成のメニュー](../media/create-expressroute-circuit-menu.png)
 
-1. 「**ExpressRoute の作成**」ページで、回線の**リソース グループ**、**リージョン**、**名前**を次のように指定します。ExpressRouteResourceGroup、米国東部 2、TestERCircuit。 次に、**[次へ: 構成 &gt;]** をクリックします。
+1. **[ExpressRoute の作成]** ページで、**[リソース グループ]** を ExpressRouteResourceGroup として指定します。 次に、**[回復性]** で **[標準の回復性]** を選択します。
 
-1. このページの値を入力するときは、この例では、正しい SKU レベル (**標準**) データ測定課金モデル (**測定**) プロバイダー (**Equinix**) ピアリングの場所 (**シアトル**) と帯域幅 (**50 Mbps**) を指定してください。
+1. ***回線の詳細**について、正しい場所 (**[East US 2]**)、回線名 (**[TestERCircuit]**)、ピアリングの場所 (**[Seattle]**)、プロバイダー (**[Equinix]**)、帯域幅 (**[50 Mbps]**)、SKU レベル (**[Standard]**) およびデータ計測課金モデル (**[従量制課金]**) になっていることを確認します。
 
 1. **[確認および作成]** を選択します。
 

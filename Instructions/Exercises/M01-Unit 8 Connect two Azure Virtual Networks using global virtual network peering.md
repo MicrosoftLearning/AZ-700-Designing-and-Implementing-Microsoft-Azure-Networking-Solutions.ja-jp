@@ -26,7 +26,7 @@ Exercise:
 
 ## タスク 1: 構成をテストするための仮想マシンを作成する
 
-このセクションでは、ManufacturingVnet 上にテスト VM を作成し、ManufacturingVnet から別の Azure 仮想ネットワーク内のリソースにアクセスできるかどうかをテストします。
+このセクションでは、VNet 上にテスト VM を作成し、VNet から別の Azure 仮想ネットワーク内のリソースにアクセスできるかどうかをテストします。
 
 ### ManufacturingVM を作成する
 
@@ -112,7 +112,7 @@ Exercise:
 
    | **オプション**                                    | **Value**                             |
    | ------------------------------------ | --------------------------------------------- | 
-   | [Peering link name](ピアリング リンク名)    | `CoreServicesVnet-to-ManufacturingVnet` |
+   | [Peering link name](ピアリング リンク名)    | `ManufacturingVnet-to-CoreServicesVnet` |
    | 仮想ネットワーク | ManufacturingVnet |
 
     **リモート仮想ネットワーク ピアリングの設定**
