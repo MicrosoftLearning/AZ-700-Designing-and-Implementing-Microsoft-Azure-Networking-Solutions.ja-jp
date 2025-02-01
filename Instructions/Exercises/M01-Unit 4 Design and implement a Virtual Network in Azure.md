@@ -92,16 +92,17 @@ Exercise:
 
 1. 各サブネットの作成を始めるには、**[+ サブネットの追加]** を選択します。 各サブネットの作成を終えるには、**[追加]** を選択します。
 
-   | **サブネット**             | **オプション**           | **Value**              |
-   | ---------------------- | -------------------- | ---------------------- |
-   | GatewaySubnet          | サブネット名          | GatewaySubnet          |
-   |                        | サブネットのアドレス範囲 | 10.20.0.0/27           |
-   | SharedServicesSubnet   | サブネット名          | SharedServicesSubnet   |
-   |                        | サブネットのアドレス範囲 | 10.20.10.0/24          |
-   | DatabaseSubnet         | サブネット名          | DatabaseSubnet         |
-   |                        | サブネットのアドレス範囲 | 10.20.20.0/24          |
-   | PublicWebServiceSubnet | サブネット名          | PublicWebServiceSubnet |
-   |                        | サブネットのアドレス範囲 | 10.20.30.0/24          |
+   | **サブネット**             | **オプション**           | **Value**               |
+   | ---------------------- | -------------------- | ----------------------- |
+   | GatewaySubnet          | サブネットの目的       | 仮想ネットワーク ゲートウェイ |
+   |                        | サブネット名          | GatewaySubnet           |
+   |                        | サブネットのアドレス範囲 | 10.20.0.0/27            |
+   | SharedServicesSubnet   | サブネット名          | SharedServicesSubnet    |
+   |                        | サブネットのアドレス範囲 | 10.20.10.0/24           |
+   | DatabaseSubnet         | サブネット名          | DatabaseSubnet          |
+   |                        | サブネットのアドレス範囲 | 10.20.20.0/24           |
+   | PublicWebServiceSubnet | サブネット名          | PublicWebServiceSubnet  |
+   |                        | サブネットのアドレス範囲 | 10.20.30.0/24           |
 
 1. CoreServicesVnet とその関連サブネットの作成を終えるには、**[確認および作成]** を選択します。
 
