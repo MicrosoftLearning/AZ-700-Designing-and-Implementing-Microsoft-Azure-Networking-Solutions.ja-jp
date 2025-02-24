@@ -201,7 +201,7 @@ Exercise:
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | ManufacturingVnet            |
-   |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
+   |                 |                   | Subnet                                      | GatewaySubnet |
    |                 |                   | パブリック IP アドレスの種類                      | Standard                     |
    |                 | パブリック IP アドレス | パブリック IP アドレス                           | 新規作成                   |
    |                 |                   | パブリック IP アドレス名                      | ManufacturingVnetGateway-ip  |
