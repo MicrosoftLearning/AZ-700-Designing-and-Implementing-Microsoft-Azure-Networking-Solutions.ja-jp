@@ -43,7 +43,7 @@ Exercise:
    | Resource group   | リソース グループ ContosoResourceGroup を選択する               |
    | Name             | Web アプリの一意の名前を入力します。 この例では WebAppContoso-1 を使用します。 |
    | 発行          | **[コード]** を選択します。                                             |
-   | ランタイム スタック    | **[.NET 6 (LTS)]** を選択します。                                     |
+   | ランタイム スタック    | **[.NET 8 (LTS)]** を選びます。                                     |
    | オペレーティング システム | **[Windows]** を選択します。                                          |
    | リージョン           | **[米国中部]** を選択します。                                       |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanCentralUS」と入力します。 |
@@ -64,7 +64,7 @@ Exercise:
    | Resource group   | リソース グループ ContosoResourceGroup を選択する               |
    | Name             | Web アプリの一意の名前を入力します。 この例では WebAppContoso-2 を使用します。 |
    | 発行          | **[コード]** を選択します。                                             |
-   | ランタイム スタック    | **[.NET 6 (LTS)]** を選択します。                                     |
+   | ランタイム スタック    | **[.NET 8 (LTS)]** を選びます。                                     |
    | オペレーティング システム | **[Windows]** を選択します。                                          |
    | リージョン           | **[East US（米国東部）]** を選択します。                                          |
    | Windows プラン     | **[新規作成]** を選択し、テキスト ボックスに「myAppServicePlanEastUS」と入力します。 |
