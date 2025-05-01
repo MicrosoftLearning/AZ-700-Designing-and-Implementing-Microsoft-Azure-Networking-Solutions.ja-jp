@@ -214,19 +214,9 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 ## タスク 7: シミュレーション パートナーとのテスト
 
-1. 「[Azure DDoS シミュレーションのテスト ポリシー](https://learn.microsoft.com/azure/ddos-protection/test-through-simulations#azure-ddos-simulation-testing-policy)」を参照してください。
+1. [[Azure DDoS シミュレーションのテスト ポリシー]](https://learn.microsoft.com/en-us/azure/ddos-protection/test-through-simulations#configure-a-ddos-attack-simulation) ページを確認します。 
 
-1. 承認されたテスト パートナーを使用して DDoS テスト攻撃を構成します。 BreakingPoint Cloud を使用してテストする場合は、以下のスクリーンショットの設定を使用してください (試用アカウントで 100k pps テスト サイズを選ぶことが必要な場合があります)。ただし、 **[ターゲット IP アドレス]** ボックスでは自分の **MyPublicIPAddress** リソースの IP アドレスを指定します (例: **51.140.137.219**) ![DDOSAttack](https://user-images.githubusercontent.com/46939028/138599420-58bef33a-2597-4fa2-919f-bf1614037bc3.JPG)
-
-1. Azure portal のホーム ページで、**[すべてのリソース]** を選択します。
-
-1. リソースの一覧で **MyPublicIPAddress** リソースを選択し、**[監視]** で **[メトリック]** を選択します。
-
-1. **[メトリック]** ボックスで、一覧から **[Under DDoS attack or not](DDoS 攻撃の有無)** を選択します。
-
-1. これで、発生している DDoS 攻撃を見ることができるようになります。 結果が表示されるまでに、10 分ほどかかる場合があることに注意してください。
-
-   ![DDoS 攻撃を受けているリソースを示すメトリック](../media/metrics-showing-resource-under-attack.png)
+1. いくつかのテスト パートナーがいることに注意してください。 時間があれば、DDoS 攻撃のシミュレーションを構成します。 BreakingPoint Cloud の場合は、最初にBreakingPoint Cloud アカウントを作成する必要があります。
 
 ## リソースをクリーンアップする
 
