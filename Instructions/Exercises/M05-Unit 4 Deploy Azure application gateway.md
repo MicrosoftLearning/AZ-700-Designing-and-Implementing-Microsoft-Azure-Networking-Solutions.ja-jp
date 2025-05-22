@@ -147,7 +147,9 @@ Exercise:
     + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。
       
-1. Cloud Shell 画面のツール バーで、**[ファイルの管理]**、**[アップロード]** の順に選択します。 **backend.json**、**backend.parameters.json**、**install-iis.ps1** の各ファイルをアップロードします。これらのファイルは、リポジトリの **\Allfiles\Exercises\M05** フォルダーからダウンロードできます。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]**、**[アップロード]** の順に選択します。 **backend.json**、**backend.parameters.json**、**install-iis.ps1** の各ファイルをアップロードします。
+
+    >**注:** 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
