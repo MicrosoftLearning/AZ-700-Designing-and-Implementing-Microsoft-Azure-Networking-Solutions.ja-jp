@@ -35,7 +35,9 @@ Exercise:
     + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
-1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M01** から Cloud Shell のホーム ディレクトリにアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** と **ManufacturingVMazuredeploy.parameters.json** というファイルをアップロードします。
+
+    >**注:** 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
