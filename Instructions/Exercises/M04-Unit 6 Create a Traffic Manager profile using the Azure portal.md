@@ -10,7 +10,9 @@ Exercise:
 
 この演習では、架空の組織 Contoso Ltd の Web アプリケーションに高い可用性をもたらす Traffic Manager プロファイルを作成します。
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+### 対話型ラボ シミュレーション
+
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 推定時間: 35 分
 
@@ -21,6 +23,8 @@ Exercise:
 以下の概略図は、この演習でデプロイする環境を示しています。
 
  ![画像 14](../media/exercise-traffic-manager-environment-diagram.png)
+
+### 職務スキル
 
  この演習では、以下のことを行います。
 

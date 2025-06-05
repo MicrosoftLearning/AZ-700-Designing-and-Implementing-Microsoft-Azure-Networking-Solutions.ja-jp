@@ -13,6 +13,8 @@ Exercise:
 
 ![仮想ネットワーク ゲートウェイの図。](../media/3-exercise-create-configure-local-network-gateway.png)
 
+### 職務スキル
+
 この演習では、次のことを行います。
 
 + タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
@@ -27,7 +29,9 @@ Exercise:
 + タスク 10: 接続が接続されていることを確認する
 + タスク 11: VM 間の接続をテストする
 
->**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+### 対話型ラボ シミュレーション
+
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
 

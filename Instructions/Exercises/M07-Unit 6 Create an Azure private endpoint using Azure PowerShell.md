@@ -12,8 +12,9 @@ Exercise:
 
 ![プライベート エンドポイント アーキテクチャの図。](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
+### 対話型ラボ シミュレーション
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 予想所要時間: 45 分
 
@@ -36,6 +37,8 @@ Azure Web アプリのプライベート エンドポイントを作成し、仮
     > **注:** 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
 
 PowerShell をインストールしてローカルで使用する場合、この例では Azure PowerShell モジュール バージョン 5.4.1 以降が必要になります。 インストールされているバージョンを確認するには、```Get-Module -ListAvailable Az``` を実行します。 アップグレードする必要がある場合は、[Azure PowerShell モジュールのインストール](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)に関するページを参照してください。 PowerShell をローカルで実行している場合、```Connect-AzAccount``` を実行して Azure との接続を作成することも必要です。
+
+### 職務スキル
 
 この演習では、以下のことを行います。
 

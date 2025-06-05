@@ -9,13 +9,17 @@ Exercise:
 
 この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+### 対話型ラボ シミュレーション
+
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 推定時間:15 分
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/5-exercise-provision-expressroute-circuit.png)
 
-この演習では、以下のことを行います。
+### 職務スキル
+
+この演習では、次のことを行います。
 
 + タスク 1: ExpressRoute 回線を作成してプロビジョニングする
 + タスク 2: サービス キーを取得する
@@ -28,11 +32,9 @@ Exercise:
 
    >**重要**: ExpressRoute 回路の課金は、サービス キーが発行されたときから始まります。 接続プロバイダーが回線をプロビジョニングする準備ができたら、この操作を実行します。
 
-1. Azure portal のメニューで、**[+ リソースの作成]** を選択します。 **[ネットワーク]** を選択してから、次の図に示すように **[ExpressRoute]** を選択します。 [ExpressRoute] が一覧に表示されない場合は、**[Marketplace を検索]** を使用してそれを検索します。
+1. Azure portal メニューで、**ExpressRoute 回線**を検索して選択します。
 
-   ![Azure portal - ExpressRoute 回線の作成のメニュー](../media/create-expressroute-circuit-menu.png)
-
-1. **[ExpressRoute の作成]** ページで、**[リソース グループ]** を ExpressRouteResourceGroup として指定します。 次に、**[回復性]** で **[標準の回復性]** を選択します。
+1. **[ExpressRoute の作成]** ページで、**[リソース グループ]** を `ExpressRouteResourceGroup` として指定します。 次に、**[回復性]** で **[標準の回復性]** を選択します。
 
 1. ***回線の詳細**について、正しい場所 (**[East US 2]**)、回線名 (**[TestERCircuit]**)、ピアリングの場所 (**[Seattle]**)、プロバイダー (**[Equinix]**)、帯域幅 (**[50 Mbps]**)、SKU レベル (**[Standard]**) およびデータ計測課金モデル (**[従量制課金]**) になっていることを確認します。
 

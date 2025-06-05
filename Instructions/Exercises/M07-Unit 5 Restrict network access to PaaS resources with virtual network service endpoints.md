@@ -12,6 +12,8 @@ Exercise:
 
 ![サービス エンドポイント アーキテクチャの図。](../media/5-exercise-restrict-network-paas-resources-virtual-network-service-endpoints.png)
 
+### 職務スキル
+
 この演習では、次のことを行います。
 
 + タスク 1: 仮想ネットワークを作成する
@@ -26,7 +28,9 @@ Exercise:
 + タスク 10: ストレージ アカウントへのアクセスを確認する
 
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+### 対話型ラボ シミュレーション
+
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 推定時間: 35 分
 

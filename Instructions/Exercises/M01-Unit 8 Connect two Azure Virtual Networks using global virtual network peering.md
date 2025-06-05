@@ -12,15 +12,19 @@ Exercise:
 
 ![仮想ネットワーク ピアリングの図。](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
 
-このユニットでは、次のことを行います。
+### 職務スキル
 
-+ タスク 1: 構成をテストするための仮想マシンを作成する
+この演習では、次のことを行います。
+
++ タスク 1:仮想マシンを作成して構成をテストする
 + タスク 2:RDP を使用してテスト VM に接続する
 + タスク 3:VM 間の接続をテストする
 + タスク 4:CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
 + タスク 5:VM 間の接続をテストする
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+### 対話型ラボ シミュレーション
+
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 推定時間:20 分
 

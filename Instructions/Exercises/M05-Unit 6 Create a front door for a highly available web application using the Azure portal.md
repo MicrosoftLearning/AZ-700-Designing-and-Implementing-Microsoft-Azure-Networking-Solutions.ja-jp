@@ -14,14 +14,17 @@ Exercise:
 
 ![Azure Front Door のネットワーク構成](../media/6-exercise-create-front-door-for-highly-available.png)
 
-この演習では、以下のことを行います。
+### 職務スキル
+
+この演習では、次のことを行います。
 
 + タスク 1: Web アプリの 2 つのインスタンスを作成する
 + タスク 2: アプリケーション用のフロント ドアを作成する
 + タスク 3: Azure Front Door の動作を確認する
 
+### 対話型ラボ シミュレーション
 
-   >**メモ:** このラボをご自分のペースでクリックして進めることができる、 **[ラボの対話型シミュレーション](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** が用意されています。 対話型シミュレーションとホストされたラボの間に若干の違いがある場合がありますが、示されている主要な概念とアイデアは同じです。
+>**注**: 以前提供されていたラボ シミュレーションは廃止されました。
 
 ### 予想所要時間: 30 分
 
