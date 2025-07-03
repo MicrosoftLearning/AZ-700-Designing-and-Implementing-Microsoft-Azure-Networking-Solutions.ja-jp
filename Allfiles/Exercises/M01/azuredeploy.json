@@ -262,12 +262,12 @@
   "name":  "[variables('PIPName1')]",
   "location": "[resourceGroup().location]",
   "sku": {
-    "name": "Basic",
+    "name": "Standard",
     "tier": "Regional"
   },
   "properties": {
     "publicIPAddressVersion": "IPv4",
-    "publicIPAllocationMethod": "Dynamic"
+    "publicIPAllocationMethod": "Static"
   }
 },
         
@@ -277,12 +277,12 @@
   "name":  "[variables('PIPName2')]",
   "location": "[resourceGroup().location]",
   "sku": {
-    "name": "Basic",
+    "name": "Standard",
     "tier": "Regional"
   },
   "properties": {
     "publicIPAddressVersion": "IPv4",
-    "publicIPAllocationMethod": "Dynamic"
+    "publicIPAllocationMethod": "Static"
   }
 }
     ],
