@@ -7,8 +7,6 @@ demo:
 
 このデモでは、パブリック ロード バランサーを作成する方法について学習します。 
 
-**シミュレーション:** [Azure Load Balancer を作成して構成する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer)
-
 **リファレンス**: [クイック スタート: Azure portal を使用して、VM の負荷分散を行うパブリック ロード バランサーを作成する](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
 
 **注:**  このデモでは、少なくとも 1 つのサブネットを持つ仮想ネットワークが必要です。 

@@ -7,8 +7,6 @@ demo:
 
 **注:**  このデモには、2 つの仮想ネットワークが必要です。
 
-**シミュレーション:** [Azure ピアリングを使用して 2 つの 仮想ネットワークを接続する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)
-
 **参照**: [VNet ピアリングを使用して仮想ネットワークを接続する - チュートリアル](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 
 **1 番目の仮想ネットワークの VNet ピアリングを構成する**
