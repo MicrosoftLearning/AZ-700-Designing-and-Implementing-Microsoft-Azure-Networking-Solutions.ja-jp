@@ -7,8 +7,6 @@ demo:
 
 このデモでは、Azure Application Gateway を作成する方法について学習します。 
 
-**シミュレーション:** [Azure Application Gateway をデプロイする](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)
-
 **リファレンス**: [クイック スタート - Azure Application Gateway による Web トラフィックのルーティング - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
 
 **参照**: [Azure Application Gateway を使用してネットワーク トラフィックをエンドツーエンドで暗号化する](https://github.com/MicrosoftDocs/mslearn-end-to-end-encryption-with-app-gateway)

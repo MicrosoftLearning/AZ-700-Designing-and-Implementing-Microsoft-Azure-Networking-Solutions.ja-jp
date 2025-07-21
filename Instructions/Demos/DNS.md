@@ -7,8 +7,6 @@ demo:
 
 このデモでは、Azure DNS について説明します。
 
-**参照:** [シミュレーション: Azure で DNS 設定を構成する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)
-
 **参照**: [チュートリアル: ドメインとサブドメインをホストする - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
 
 **DNS ゾーンの作成**

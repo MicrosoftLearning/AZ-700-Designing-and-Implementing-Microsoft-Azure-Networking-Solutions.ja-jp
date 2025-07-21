@@ -9,8 +9,6 @@ demo:
 
 **参照**: [クイックスタート: 仮想ネットワークを作成する - Azure portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
 
-**シミュレーション:** [仮想ネットワークを構成する](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)
-
 ## Portal で仮想ネットワークを作成する
 
 1.  Azure portal にサインインし、 **仮想ネットワーク**を検索します。
