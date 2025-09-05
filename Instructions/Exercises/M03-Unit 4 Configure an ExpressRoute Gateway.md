@@ -88,11 +88,8 @@ Exercise:
    | ゲートウェイの種類              | ExpressRoute               |
    | SKU                       | Standard                   |
    | 仮想ネットワーク           | CoreServicesVNet           |
-   | **パブリック IP アドレス**     |                            |
-   | パブリック IP アドレス         | 新規作成                 |
-   | パブリック IP アドレス名    | CoreServicesVnetGateway-IP |
-   | 譲渡                | 構成できません。           |
-
+   | Subnet                    | GatewaySubnet              |
+   
 1. **[確認および作成]** を選択します。
 
 1. ゲートウェイの構成が検証に合格することを確認してから、**[作成]** を選択します。
@@ -105,7 +102,7 @@ Exercise:
 ## Copilot を使用して学習を拡張する
 
 Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
-+ Azure ExpressRoute と Virtual WAN の違いは何ですか? これらのテクノロジは一緒に使用できますか? 例を挙げます。
++ Azure ExpressRoute と Virtual WAN の違いは何ですか? これらのテクノロジは一緒に使用できますか? 例を示します。
 + ExpressRoute プロバイダー モデルと ExpressRoute Direct のどちらかを選択する場合に考慮すべきことは何ですか?
 + Azure ExpressRoute SKU とその機能をまとめた表を作成してください。
 
@@ -121,3 +118,4 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 + Microsoft では、ExpressRoute 専用接続に対して最低 99.95% の可用性を保証します。 接続はプライベートであり、専用回線で行われるため、サード パーティはトラフィックを傍受できません。
 + オンプレミスのネットワークと Microsoft クラウドの間の接続は、CloudExchange での同一場所配置、ポイント ツー ポイントのイーサネット接続、任意の環境間 (IPVPN) 接続、ExpressRoute Direct という 4 つの異なる方法で作成できます。
 + ExpressRoute の機能は、SKU (Local、Standard、Premuium) で決まります。 
+
