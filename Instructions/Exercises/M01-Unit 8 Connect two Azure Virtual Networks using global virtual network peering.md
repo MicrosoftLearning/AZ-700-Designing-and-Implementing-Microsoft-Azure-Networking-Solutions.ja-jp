@@ -140,6 +140,8 @@ Exercise:
     | ------------------------------------ | --------------------------------------------- | 
     | 'ManufacturingVnet' へのアクセスを 'CoreServicesVnet' に許可する | Enabled
     | 'CoreServicesVnet' が 'ManufacturingVnet' からのトラフィック転送を受信することを許可する | Enabled |
+
+1. **CoreServicesVnet-to-ManufacturingVnet** の左側にあるチェック ボックスをオンにし、**[同期]** を選択する
  
 1. [CoreServicesVnet \| ピアリング] で、**CoreServicesVnet-to-ManufacturingVnet** ピアリングが**接続済み** であることを確認します。
 
