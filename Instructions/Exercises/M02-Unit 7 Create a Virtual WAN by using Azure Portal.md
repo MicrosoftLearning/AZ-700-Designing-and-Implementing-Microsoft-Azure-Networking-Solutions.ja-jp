@@ -129,7 +129,7 @@ Exercise:
 
 Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
 + Azure VWAN はどの種類のネットワーク アーキテクチャを使用しますか?
-+ Azure VWAN の Basic と Standard の違いは何ですか? 例を挙げます。
++ Azure VWAN の Basic と Standard の違いは何ですか? 例を示します。
 + スクリプト ツールを使用して Azure VWAN を作成できますか?
 
 ## 自習トレーニングでさらに学習する
