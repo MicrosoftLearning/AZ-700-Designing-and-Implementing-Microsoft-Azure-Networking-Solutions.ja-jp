@@ -202,7 +202,7 @@ Exercise:
    | 基本          | プロジェクトの詳細   | サブスクリプション                                | 変更は必要ありません          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | インスタンスの詳細  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | リージョン                                      | 北ヨーロッパ                 |
+   |                 |                   | リージョン                                      | 西ヨーロッパ                  |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
