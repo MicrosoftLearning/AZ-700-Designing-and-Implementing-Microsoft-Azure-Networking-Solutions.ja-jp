@@ -14,10 +14,6 @@ Exercise:
 
 ![プライベート エンドポイント アーキテクチャの図。](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
-### 対話型ラボ シミュレーション
-
->**注**: 以前提供されていたラボ シミュレーションは廃止されました。
-
 ### 予想所要時間: 45 分
 
 Azure Web アプリのプライベート エンドポイントを作成し、仮想マシンをデプロイしてプライベート接続をテストします。
