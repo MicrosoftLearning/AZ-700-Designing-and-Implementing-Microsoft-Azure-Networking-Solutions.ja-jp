@@ -20,10 +20,6 @@ Exercise:
 + タスク 3: 構成をテストするための仮想マシンを作成する
 + タスク 4: DNS ゾーンにレコードが存在することを確認する
 
-### 対話型ラボ シミュレーション
-
->**注**: 以前提供されていたラボ シミュレーションは廃止されました。
-
 ### 推定時間: 25 分
 
 **重要:** この演習には、前のラボの仮想ネットワークが必要です。 これは[テンプレート](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises/M01/template.json) ファイルを使用してインストールできます。 すべての仮想ネットワークがインストールされますが、必要なのは CoreServicesVNet のみです。 
