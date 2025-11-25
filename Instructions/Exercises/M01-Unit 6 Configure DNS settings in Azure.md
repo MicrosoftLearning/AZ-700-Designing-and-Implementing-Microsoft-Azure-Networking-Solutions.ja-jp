@@ -39,7 +39,7 @@ Exercise:
     | --------------- | -------------------------------------- | -------------------- |
     | 基本          | リソース グループ (必要に応じて新規に作成してください) | `ContosoResourceGroup` |
     |                 | Name                                   | `Contoso.com`          |
-    | [確認および作成] | 設定を確認し、[作成] を選択します |                      |
+    | [確認および作成] | 設定を確認し、**[作成]** を選択します |                      |
 
 1. デプロイが完了するまで待ち、**[リソースに移動]** を選択します。
 
@@ -49,7 +49,7 @@ Exercise:
 
 1. Contoso.com の **[DNS 管理]** で、**[仮想ネットワーク リンク]** を選択します。
 
-1. [Contoso.com \| 仮想ネットワーク リンク] で、**[+ 追加]** を選択します。
+1. [contoso.com \| 仮想ネットワーク リンク] で、**[+ 追加]** を選択します。
 
     ![[+ 追加] が強調されている [contoso.com \| 仮想リンク]。](../media/add-network-link-dns.png)
 
@@ -60,8 +60,8 @@ Exercise:
     | リンク名                           | `CoreServicesVnetLink`                   |
     | サブスクリプション                        | 変更は必要ありません                     |
     | Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
-    | 自動登録を有効にする            | オン                                |
-    | 設定を確認し、[OK] を選択します。 |                                         |
+    | 自動登録を有効にする            | 選択済み                                |
+    | 設定を確認し、 **[作成]** を選択します。 |                                         |
 
 1. **[最新の情報に更新]** を選択します。
 
@@ -76,7 +76,7 @@ Exercise:
     + **[ストレージ アカウントは必要ありません]** と **[サブスクリプション]** を選択してから、**[適用]** を選択します。
     + ターミナルが作成され、プロンプトが表示されるまで待ちます。 
 
-1. Cloud Shell 画面のツールバーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** と **azuredeploy.parameters.json** というテンプレート ファイルをアップロードします。
+1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**\\Allfiles\\Exercises\\M01\\** フォルダーの **azuredeploy.json** と **azuredeploy.parameters.json** というテンプレート ファイルをアップロードします。
 
    >**注:** 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
    
@@ -124,9 +124,13 @@ Exercise:
 
 1. IP アドレスが DNS ゾーンのものと同じであることを確認します。
 
-1. `ping TestVM2.contoso.com` コマンドを入力します。 このコマンドは、VM で有効になっている Windows ファイアウォールが原因でタイムアウトになります。
+1. `ping TestVM2.contoso.com` コマンドを入力します。
 
-1. 代わりに、`nslookup TestVM2.contoso.com` コマンドを使用して、VM2 の名前解決レコードが正常に受信されることを確認します。 これは、プライベート ゾーンの名前解決を示します。 
+    >**注:**  このコマンドは、VM で有効になっている Windows ファイアウォールが原因でタイムアウトになります。
+
+1. 代わりに、`nslookup TestVM2.contoso.com` コマンドを使用します。
+
+    >**注:**  このコマンドは正常に実行され、プライベート ゾーンの名前解決を示します。 
 
 ## Copilot を使用して学習を拡張する
 
