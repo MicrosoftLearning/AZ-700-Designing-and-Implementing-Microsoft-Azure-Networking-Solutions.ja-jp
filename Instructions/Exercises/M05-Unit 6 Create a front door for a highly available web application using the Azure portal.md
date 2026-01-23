@@ -109,10 +109,12 @@ Exercise:
 
 1. [概要] ブレードの Front Door リソースで、エンドポイント用に作成されたエンドポイント ホスト名を探します。 これは、fdendpoint の後にハイフンとランダムな文字列が続きます。 たとえば、**fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net** などです。 この FQDN を**コピー**します。
 
-1. 新しいブラウザー タブで、Front Door エンドポイントの FQDN に移動します。 Web アプリが稼働しており、コンテンツを待機していることを示す情報ページが表示されます。 
+1. 新しいブラウザー タブで、Front Door エンドポイントの FQDN に移動します。 Web アプリが稼働しており、コンテンツを待機していることを示す情報ページが表示されます。
+
+    ![Web アプリがコンテンツを待機中であることを示すスクリーンショット。](../media/front-door-app-ready.png)
 
 1. 既定の App Service ページが表示されるまでに最大 1 時間かかることがあります。
-   ![App Service の情報ページが表示されているブラウザー](../media/app-service-info-page.png)
+   ![App Service の情報ページを示すスクリーンショット。](../media/app-service-info-page.png)
 
 1. 即時グローバル フェールオーバーの動作をテストするために、次の手順を試してみましょう。
 
