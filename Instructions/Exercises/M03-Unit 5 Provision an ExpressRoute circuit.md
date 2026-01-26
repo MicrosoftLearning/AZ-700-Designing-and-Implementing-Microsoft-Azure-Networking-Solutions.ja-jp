@@ -9,11 +9,11 @@ Exercise:
 
 この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。
 
-### 推定時間:15 分
+## 推定時間:15 分
 
 ![演習用の ExpressRoute 回線のレイアウト図](../media/5-exercise-provision-expressroute-circuit.png)
 
-### 職務スキル
+## 職務スキル
 
 この演習では、次のことを行います。
 
@@ -137,5 +137,6 @@ Copilot は、Azure スクリプト ツールの使用方法を学習するの�
 + Microsoft では、ExpressRoute 専用接続に対して最低 99.95% の可用性を保証します。 接続はプライベートであり、専用回線で行われるため、サード パーティはトラフィックを傍受できません。
 + オンプレミスのネットワークと Microsoft クラウドの間の接続は、CloudExchange での同一場所配置、ポイント ツー ポイントのイーサネット接続、任意の環境間 (IPVPN) 接続、ExpressRoute Direct という 4 つの異なる方法で作成できます。
 + ExpressRoute の機能は、SKU (Local、Standard、Premuium) で決まります。 
+
 
 

@@ -14,7 +14,7 @@ Exercise:
 
 ![Azure Front Door のネットワーク構成](../media/6-exercise-create-front-door-for-highly-available.png)
 
-### 職務スキル
+## 職務スキル
 
 この演習では、次のことを行います。
 
@@ -22,7 +22,7 @@ Exercise:
 + タスク 2: アプリケーション用のフロント ドアを作成する
 + タスク 3: Azure Front Door の動作を確認する
 
-### 予想所要時間: 30 分
+## 予想所要時間: 30 分
 
 ## タスク 1: Web アプリの 2 つのインスタンスを作成する
 

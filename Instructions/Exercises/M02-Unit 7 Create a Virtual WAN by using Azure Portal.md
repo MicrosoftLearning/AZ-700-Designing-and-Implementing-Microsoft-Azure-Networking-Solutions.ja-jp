@@ -12,14 +12,14 @@ Exercise:
 
 ![仮想ネットワーク WAN アーキテクチャの図。](../media/7-exercise-create-virtual-wan-by-using-azure-portal.png)
 
-### 職務スキル
+## 職務スキル
 この演習では、以下のことを行います。
 
 + タスク 1: Virtual WAN を作成する
 + タスク 2:Azure portal を使用してハブを作成する
 + タスク 3: 仮想ハブに VNet を接続する
 
-### 推定時間: 65 分 (最大 45 分のデプロイ待機時間を含む)
+## 推定時間: 65 分 (最大 45 分のデプロイ待機時間を含む)
 
 ## タスク 1: Virtual WAN を作成する
 
