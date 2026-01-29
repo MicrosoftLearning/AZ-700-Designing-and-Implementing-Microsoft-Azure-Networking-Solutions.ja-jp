@@ -12,7 +12,7 @@ Exercise:
 
 ![仮想ネットワーク ピアリングの図。](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
 
-### 職務スキル
+## 職務スキル
 
 この演習では、次のことを行います。
 
@@ -22,7 +22,7 @@ Exercise:
 + タスク 4:CoreServicesVnet と ManufacturingVnet の間に VNet ピアリングを作成する
 + タスク 5:VM 間の接続をテストする
 
-### 推定時間:20 分
+## 推定時間:20 分
 
 ## タスク 1: 構成をテストするための仮想マシンを作成する
 

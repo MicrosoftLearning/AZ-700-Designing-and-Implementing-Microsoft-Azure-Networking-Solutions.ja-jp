@@ -12,7 +12,7 @@ Exercise:
 
 ![DNS アーキテクチャの図。](../media/6-exercise-configure-domain-name-servers-configuration-azure.png)
 
-### 職務スキル
+## 職務スキル
 この演習では、次のことを行います。
 
 + タスク 1: プライベート DNS ゾーンを作成する
@@ -20,7 +20,7 @@ Exercise:
 + タスク 3: 構成をテストするための仮想マシンを作成する
 + タスク 4: DNS ゾーンにレコードが存在することを確認する
 
-### 推定時間: 25 分
+## 推定時間: 25 分
 
 **重要:** この演習には、前のラボの仮想ネットワークが必要です。 これは[テンプレート](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises/M01/template.json) ファイルを使用してインストールできます。 すべての仮想ネットワークがインストールされますが、必要なのは CoreServicesVNet のみです。 
 

@@ -14,7 +14,7 @@ Exercise:
 
 ![演習で作成されるロード バランサー アーキテクチャを示す図 - ロード バランサー、VNet、サブネット、Bastionsubnet、および VM が含まれます](../media/3-exercise-monitor-load-balancer-resource-using-azure-monitor.png)
 
-### 職務スキル
+## 職務スキル
 
  この演習では、次のことを行います。
 
@@ -32,7 +32,7 @@ Exercise:
 + タスク 12: リソース正常性を表示する
 + タスク 13: 診断設定を構成する
 
-### 推定時間: 55 分
+## 推定時間: 55 分
 
 ## タスク 1: 仮想ネットワークを作成する
 

@@ -13,7 +13,7 @@ Exercise:
 
 ![仮想ネットワーク ゲートウェイの図。](../media/3-exercise-create-configure-local-network-gateway.png)
 
-### 職務スキル
+## 職務スキル
 
 この演習では、次のことを行います。
 
@@ -29,7 +29,7 @@ Exercise:
 + タスク 10: 接続が接続されていることを確認する
 + タスク 11: VM 間の接続をテストする
 
-### 推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
+## 推定時間: 70 分 (最大 45 分のデプロイ待機時間を含む)
 
 ## タスク 1: CoreServicesVnet と ManufacturingVnet を作成する
 
@@ -257,7 +257,7 @@ Exercise:
    | ------------------------------ | --------------------------------- |
    | 名前                           | ManufacturingGW-to-CoreServicesGW |
    | 接続の種類                | VNet 間                      |
-   | Location                       | 北ヨーロッパ                      |
+   | Location                       | 西ヨーロッパ                      |
    | 最初の仮想ネットワーク ゲートウェイ  | ManufacturingVnetGateway          |
    | 2 番目の仮想ネットワーク ゲートウェイ | CoreServicesVnetGateway           |
    | 共有キー (PSK)               | abc123                            |

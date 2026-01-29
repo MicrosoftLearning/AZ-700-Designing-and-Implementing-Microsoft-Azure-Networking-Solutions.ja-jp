@@ -14,7 +14,7 @@ Exercise:
 
 ![プライベート エンドポイント アーキテクチャの図。](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
-### 予想所要時間: 45 分
+## 予想所要時間: 45 分
 
 Azure Web アプリのプライベート エンドポイントを作成し、仮想マシンをデプロイしてプライベート接続をテストします。
 
@@ -36,7 +36,7 @@ Azure Web アプリのプライベート エンドポイントを作成し、仮
 
 PowerShell をインストールしてローカルで使用する場合、この例では Azure PowerShell モジュール バージョン 5.4.1 以降が必要になります。 インストールされているバージョンを確認するには、```Get-Module -ListAvailable Az``` を実行します。 アップグレードする必要がある場合は、[Azure PowerShell モジュールのインストール](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)に関するページを参照してください。 PowerShell をローカルで実行している場合、```Connect-AzAccount``` を実行して Azure との接続を作成することも必要です。
 
-### 職務スキル
+## 職務スキル
 
 この演習では、以下のことを行います。
 
