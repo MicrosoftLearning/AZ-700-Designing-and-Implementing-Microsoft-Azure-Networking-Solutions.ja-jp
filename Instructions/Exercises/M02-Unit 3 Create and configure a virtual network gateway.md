@@ -155,7 +155,7 @@ Exercise:
    |                 | インスタンスの詳細  | 名前                                        | CoreServicesVnetGateway      |
    |                 |                   | リージョン                                      | 米国東部                      |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
-   |                 |                   | SKU                                         | VpnGw1                       |
+   |                 |                   | SKU                                         | VpnGw1AZ                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | CoreServicesVnet             |
    |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
@@ -200,7 +200,7 @@ Exercise:
    |                 | インスタンスの詳細  | Name                                        | ManufacturingVnetGateway     |
    |                 |                   | リージョン                                      | 西ヨーロッパ                  |
    |                 |                   | ゲートウェイの種類                                | VPN                          |
-   |                 |                   | SKU                                         | VpnGw1                       |
+   |                 |                   | SKU                                         | VpnGw1AZ                     |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | 仮想ネットワーク                             | ManufacturingVnet            |
    |                 |                   | Subnet                                      | GatewaySubnet |
