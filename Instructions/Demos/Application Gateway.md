@@ -1,7 +1,7 @@
 ---
 demo:
   module: Module 05 - Load balancing HTTPS traffic
-  title: Application Gateway (モジュール 05)
+  title: モジュール 05 - Application Gateway
 ---
 ## Azure Application Gateway を構成する
 
