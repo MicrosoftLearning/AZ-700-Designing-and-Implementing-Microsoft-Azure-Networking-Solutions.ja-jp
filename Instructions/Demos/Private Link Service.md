@@ -1,7 +1,7 @@
 ---
 demo:
   title: プライベート エンドポイントと Private Link サービス (モジュール 07)
-  module: 'Demo: Design and implement private access to Azure Services'
+  module: 'Module 07: Design and implement private access to Azure Services'
 ---
 このデモではプライベート エンドポイントの構成を確認します。
 
