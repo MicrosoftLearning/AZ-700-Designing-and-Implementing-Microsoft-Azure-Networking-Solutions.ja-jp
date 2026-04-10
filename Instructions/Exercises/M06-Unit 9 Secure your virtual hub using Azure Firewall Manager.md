@@ -2,8 +2,15 @@
 Exercise:
   title: M06 - ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
   module: Module 06 - Design and implement network security
+  description: Azure Firewall Manager を作成して構成します。
+  duration: 35 minutes
+  level: 500
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Firewall
+    - Azure Firewall Manager
 ---
-
 
 # M06-ユニット 9 Azure Firewall Manager を使用して仮想ハブのセキュリティを保護する
 
@@ -13,9 +20,8 @@ Exercise:
 
 ![セキュリティで保護されたハブを使用した仮想ネットワーク アーキテクチャの図。](../media/9-exercise-secure-your-virtual-hub-using-azure-firewall-manager.png)
 
-## ハブとスポークのアーキテクチャを作成する
 
-演習のこの部分では、ワークロード サーバーを配置するスポーク仮想ネットワークとサブネットを作成します。 次に、セキュリティ保護付き仮想ハブを作成し、ハブとスポークの仮想ネットワークを接続します。
+## 推定所要時間:35 分
 
 ## 職務スキル
 
@@ -32,7 +38,7 @@ Exercise:
 + タスク 9: ネットワーク規則をテストする
 + タスク 10: リソースをクリーンアップする
 
-## 推定時間: 35 分
+
 
 ## タスク 1: 2 つのスポーク仮想ネットワークとサブネットを作成する
 
@@ -196,7 +202,7 @@ Exercise:
 
    | **設定** | **Value** |
    | ---------- | --------------|
-   | 名前        |  `App-RC-01` |
+   | Name        |  `App-RC-01` |
    | 規則コレクションの種類 | **アプリケーション** |
    | 優先順位    | `100` |
    | 規則コレクション アクション | **許可** |
@@ -218,7 +224,7 @@ Exercise:
 
    | **設定** | **Value** |
    | ---------- | --------------|
-   | 名前        |  `dnat-rdp` |
+   | Name        |  `dnat-rdp` |
    | 規則コレクションの種類 | **DNAT** |
    | 優先順位    | `100` |
    | 規則コレクション アクション | **許可** |
@@ -243,7 +249,7 @@ Exercise:
 
    | **設定** | **Value** |
    | ---------- | --------------|
-   | 名前        |  `vnet-rdp` |
+   | Name        |  `vnet-rdp` |
    | 規則コレクションの種類 | **Network** |
    | 優先順位    | `100` |
    | 規則コレクション アクション | **許可** |
@@ -309,8 +315,6 @@ Exercise:
 1. 構成が完了したら、**[インターネット トラフィック]** と **[プライベート トラフィック]** で、どちらのハブ スポーク接続にも **[Secured by Azure Firewall](Azure Firewall によって保護されています)** と表示されていることを確認します。
 
 ## タスク 8: アプリケーション規則をテストする
-
-演習のこの部分では、リモート デスクトップをファイアウォールのパブリック IP アドレスに接続します。これは、Srv-Workload-01 にネットワーク アドレス変換されます。 その後、Web ブラウザーを使用してアプリケーション規則をテストし、リモート デスクトップを Srv-Workload-02 に接続してネットワーク規則をテストします。
 
 このタスクでは、アプリケーション規則をテストして、期待したように動作することを確認します。
 
@@ -383,5 +387,22 @@ Exercise:
    ```powershell
    Remove-AzResourceGroup -Name 'fw-manager-rg' -Force -AsJob
    ```
-
    >**注**:このコマンドは非同期で実行されるため (-AsJob パラメーターによって決定されます)、同じ PowerShell セッション内で直後に別の PowerShell コマンドを実行できますが、リソース グループが実際に削除されるまでに数分かかります。
+
+## Copilot を使用して学習を拡張する
+
+Copilot は、Azure スクリプト ツールの使用方法を学習するのに役立ちます。 Copilot は、ラボでは対象外の、またはさらに詳しい情報が必要な領域でも役立ちます。 Edge ブラウザーを開き、Copilot (右上) を選択するか、*copilot.microsoft.com* に移動します。 次のプロンプトを試すには数分かかります。
++ Azure Firewall Manager の 3 つの一般的な使用シナリオを挙げてください。 
++ 使用できるファイアウォール ポリシー規則の種類はどのようなものですか。 各種類の使用事例を挙げてください。 
+
+## 自習トレーニングでさらに学習する
+
++ [Azure Firewall の概要](https://learn.microsoft.com/training/modules/introduction-azure-firewall/)。 このモジュールでは、Azure Firewall が機能、規則、デプロイ オプションを含む Azure 仮想ネットワーク リソースをどのように保護するかについて説明します。
++ [Azure Firewall Manager の概要](https://learn.microsoft.com/training/modules/intro-to-azure-firewall-manager/)。 このモジュールでは、Azure Firewall Manager がクラウドベースのセキュリティ境界に対して一元的なセキュリティ ポリシーとルート管理をどのように提供するかについて説明します。
+
+## 要点
+
+以上でラボは完了です。 このラボの要点は次のとおりです。 
++ Azure Firewall Manager では、複数の Azure Firewall インスタンスにわたり、一元的な構成と管理を提供します。
++ Azure Firewall Manager を使用すると、1 つ以上のファイアウォール ポリシーを作成して複数のファイアウォールにすばやく適用できます。
++ アプリケーション、ネットワーク、NAT 向けのファイアウォール ポリシー規則があります。 

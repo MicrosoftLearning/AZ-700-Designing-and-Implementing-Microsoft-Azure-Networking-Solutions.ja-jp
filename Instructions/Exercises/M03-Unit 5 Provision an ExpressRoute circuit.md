@@ -2,16 +2,25 @@
 Exercise:
   title: M03 - ユニット 5 ExpressRoute 回線のプロビジョニング
   module: Module 03 - Design and implement Azure ExpressRoute
+  description: ExpressRoute 回線を作成して構成します。
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Portal
+    - Azure Resource Manager
 ---
+
 # M03-ユニット 5 ExpressRoute 回線のプロビジョニング
 
 ## 演習のシナリオ
 
 この演習では、Azure portal と Azure Resource Manager デプロイ モデルを使用して、ExpressRoute 回線を作成します。
 
-## 推定時間:15 分
-
 ![演習用の ExpressRoute 回線のレイアウト図](../media/5-exercise-provision-expressroute-circuit.png)
+
+## 推定時間:15 分
 
 ## 職務スキル
 

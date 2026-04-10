@@ -2,6 +2,12 @@
 Exercise:
   title: M01 - ユニット 6 Azure で DNS 設定を構成する
   module: Module 01 - Introduction to Azure Virtual Networks
+  description: プライベート DNS ゾーンを作成し、登録と解決のために VNet をリンクし、2 つの仮想マシンを作成し、解決をテストします。
+  duration: 25 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
 ---
 
 # M01 - ユニット 6 Azure で DNS 設定を構成する
@@ -12,6 +18,8 @@ Exercise:
 
 ![DNS アーキテクチャの図。](../media/6-exercise-configure-domain-name-servers-configuration-azure.png)
 
+## 推定時間: 25 分
+
 ## 職務スキル
 この演習では、次のことを行います。
 
@@ -19,8 +27,6 @@ Exercise:
 + タスク 2: 自動登録のためにサブネットをリンクする
 + タスク 3: 構成をテストするための仮想マシンを作成する
 + タスク 4: DNS ゾーンにレコードが存在することを確認する
-
-## 推定時間: 25 分
 
 **重要:** この演習には、前のラボの仮想ネットワークが必要です。 これは[テンプレート](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises/M01/template.json) ファイルを使用してインストールできます。 すべての仮想ネットワークがインストールされますが、必要なのは CoreServicesVNet のみです。 
 
