@@ -195,7 +195,7 @@ Exercise:
 
     > **注:** 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
 
-1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワーク、サブネット、VM を作成します。 **注意**: 管理者パスワードを入力するように求められます。
+1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワーク、サブネット、VM を作成します。 **注**: 管理者パスワードを入力するように求められます。
 
    ```powershell
    $RGName = "IntLB-RG"
