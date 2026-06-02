@@ -226,7 +226,7 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 1. [[Azure DDoS シミュレーションのテスト ポリシー]](https://learn.microsoft.com/en-us/azure/ddos-protection/test-through-simulations#configure-a-ddos-attack-simulation) ページを確認します。 
 
-1. いくつかのテスト パートナーがいることに注意してください。 時間があれば、DDoS 攻撃のシミュレーションを構成します。 BreakingPoint Cloud の場合は、最初にBreakingPoint Cloud アカウントを作成する必要があります。
+1. いくつかのテスト パートナーがいることに注意してください。 時間があれば、いずれかのシミュレーション パートナーをレビューして試してみてください。
 
 ## リソースをクリーンアップする
 
