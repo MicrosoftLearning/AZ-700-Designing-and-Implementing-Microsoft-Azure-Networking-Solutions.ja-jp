@@ -78,7 +78,9 @@ Exercise:
 
 1. 仮想ネットワークの IP アドレスが **10.1.0.0/16** であることを確認します。
 
-1. 既定のサブネット IP アドレス範囲が **10.1.0.0 - 10.1.0.255** であり **/24** が指定されていることを確認します。 名前を `myBackendSubnet` に変更します。 変更内容を**保存**します。 
+1. 既定のサブネット IP アドレスの範囲が **10.1.0.0 - 10.1.0.255** であり **/24** が指定されていることを確認します。 名前を `myBackendSubnet` に変更します。
+
+1. **[プライベート ネットワークを有効にする (既定の送信アクセスなし)]** がチェックされて**いない**ことを確認します。 変更内容を**保存**します。 
 
 1. AzureBastionSubnet が **10.1.1.0 - 10.1.1.63** であり **/26** が指定されていることを確認します。 
 
@@ -202,7 +204,7 @@ Exercise:
 
    ```powershell
    $RGName = "IntLB-RG"
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json -Verbose
    ```
 1. デプロイには数分かかることがあります。 仮想マシン リソース ページを更新することで、ポータルで進行状況を確認できます。
 
@@ -238,11 +240,13 @@ Exercise:
 
 1. **[ユーザー名]** ボックスに「**TestUser**」 と入力して、 **[パスワード]** ボックスに、展開中に指定したパスワードを入力して、 **[接続]** を選択します。
 
+1. ポップアップブロッカーエラーが発生した場合は、URL の端にあるアイコンを使ってポップアップを許可してください。 
+
 1. **[myTestVM]** ウィンドウが別のブラウザー タブで開きます。
 
 1. **[ネットワーク]** ペインが表示されたら、 **[はい]** を選択します。
 
-1. タスク バーの **[Internet Explorer]** アイコンをクリックして、Web ブラウザーを開きます。
+1. タスク バーの **[Internet Explorer]** アイコンをクリックして、Web ブラウザーを開きます。 これが、仮想マシン内のアイコンであることを必ず確認してください。 
 
 1. **[Internet Explorer 11 の設定]** ダイアログ ボックスで、 **[OK]** を選択します。
 
