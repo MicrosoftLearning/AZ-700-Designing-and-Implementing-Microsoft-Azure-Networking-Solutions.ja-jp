@@ -45,7 +45,7 @@ Exercise:
 
 1. Cloud Shell 画面のツールバーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**azuredeploy.json** と **azuredeploy.parameters.json** というファイルを Cloud Shell のホーム ディレクトリにアップロードします。
 
-        Note:: If you are working in your own subscription the [template files](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises) are available in the GitHub lab repository.
+  >注: 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な仮想ネットワークとサブネットを作成します。
 
@@ -55,6 +55,7 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+1. ポータルでは、3 つの仮想ネットワークが作成されたことを確認できます。
    
 ## タスク 2:CoreServicesVM を作成する
 
@@ -64,7 +65,7 @@ Exercise:
 
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
-   >**注**: 管理者パスワードを入力するように求められます。
+   >**注**: 管理者パスワードを入力するように求められます。 このパスワードは、演習の後半で必要になります。 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -82,9 +83,11 @@ Exercise:
 
 1. Cloud Shell 画面のツール バーで、**[ファイルの管理]** アイコンを選択し、ドロップダウン メニューで **[アップロード]** を選択して、**ManufacturingVMazuredeploy.json** ファイルと **ManufacturingVMazuredeploy.parameters.json** ファイルを、ソース フォルダー **F:\Allfiles\Exercises\M02** から Cloud Shell のホーム ディレクトリに 1 つずつアップロードします。
 
+  >注: 自分のサブスクリプションで作業している場合、[テンプレート ファイル](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)は GitHub ラボ リポジトリで入手できます。
+
 1. 次の ARM テンプレートをデプロイして、この演習に必要な VM を作成します。
 
-   >**注**: 管理者パスワードを入力するように求められます。
+   >**注意**: 管理者パスワードの入力を求められます。このパスワードは次のタスクで必要になります。
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -102,7 +105,7 @@ Exercise:
 
 1. **ManufacturingVM** を選択します。
 
-1. **ManufacturingVM** で、**[接続]** を選択してから **[RDP]** を選択します。
+1. **ManufacturingVM** で、**[接続]** を選択してから **[接続]** を選択します。
 
 1. **[RDP ファイルのダウンロード]** を選択します。
 
@@ -146,8 +149,9 @@ Exercise:
 
 ## タスク 6: CoreServicesVnet ゲートウェイを作成する
 
-1. **[リソース、サービス、ドキュメントの検索 (G+/)]** で、「**仮想ネットワーク ゲートウェイ**」 と入力し、結果から **[仮想ネットワーク ゲートウェイ]** を選択します。
-   ![Azure Portal で仮想ネットワーク ゲートウェイを検索します。](../media/virtual-network-gateway-search.png)
+1. ポータルで **[ハイブリッド接続]** を検索して選択してください。
+
+1. **VPNゲートウェイ** ブレードで **[VPN ゲートウェイ]** を選択します。
 
 1. [仮想ネットワーク ゲートウェイ] で、**[+ 作成]** を選択します。
 
@@ -192,7 +196,9 @@ Exercise:
 
 ### 仮想ネットワーク ゲートウェイを作成する
 
-1. **[リソース、サービス、ドキュメントの検索 (G+/)]** で、「**仮想ネットワーク ゲートウェイ**」 と入力し、結果から **[仮想ネットワーク ゲートウェイ]** を選択します。
+1. ポータルで **[ハイブリッド接続]** を検索して選択してください。
+
+1. **VPNゲートウェイ** ブレードで **[VPN ゲートウェイ]** を選択します。
 
 1. [仮想ネットワーク ゲートウェイ] で、**[+ 作成]** を選択します。
 

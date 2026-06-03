@@ -237,7 +237,7 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 ```
 
-パブリック IP アドレスが割り当てられていないか、内部の Basic Azure Load Balancer のバックエンドプールにある Azure Virtual Machines に対しては、Azure によってエフェメラル IP が提供されます。 エフェメラル IP メカニズムは、構成できないアウトバウンド IP アドレスを提供します。
+パブリック IP アドレスが割り当てられていないか、内部の Basic Azure Load Balancer のバックエンドプールにある Azure 仮想マシン に対しては、Azure によってエフェメラル IP が提供されます。 エフェメラル IP メカニズムは、構成できないアウトバウンド IP アドレスを提供します。
 
 パブリック IP アドレスが仮想マシンに割り当てられている場合、またはアウトバウンド規則の有無にかかわらず仮想マシンが Standard Load Balancer のバックエンド プールに配置されている場合、エフェメラル IP は無効になります。 Azure Virtual Network NAT ゲートウェイ リソースが仮想マシンのサブネットに割り当てられている場合、エフェメラル IP は無効になります。
 
@@ -386,8 +386,6 @@ New-AzPrivateDnsZoneGroup @parameters4
 1. **[myVM]** を選択します。
 
 1. **myVM** の [概要] ページで **[接続]** 、 **[Bastion]** の順に選択します。
-
-1. 青色の **[Bastion を使用する]** ボタンを選択します。
 
 1. 仮想マシンの作成時に入力したユーザー名とパスワードを入力します。
 
