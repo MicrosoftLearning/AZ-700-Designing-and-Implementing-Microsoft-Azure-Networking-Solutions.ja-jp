@@ -328,8 +328,6 @@ Exercise:
 
 1. **[接続]** を選択します。
 
-   ![srv-workload-01 への RDP 接続](../media/rdp-srv-workload-01.png)
-
 1. **[資格情報を入力してください]** ダイアログ ボックスで、展開中に指定したパスワードを使用して、**Srv-workload-01** サーバーの仮想マシンにログインします。
 
 1. **[OK]** を選択します。
@@ -345,8 +343,6 @@ Exercise:
 1. Internet Explorer でセキュリティ アラートのポップアップが表示される場合は、**[閉じる]** を選択します。
 
 1. Microsoft のホーム ページが表示されるはずです。
-
-    ![microsoft.com を参照している RDP セッション](../media/microsoft-home-page.png)
 
 1. **https://** **<www.google.com>** を閲覧します。
 

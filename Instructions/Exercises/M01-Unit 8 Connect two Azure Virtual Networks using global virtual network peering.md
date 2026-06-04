@@ -112,7 +112,6 @@ Exercise:
 1. Azure のホーム ページで **[仮想ネットワーク]** を選択し、**CoreServicesVnet** を選択します。
 
 1. CoreServicesVnet の **[設定]** で、**[ピアリング]** を選択します。
-   ![CoreServicesVnet のピアリング設定のスクリーンショット](../media/create-peering-on-coreservicesvnet.png)
 
 1. [CoreServicesVnet \| ピアリング] で、**[+ 追加]** を選択します。
 
