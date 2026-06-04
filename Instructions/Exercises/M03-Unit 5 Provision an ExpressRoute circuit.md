@@ -47,8 +47,6 @@ Exercise:
 
 1. ExpressRoute の構成が検証に合格することを確認してから、 **[作成]** を選択します。
 
-![Azure portal - [ExpressRoute の作成] の [構成] タブ](../media/expressroute-create-configuration2.png)
-
 + [ポートの種類] により、サービス プロバイダーに接続するか、またはピアリングの場所で Microsoft のグローバル ネットワークに直接接続するかが決まります。
 + [新規作成またはクラシックからインポート] では、新しい回線を作成するか、従来の回線を Azure Resource Manager に移行するかを指定します。
 + [プロバイダー] は、サービスの要求先となるインターネット サービス プロバイダーです。
@@ -77,8 +75,6 @@ Exercise:
    ![Azure portal - ExpressRoute リソースの作成のメニュー](../media/expressroute-circuit-menu.png)
 
 1. サブスクリプション内で作成されたすべての ExpressRoute 回線がここに表示されます。
-
-   ![Azure portal - 既存の Expressroute 回線を表示する](../media/expressroute-circuit-list.png)
 
 1. 回線のページには、その回線のプロパティが表示されます。 サービス キーは [サービス キー] フィールドに表示されます。 お使いのサービス プロバイダーは、プロビジョニング プロセスを完了するためにサービス キーを必要とします。 サービス キーは回線に固有です。 **プロビジョニングのためにサービス キーを接続プロバイダーに送信する必要があります。**
 
@@ -112,8 +108,6 @@ ExpressRoute 回線サービス プロバイダーのプロビジョニング状
 ## リソースをクリーンアップする
 
 **[削除]** アイコンを選択し、ExpressRoute 回線を削除できます。 続行する前に、プロバイダーのステータスが確実に "未プロビジョニング" になっているようにします。
-
-![Azure portal - ExpressRoute 回線を削除する](../media/expressroute-circuit-delete.png)
 
    >**注**:新規に作成し、使用しなくなったすべての Azure リソースを削除することを忘れないでください。 使用していないリソースを削除することで、予期しない料金が発生しなくなります。
 

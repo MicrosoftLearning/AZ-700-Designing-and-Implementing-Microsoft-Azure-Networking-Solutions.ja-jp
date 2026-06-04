@@ -32,7 +32,7 @@ Exercise:
 
 ## タスク 1: プライベート DNS ゾーンを作成する
 
-1. [Azure Portal](https://portal.azure.com/) に移動します。
+1. [Azure portal](https://portal.azure.com/) に移動します。
 
 1. Azure ホーム ページの検索バーに「dns」と入力し、 **[プライベート DNS ゾーン]** を選択します。  
    ![DNS が検索されている Azure portal ホーム ページ](../media/create-private-dns-zone.png)
@@ -56,8 +56,6 @@ Exercise:
 1. Contoso.com の **[DNS 管理]** で、**[仮想ネットワーク リンク]** を選択します。
 
 1. [contoso.com \| 仮想ネットワーク リンク] で、**[+ 追加]** を選択します。
-
-    ![[+ 追加] が強調されている [contoso.com \| 仮想リンク]。](../media/add-network-link-dns.png)
 
 1. 次の表の情報を使用して、仮想ネットワーク リンクを追加します。
 

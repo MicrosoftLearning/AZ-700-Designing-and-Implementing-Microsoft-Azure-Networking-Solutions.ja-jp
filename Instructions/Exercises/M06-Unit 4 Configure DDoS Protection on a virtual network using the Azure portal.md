@@ -79,8 +79,6 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 1. **[DDoS 保護計画]** ドロップダウン リストで、**MyDdosProtectionPlan** を選択します。
 
-   ![[仮想ネットワークの作成] - [セキュリティ] タブ](../media/create-virtual-network-security-for-ddos-protection.png)
-
 1. **[Review + create](レビュー + 作成)** を選択します。
 
 1. **［作成］** を選択します
@@ -111,15 +109,11 @@ Contoso のネットワーク セキュリティ チームを担当している�
 
 1. **[スコープ]** ボックスを選択し、**MyPublicIPAddress** の横にあるチェック ボックスをオンにします。
 
-    ![DDoS テレメトリのメトリック スコープを作成します](../media/create-metrics-scope-for-ddos-telemetry.png)
-
-1. **[適用]** を選択します。
+1. **適用**を選択します。
 
 1. **[メトリック]** ボックスで、 **[DDoS で破棄されたインバウンド パケット数]** を選択します。
 
 1. **[集計]** ボックスで、 **[最大]** を選択します。
-
-    ![DDoS テレメトリ用に作成されたメトリック](../media/metrics-created-for-ddos-telemetry.png)
 
 ## タスク 5: DDoS 診断ログを構成する
 
