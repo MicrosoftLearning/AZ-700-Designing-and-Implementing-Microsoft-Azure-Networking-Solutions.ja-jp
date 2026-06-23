@@ -87,6 +87,15 @@ Exercise:
 
 ## タスク 3: 仮想ハブに VNet を接続する
 
+1. **[ResearchVnet]** が **[ContosoResourceGroup]** に存在していることを確認してください。 存在しない (たとえば、以前のラボで削除された) 場合は、Cloud Shell から再作成してください。
+
+   ```powershell
+   $existingVnet = Get-AzVirtualNetwork -Name "ResearchVnet" -ResourceGroupName "ContosoResourceGroup" -ErrorAction SilentlyContinue
+   if (-not $existingVnet) {
+      New-AzVirtualNetwork -Name "ResearchVnet" -ResourceGroupName "ContosoResourceGroup" -Location "southeastasia" -AddressPrefix "10.40.0.0/16"
+   }
+   ```
+
 1. 作成した仮想 WAN を探します。
 
 1. ContosoVirtualWAN の **[接続]** で、**[仮想ネットワーク接続]** を選択します。
@@ -103,7 +112,7 @@ Exercise:
 
    + **リソース グループ:** ContosoResourceGroup
 
-   + **仮想ネットワーク:** ResearchVNet
+   + **仮想ネットワーク:** ResearchVnet
 
    + **伝達しない:** はい
 
